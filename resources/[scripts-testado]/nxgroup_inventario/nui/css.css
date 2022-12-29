@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+body,
+td,
+th {
+    overflow: hidden;
+    font-family: "Montserrat";
+    font-size: 12px;
+    color: #a9a9a9;
+    cursor: default;
+    vertical-align: baseline;
+    outline: 0;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    max-height: 100vh;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+    font-size: 12px;
+    color: #a9a9a9;
+    text-decoration: none;
+}
+
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr {
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+:focus {
+    outline: 0;
+}
+
+img {
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(50, 50, 50, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(50, 50, 50, 1);
+}
+
+::selection {
+    background: transparent;
+}
+
+::-moz-selection {
+    background: transparent;
+}
+
+#actionmenu {
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.529) 0%, rgba(18, 18, 40, 0.857) 100%);
+}
+
+#inventory {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.content {
+    width: 52vw;
+    margin-left: 12vw;
+}
+
+#myWeigth {
+    background: rgba(255, 255, 255, 0.09);
+    width: 8px;
+    height: 32%;
+    border-radius: 2%;
+    position: absolute;
+    left: 28.9vw;
+}
+
+#myBar {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+}
+
+#rightinventory {
+    top: 40%;
+    left: 40%;
+    width: 990px;
+    margin-left: 10%;
+    overflow: auto;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+}
+
+#invleft {
+    width: 40vw;
+    max-height: 272px;
+    float: left;
+    overflow-y: auto;
+}
+
+#invmidle {
+    color: #888;
+    line-height: 25px;
+    font-size: 14px;
+    height: 2vw;
+    min-width: 105px;
+    margin-left: 2px;
+    width: 694px;
+    position: absolute;
+    margin-top: 16vw;
+    float: left;
+    display: flex !important;
+}
+
+#pesoright {
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+#invright {
+    width: 435px;
+}
+
+#contentright {
+    max-height: 272px;
+    overflow-y: auto;
+}
+
+.peso {
+    position: absolute;
+    margin: -22px 0 0 10px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.peso b {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1.0);
+}
+
+.peso s {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.item {
+    width: 4.55vw;
+    height: 4.3vw;
+    position: relative;
+    float: left;
+    background: rgba(255, 255, 255, 0.09);
+    margin-top: 8px;
+    margin-right: 6px;
+}
+
+@media(max-width: 1360px) {
+    .item {
+        width: 4.5vw !important;
+    }
+}
+
+.item s {
+    font-size: 9px;
+    text-decoration: none;
+    position: absolute;
+    margin: -45px 0 0 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.item.active,
+.item.active:hover,
+.item:hover {
+    background: rgba(255, 255, 255, 0.282);
+}
+
+.itemchest {
+    width: 80px;
+    height: 80px;
+    float: left;
+    background: rgba(255, 255, 255, 0.09);
+    margin-top: 8px;
+    position: relative;
+    margin-right: 6px;
+}
+
+.itemchest s {
+    font-size: 9px;
+    text-decoration: none;
+    position: absolute;
+    margin: -45px 0 0 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.itemchest.active,
+.itemchest.active:hover,
+.itemchest:hover {
+    background: rgba(255, 255, 255, 0.282);
+}
+
+.itemchest2 {
+    width: 80px;
+    height: 80px;
+    float: left;
+    background: rgba(255, 255, 255, 0.09);
+    margin-top: 8px;
+    position: relative;
+    margin-right: 6px;
+}
+
+.itemchest2 s {
+    font-size: 9px;
+    text-decoration: none;
+    position: absolute;
+    margin: -45px 0 0 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.itemchest2.active,
+.itemchest2.active:hover,
+.itemchest2:hover {
+    background: rgba(255, 255, 255, 0.282);
+}
+
+.itemtrunkchest {
+    width: 84px;
+    height: 84px;
+    float: left;
+    background: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px #000;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.itemtrunkchest s {
+    font-size: 9px;
+    text-decoration: none;
+    position: absolute;
+    margin: -45px 0 0 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.itemtrunkchest.active,
+.itemtrunkchest.active:hover,
+.itemtrunkchest:hover {
+    background: rgba(255, 255, 255, 0.282);
+}
+
+.itemtrunkchest2 {
+    width: 84px;
+    height: 84px;
+    float: left;
+    background: rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px #000;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.itemtrunkchest2 s {
+    font-size: 9px;
+    text-decoration: none;
+    position: absolute;
+    margin: -45px 0 0 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.itemtrunkchest2.active,
+.itemtrunkchest2.active:hover,
+.itemtrunkchest2:hover {
+    background: rgba(255, 255, 255, 0.282);
+}
+
+.populated {
+    background-size: 90% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.populated:hover,
+.hoverControl {
+    background-color: rgba(255, 255, 255, 0.282) !important;
+}
+
+.hoverControl {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.282) !important;
+}
+
+#peso {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: 8px;
+    position: absolute;
+    left: .3vw;
+    top: .5vw;
+}
+
+#quantity {
+    float: left;
+    color: #fff;
+    position: absolute;
+    right: .3vw;
+    top: .5vw;
+    font-size: 8px
+}
+
+#itemname {
+    width: 4vw;
+    display: block;
+    color: #f7f7f7;
+    text-align: left;
+    position: absolute;
+    bottom: .2vw;
+    left: .3vw;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.drop,
+.send,
+.use {
+    float: left;
+    width: 9vw;
+    font-size: 0.7rem;
+    height: 5vh;
+    border-radius: 2px;
+    color: #fff;
+    margin-left: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+#invmidle h1 {
+    font-size: .8vw;
+    color: #fff;
+    font-weight: 500;
+}
+
+.qtd {
+    width: 8.5vw;
+    padding: 10px 0;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 2px;
+    color: #fff;
+    height: 5vh;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 0;
+}
+
+.myInfos {
+    align-self: flex-start;
+    padding: 0 0 25px 16px;
+}
+
+.infosContent {
+    padding-top: 12px;
+    font-size: .75rem;
+    color: #ffffff;
+}
+
+.myName span {
+    letter-spacing: 1px;
+    margin-right: 18px;
+    font-size: .75rem;
+}
+
+.infosContent span {
+    letter-spacing: 1px;
+    margin-right: 18px;
+}
+
+.myInfos b {
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+}
+
+.myInfos i {
+    color: #b3b3b3;
+    font-weight: 300;
+}
+
+.myInfos s {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.myName {
+    align-self: flex-start;
+    margin-bottom: 2vw;
+    font-size: 2rem;
+}
+
+.myName b {
+    color: #ffffff;
+}
+
+.myName i {
+    color: #cfcece;
+    font-weight: bold;
+}
+
+.myName s {
+    color: #cfcece;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.slotNumber {
+    width: 24px;
+    height: 24px;
+    padding: 6px 0 0;
+    font-size: 0.6rem;
+    text-align: center;
+    color: rgba(19, 22, 28, 1.0);
+    background: rgba(255, 255, 255, 0.75);
+}
+
+#binds {
+    display: flex;
+}
+
+#binds .bind {
+    width: 9.45vw;
+    height: 3.5vw;
+    background: rgba(255, 255, 255, 0.09);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#binds .bind:nth-child(2),
+.bind:nth-child(3),
+.bind:nth-child(4) {
+    margin-left: 6px;
+}
+
+.bind-img {
+    width: 3vw;
+    transform: rotate(90deg);
+}
+
+.equipped {
+    height: 7vh;
+    width: 38.5vw;
+    background-color: rgba(255, 255, 255, 0.09);
+    position: absolute;
+    bottom: 0;
+    border-radius: .1vw;
+    display: flex;
+    border-top-left-radius: .8vw;
+    border-top-right-radius: .8vw;
+}
+
+.equipped .weapon {
+    height: 3vw;
+    width: 3vw;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.09);
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.equipped .weapon img {
+    width: 3vw;
+}
+
+.weapon .amount {
+    position: absolute;
+    bottom: 0;
+    right: .2vw;
+    font-size: .5vw;
+    font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}yPress'](_0x542994) {
+    keyPressåKtæBgý

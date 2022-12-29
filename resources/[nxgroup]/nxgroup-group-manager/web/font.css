@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'sbold';
+    src: url('./fonts/Inter-SemiBold.ttf')
+}
+
+@font-face {
+    font-family: 'black';
+    src: url('./fonts/Inter-Black.ttf')
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url('./fonts/Inter-Regular.ttf')
+}

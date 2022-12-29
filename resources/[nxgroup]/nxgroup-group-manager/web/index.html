@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container" v-if="visible">
+            <div class="searchBar">
+                <img src="./assets/lupa.png">
+                <input v-model="findUser" @input="findUserByName" type="text" placeholder="Buscar usuário">
+            </div>
+            <div class="content">
+                <select class="filter-select" ref="tableFilter" @change="changeFilter($event.currentTarget.value)">
+                    <option value="all" selected hidden>FILTRAR POR</option>
+                    <option value="donations">Doações</option>
+                    <option value="online">Online</option>
+                </select>
+                <div class="data">
+                    <div class="infos"> 
+                        <div class="info">
+                            <div class="imageArea">
+                                <img src="./assets/members.png">
+                            </div>
+                            <div class="infoData">
+                                <span>Membros</span>
+                                <h1>{{data.organization_members.length}}/{{data.maxMembers}}</h1>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="imageArea">
+                                <img src="./assets/money.png">
+                            </div>
+                            <div class="infoData">
+                                <span>Dinheiro da Facção</span>
+                                <h1>${{data.money}}</h1>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="imageArea">
+                                <img src="./assets/invite.png">
+                            </div>
+                            <div class="infoData">
+                                <div class="invite-header">
+                                    <span>Convidar</span>
+                                    <select class="role-new-member-select" ref="groupSelector">
+                                        <option value="-" hidden>SELECIONAR CARGO</option>
+                                        <option :value="group"
+                                            v-for="group in data.config.organizations[data.org_name].groups">
+                                            {{group.toUpperCase()}}</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="INSIRA O PASSAPORTE" v-model="playerPassport"
+                                @keypress.enter="addPlayer">
+                            </div>
+                        </div>
+                        <!-- <div class="info">
+                            <div class="imageArea">
+                                <img src="./assets/donate.png">
+                            </div>
+                            <div class="infoData">
+                                <span>Doar Dinheiro</span>
+                                <input type="text" placeholder="INSIRA O VALOR" v-model="donationValue"
+                                    @keypress.enter="donateMoney">
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="tableData">
+                        <div class="data-index-container">
+                            <p>ID</p>
+                            <p>CARGO</p>
+                            <p>NOME</p>
+                            <p>DOAÇÕES</p>
+                            <p>STATUS</p>
+                        </div>
+                         <div class="data-table" v-for="member in playerList"
+                            :style='{background: member.user_id === selectedPlayer ? "#F02E2E" : ""}'
+                            @click="selectPlayer(member.user_id)">
+                            <p>{{member.user_id}}</p>
+                            <p>{{member.org_group}}</p>
+                            <p>{{member.name}}</p>
+                            <p>${{member.donated_money}}</p>
+                            <div class="status-ball"
+                                :style='{background: parseInt(member.status) === 0 ? "#429F2D" : "#464646"}'></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button @click="makeAction('demitido')">EXPULSAR</button>
+                    <button @click="makeAction('unpromote')">REBAIXAR</button>
+                    <button @click="makeAction('promote')">PROMOVER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

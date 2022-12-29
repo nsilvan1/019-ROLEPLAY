@@ -1,0 +1,191 @@
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-BlackItalic.7dbe70da.woff2) format("woff2"), url(./OpenSauceSans-BlackItalic.fbf68d95.woff) format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-Bold.6b7ff703.woff2) format("woff2"), url(./OpenSauceSans-Bold.08fd7640.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-Black.f86cd3c2.woff2) format("woff2"), url(./OpenSauceSans-Black.bfe2c809.woff) format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-BoldItalic.ba280bd1.woff2) format("woff2"), url(./OpenSauceSans-BoldItalic.d60262f2.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans ExBold;
+    src: url(./OpenSauceSans-ExtraBoldItalic.b1dbcac4.woff2) format("woff2"), url(./OpenSauceSans-ExtraBoldItalic.72976c21.woff) format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-MediumItalic.b1a8b56f.woff2) format("woff2"), url(./OpenSauceSans-MediumItalic.ff746611.woff) format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-LightItalic.399b79ab.woff2) format("woff2"), url(./OpenSauceSans-LightItalic.70f7fe3e.woff) format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-SemiBold.26bed229.woff2) format("woff2"), url(./OpenSauceSans-SemiBold.ef527755.woff) format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-Medium.d22fc16d.woff2) format("woff2"), url(./OpenSauceSans-Medium.7cc01cd0.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-Regular.87e290c7.woff2) format("woff2"), url(./OpenSauceSans-Regular.4d0e9eb8.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-Italic.b33597e2.woff2) format("woff2"), url(./OpenSauceSans-Italic.537b3387.woff) format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-Light.47c5152e.woff2) format("woff2"), url(./OpenSauceSans-Light.17142ea6.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Open Sauce Sans;
+    src: url(./OpenSauceSans-SemiBoldItalic.dc1cf1ae.woff2) format("woff2"), url(./OpenSauceSans-SemiBoldItalic.74d82daf.woff) format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    user-select: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    font-smooth: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Open Sauce Sans
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+:root {
+    font-size: 1.3vh
+}
+
+:root {
+    --animation-duration: 1s
+}
+
+@keyframes velocimeterIn {
+    0% {
+        transform: translate(-100%);
+        opacity: 0%
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 100%
+    }
+}
+
+.velocimeterIn {
+    animation-name: velocimeterIn;
+    animation-duration: var(--animation-duration);
+    animation-fill-mode: forwards
+}
+
+@keyframes velocimeterOut {
+    0% {
+        transform: translate(0);
+        opacity: 100%
+    }
+
+    to {
+        transform: translate(-100%);
+        opacity: 0%
+    }
+}
+
+.velocimeterOut {
+    animation-name: velocimeterOut;
+    animation-duration: var(--animation-duration);
+    animation-fill-mode: forwards
+}
+
+.logoContainer {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.logoContainer .logo {
+    width: 10vw
+}
+
+:root {
+    --main-color: #FFF;
+    --background-color: #111111
+}

@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+body {
+    user-select: none;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    transform: translate3d(0);
+    /* background-image: url("https://cdn.discordapp.com/attachments/720123156160970754/833565997595099196/7834706080f480f2fb555786e13856b6.png"); */
+    /* backdrop-filter: blur(15px); */
+}
+
+
+.logo {
+    position: absolute;
+    right: 3vh; top: 3vh;
+    width: 12vh;
+    height: 12vh;
+    transform: rotateY(0deg);
+    left: 0; right: 0; top: 1vh; margin: auto;
+    opacity: .7;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.logo-animation {
+    animation: rotate 1s ease-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+.container {
+    position: absolute;
+    width: 40vh;
+    height: 25vh;
+    bottom: 7.5vh; right: 0;
+    opacity: .85;
+    transition: bottom 1s;
+}
+
+.container-vehicle {
+    bottom: 5vh;
+}
+
+.main {
+    position: absolute;
+    bottom: 0; right: 1vh;
+    margin: auto;
+    width: 12%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: bottom 1s, right 1s;
+}
+
+
+
+
+
+.component {
+    position: relative;
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    margin: 1vh auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 1s, left 1s, right 1s, top 1s, bottom 1s;
+}
+
+.component svg {
+    width: 100%;
+    height: 100%;
+}
+
+.fill {
+    z-index: -1;
+    position: absolute;
+    bottom: 30%; right: 0; left: 0;
+    margin: auto;
+    height: 0%;
+    max-height: 43.5%;
+    width: 50%;
+    filter: blur(1px);
+    transition: height .5s;
+}
+
+.health {
+    background: #d32d4b;
+}
+
+.shield {
+    background: #97D05F;
+}
+
+.hunger {
+    background: #FFC700;
+}
+
+.thirst {
+    background: #32C1FF;
+}
+
+.stamina {
+    background: #00FFC2;
+    bottom: .7vh;
+    max-height: 60%;
+}
+
+.progressbar {
+    background: #e2012d;
+    height: 55%;
+    max-height: 55%;
+    bottom: .85vh;
+    transition: none;
+}
+
+
+.mic {
+    z-index: -1;
+    position: absolute;
+    bottom: 0; right: 0; left: 0; top: 0;
+    margin: auto;
+    height: 65%;
+    width: 50%;
+    background: white;
+    opacity: .5;
+}
+
+.mic-active { 
+    opacity: 1;
+}
+
+
+.default {
+    background: white;
+}
+
+.whisper {
+    background: rgb(252, 188, 68);
+}
+
+.shout {
+    background: rgb(255, 83, 83);
+}
+
+
+
+.speedometer {
+    position: absolute;
+    bottom: 10%; right: 0;
+    width: 60%;
+    height: 80%;
+    right: 11%; top: 0; bottom: 0;
+    margin: auto;
+    visibility: hidden;
+
+}
+
+.ldBar {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#speedometer path {
+    fill: rgba(6, 0, 26, 0.3);
+}
+
+
+.ldBar path.mainline {
+    stroke-width: 20;
+    stroke: #97D05F;
+    filter: drop-shadow(0px 2.96px 14.81px rgba(151, 208, 95, 0.5));
+}
+.ldBar path.baseline {
+  stroke-width: 20;
+  stroke: #101314;
+}
+.ldBar-label {
+  display: none;
+}
+.fuel-container {
+  position: absolute;
+  height: 50%;
+  width: 30%;
+  bottom: 46%; right: 3.5%;
+  transform: rotate(-5.5deg);
+  color: white;
+  font-family: Roboto;
+  font-size: 1.1vh;
+
+}
+.fuel path.mainline {
+  stroke-width: 6;
+  stroke: #FFC700;
+  filter: none;
+}
+.fuel path.baseline {
+  stroke-width: 6;
+  stroke: #101314;
+}
+
+
+.f {
+    position: absolute;
+    right: 80%; top: -10%;
+    transform: rotate(5.5deg);
+}
+
+.e {
+    position: absolute;
+    right: 19%; bottom: -15%;
+    transform: rotate(5.5deg);
+}
+
+
+
+
+
+
+.engine-container {
+  position: absolute;
+  height: 35%;
+  width: 33%;
+  bottom: 52%; left: 10%;
+  transform: rotate(3deg);
+}
+
+.engine path.mainline {
+  stroke-width: 4;
+  stroke: #D32D4B;
+  filter: none;
+}
+
+.engine path.baseline {
+  stroke-width: 4;
+  stroke: #101314;
+}
+
+.speed {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 5vh;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Roboto;
+    text-transform: uppercase;
+}
+
+  .speed p {
+    margin: 0;
+    font-size: 1.1vh;
+    line-height: 90%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.speed-text {
+    font-size: 3.5vh !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+.arrows {
+    position: absolute;
+    width: 63%;
+    height: fit-content;
+    bottom: 42%;
+    margin: auto;
+    left: 0; right: 0;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+}
+
+.arrows svg {
+    width: 1.2vh;
+    height: 1.2vh;
+}
+
+.arrow-active {
+    animation: arrow-active 1s infinite;
+}
+
+.arrow-active path {
+    fill: #FFC700;
+}
+
+.headlights { 
+    position: absolute;
+    width: 1.5vh;
+    height: 1.5vh;
+    left: 0; right: 0;
+    top: 20%;
+    margin: auto;
+}
+
+
+.headlights-on {
+    filter: drop-shadow(0px 3px 6px #ffc800);
+}
+
+.headlights-on path {
+    fill: #FFC700;
+}
+
+.headlights svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+.one-vehicle {
+    transform: translate(-3.4vh, 2.5vh);
+}
+
+.two-vehicle {
+    transform: translate(-1.5vh, 1.1vh);
+}
+
+.three-vehicle {
+    transform: translate(-.5vh);
+}
+
+.four-vehicle {
+    transform: translate(-1.5vh, -1.1vh);
+}
+
+.five-vehicle {
+    transform: translate(-3.4vh, -2.5vh);
+}
+
+.seven-vehicle {
+    position: absolute;
+    left: -26vh; top: 0; bottom: 0;
+    margin: auto;
+}
+
+.six, .seven { 
+    display: none;
+}
+
+.main-vehicle {
+    right: .5vh;
+    bottom: .5vh;
+}
+
+
+
+
+/* HUD COM TODAS AS OPCOES */
+
+/* .six { 
+    display: block;
+}
+.one-vehicle {
+    transform: translate(-4.8vh, 3.5vh);
+}
+
+.two-vehicle {
+    transform: translate(-2vh, 1.5vh);
+}
+
+.three-vehicle {
+    transform: translate(-.5vh, .4vh);
+}
+
+.four-vehicle {
+    transform: translate(-.5vh, -.4vh);
+}
+
+.six-vehicle { 
+    transform: translate(-2vh, -1.5vh);
+}
+
+.five-vehicle {
+    transform: translate(-4.8vh, -3.5vh);
+}
+
+.main-vehicle {
+    right: .5vh;
+    bottom: -2vh;
+}
+
+.container-vehicle {
+    bottom: 6vh;
+}
+
+
+
+ */
+
+
+
+
+
+/*    HUD SEM FOME E SEDE      */ 
+
+
+
+ .six {  
+    display: block;
+}
+
+.three, .four {
+    display: none;
+    
+}
+
+.one-vehicle {
+    transform: translate(-2.5vh, 1.5vh);
+}
+
+.two-vehicle {
+    transform: translate(-.5vh, .3vh);
+}
+
+.six-vehicle {
+    transform: translate(-.5vh, -.3vh);
+}
+
+
+.five-vehicle {
+    transform: translate(-2.5vh, -1.5vh);
+}
+
+.main-vehicle {
+    bottom: 3.5vh;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.seatbelt {
+    position: absolute;
+    width: 2vh;
+    height: 2vh;
+    left: 0; right: 0;
+    fill: #D32D4B;
+    margin: auto;
+    bottom: 20%;
+    animation: seatbelt 1s infinite;
+    /* display: none; */
+}
+
+.seatbelt-on {
+    position: absolute;
+    width: 1.5vh;
+    height: 1.5vh;
+    left: 0; right: 0;
+    fill: #97D05F;
+    margin: auto;
+    bottom: 20%;
+    filter: drop-shadow(0px 2px 5px #97D05F);
+    display: none;
+}
+
+.lock {
+    position: absolute;
+    width: 1.7vh;
+    height: 1.7vh;
+    fill: #97D05F;
+    right: 30%; bottom: 30%;
+    filter: drop-shadow(0px 2px 5px #97D05F);
+}
+
+.unlock {
+    fill: #101314;
+    filter: none;
+}
+
+
+.power {
+    position: absolute;
+    width: 1.7vh;
+    height: 1.7vh;
+    fill: #101314;
+    left: 30%; bottom: 30%;
+}
+
+.power-on {
+    fill: #97D05F;
+    filter: drop-shadow(0px 2px 5px #97D05F);
+}
+
+
+@keyframes seatbelt {
+    0% {
+        filter: drop-shadow(0px 0px 0px #D32D4B);
+    }
+    50% {
+        filter: drop-shadow(0px 2px 5px #D32D4B);
+
+    }
+    100% {
+        filter: drop-shadow(0px 0px 0px #D32D4B);
+    }
+}
+
+
+
+@keyframes arrow-active {
+    0% {
+        filter: drop-shadow(0px 0px 0px #FFC700);
+    }
+    50% {
+        filter: drop-shadow(0px 2px 5px #FFC700);
+
+    }
+    100% {
+        filter: drop-shadow(0px 0px 0px #FFC700);
+    }
+}
+
+.showSpeedometer {
+    transform: translate3d(0,0,0);
+    animation: showSpeedometer 1s forwards;
+}
+
+.hideSpeedometer {
+    transform: translate3d(0,0,0);
+    animation: hideSpeedometer 1s forwards;
+}
+
+
+@keyframes showSpeedometer {
+    0% {
+        opacity: 0;
+        visibility: visible;
+        transform: translateX(5vh);
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0vh);
+    }
+    
+}
+
+@keyframes hideSpeedometer {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0vh);
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(5vh);
+    }
+    
+}
+
+
+.second-info {
+    position: absolute;
+    bottom: 4vh; right: 1.5vh;
+    width: fit-content;
+    height: 3vh;
+    font-size: 1vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.384);
+    text-transform: uppercase;
+    transition: bottom 1s, opacity 1s;
+    opacity: 0;
+}
+
+
+.second-info-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap ;
+    text-align: center;
+    background: #101314;
+    padding: 0 1vh 0 .5vh;
+    margin: auto;
+    width: auto;
+    height: 4vh;
+    border-radius: 2vh;
+}
+
+.second-info-box i {
+    margin: 0 .5vh;
+    color: #97D05F;
+    font-size: 1.5vh;
+}
+
+
+.time {
+    margin: auto .5vh;
+}
+
+.radio {
+    opacity: 0;
+    transition: opacity 1s;
+}

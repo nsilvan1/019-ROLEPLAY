@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#NXGROUP-ID</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <Transition>
+            <div v-if="opened" id="container">
+                <transition-group class="notify-container" name="list" tag="div">
+                    <div v-for="notify in notifys" :key="notify" class="notify">{{notify.message}}</div>
+                </transition-group>
+                <main>
+                    <div class="light-frame">
+                        <div class="light"></div>
+                        <img src="./assets/images/light.png" />
+                    </div>
+                    <header>
+                        <h1>IH, PARECE QUE ALGO DEU RUIM</h1>
+                        <img src="./assets/images/emoji.png" />
+                    </header>
+                    <p class="description">Você precisará acessar nosso discord e ir até a sala <span>#🔑│liberar-id</span>. Após isso, <span>cole o ID copiado</span> abaixo, para que <span>sua tela seja desbloqueada.</span></p>
+                    <div class="content-container">
+                        <div class="content">
+                            <p><span>COPIE ESTE ID</span> E COLE NO DISCORD</p>
+                            <div class="id-frame">
+                                <input readonly type="text" @click="copyValue" v-model="id" ref="id" />
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p>CLIQUE PARA ACESSAR <span>NOSSO DISCORD</span></p>
+                            <div @click="redirect" class="button-frame">VAMOS LÁ!</div>
+                        </div>
+                    </div>
+                    <footer>Essa verificação servirá como forma de segurança contra jogadores mal intencionados que causam uma má experiência de jogadores como você.</footer>
+                </main>
+            </div>
+        </Transition>
+    </div>
+    <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

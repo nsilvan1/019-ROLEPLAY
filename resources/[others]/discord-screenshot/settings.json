@@ -1,0 +1,11 @@
+{
+    "webhookUrl": "",
+    "framework": "vrp",
+    "commandName": "print",
+    "commandPermission": "ac.permissao",
+    "hiddenIdentifiers": [],
+    "screenshotOptions": {
+        "encoding": "jpg",
+        "quality": 0.92
+    }
+}

@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    background: rgba(13, 13, 13, 0.95);
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Saira";
+    text-align: center;
+}
+
+.container .icon i {
+    color: #d80000;
+    font-size: 6vw;
+}
+
+.container .text h1 {
+    font-size: 3vw;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 3vw;
+}
+
+.container .text h2 {
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1vw;
+}
+
+.container .text h2 strong {
+    font-weight: 300;
+}
+
+.container .text span {
+    color: #d80000;
+    font-weight: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.container-notify {
+    position: absolute;
+    top: 4.5vw;
+    font-family: 'Poppins', sans-serif;
+    right: 2vw;
+}
+
+.container-notify .notify {
+    background: rgba(13, 13, 13, 0.85);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1vw 2vw 1.2vw 1.2vw;
+    min-width: 17vw;
+    min-width: 18vw;
+    max-width: 18vw;
+    margin-top: 1.2vw;
+}
+
+.container-notify i {
+    color: #fff;
+    font-size: 1.2vw;
+}
+
+.container-notify .notify .text {
+    margin-left: 1vw;
+    font-size: .7vw;
+    color: #fff;
+    max-width: 80%;
+    word-break: normal;
+}
+
+.container-notify .notify h1 {
+    font-weight: bold;
+    color: #fff;
+    font-size: .8vw;
+}
+
+.container-notify .notify p {
+    color: #fff;
+    font-size: .7vw;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+.container-notify .duration {
+    width: 80%;
+    background: rgba(211, 39, 39, 0.187);
+    height: .3vh;
+    border-radius: 10px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-notify .duration .durationDisplay {
+    animation: skillbarAnimation var(--tempoduracao);
+    background: #fff;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.container-notify b{
+    font-size: .7vw;
+    color: #fff;
+}
+
+:root {
+    --tempoduracao: 1000s;
+}
+
+
+.showNotify {
+    transform: translate3d(0, 0, 0);
+    animation: showNotify .8s forwards
+}
+
+.hideNotify {
+    transform: translate3d(0, 0, 0);
+    animation: hideNotify .5s forwards
+}
+
+@keyframes skillbarAnimation {
+    0% {
+        width: 100%;
+        background: rgba(255, 244, 89, 1);
+    }
+    100% {
+        width: 0%;
+        background: rgb(169, 155, 93);
+    }
+}
+
+@keyframes showNotify {
+    0% {
+        opacity: 0;
+        visibility: visible;
+        transform: translateX(5vh)
+    }
+    60% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-4vh)
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes hideNotify {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0)
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(5vh)
+    }
+}
+
+.logoContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logoContainer img{
+    width:8vw;
+    margin-top: 1vw;
+}
