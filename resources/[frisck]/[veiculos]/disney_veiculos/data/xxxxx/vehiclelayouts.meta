@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleMetadataMgr>
+  <VehicleSeatInfos>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_EXTRA_LEFT_3</Name>
+      <SeatBoneName>seat_dside_r3</SeatBoneName>
+      <ShuffleLink>SEAT_EXTRA_RIGHT_3</ShuffleLink>
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags />
+      <HairScale value="0.000000" />
+    </Item>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_EXTRA_RIGHT_3</Name>
+      <SeatBoneName>seat_pside_r3</SeatBoneName>
+      <ShuffleLink>SEAT_EXTRA_LEFT_3</ShuffleLink>
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags />
+      <HairScale value="0.000000" />
+    </Item>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_EXTRA_LEFT_4</Name>
+      <SeatBoneName>seat_dside_r4</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>KeepOnHeadProp</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_EXTRA_RIGHT_4</Name>
+      <SeatBoneName>seat_pside_r4</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>KeepOnHeadProp</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_EXTRA_LEFT_5</Name>
+      <SeatBoneName>seat_dside_r5</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>KeepOnHeadProp</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+    <Item type="CVehicleSeatInfo">
+      <Name>SEAT_EXTRA_RIGHT_5</Name>
+      <SeatBoneName>seat_pside_r5</SeatBoneName>
+      <ShuffleLink />
+      <RearSeatLink />
+      <DefaultCarTask>TASK_DRIVE_WANDER</DefaultCarTask>
+      <SeatFlags>KeepOnHeadProp</SeatFlags>
+      <HairScale value="0.000000" />
+    </Item>
+  </VehicleSeatInfos>
+  <VehicleEntryPointInfos>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_EXTRA_LEFT_3</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_EXTRA_LEFT_3" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_EXTRA_RIGHT_3</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_RIGHT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_EXTRA_RIGHT_3" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_EXTRA_LEFT_4</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_EXTRA_LEFT_4" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_EXTRA_RIGHT_4</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_RIGHT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_EXTRA_RIGHT_4" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_EXTRA_LEFT_5</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_LEFT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_EXTRA_LEFT_5" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+    <Item type="CVehicleEntryPointInfo">
+      <Name>ENTRY_POINT_EXTRA_RIGHT_5</Name>
+      <DoorBoneName />
+      <SecondDoorBoneName />
+      <DoorHandleBoneName />
+      <WindowId>INVALID</WindowId>
+      <VehicleSide>SIDE_RIGHT</VehicleSide>
+      <AccessableSeats>
+        <Item ref="SEAT_EXTRA_RIGHT_5" />
+      </AccessableSeats>
+      <VehicleExtraPointsInfo ref="NULL" />
+      <Flags />
+      <BlockJackReactionSides />
+    </Item>
+  </VehicleEntryPointInfos>
+  <VehicleLayoutInfos>
+    <Item type="CVehicleLayoutInfo">
+      <Name>LAYOUT_12SEATSFURLANI</Name>
+      <Seats>
+        <Item>
+          <SeatInfo ref="SEAT_STANDARD_FRONT_LEFT" />
+          <SeatAnimInfo ref="SEAT_ANIM_STANDARD_FRONT_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_STANDARD_FRONT_RIGHT" />
+          <SeatAnimInfo ref="SEAT_ANIM_STANDARD_FRONT_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_STANDARD_REAR_LEFT" />
+          <SeatAnimInfo ref="SEAT_ANIM_BISON_REAR_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_STANDARD_REAR_RIGHT" />
+          <SeatAnimInfo ref="SEAT_ANIM_BISON_REAR_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_LEFT_2" />
+          <SeatAnimInfo ref="SEAT_ANIM_BODHI_REAR_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_RIGHT_2" />
+          <SeatAnimInfo ref="SEAT_ANIM_BODHI_REAR_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_LEFT_3" />
+          <SeatAnimInfo ref="SEAT_ANIM_BODHI_REAR_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_RIGHT_3" />
+          <SeatAnimInfo ref="SEAT_ANIM_BODHI_REAR_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_LEFT_4" />
+          <SeatAnimInfo ref="SEAT_ANIM_SWAT_RANGER_SIDE_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_RIGHT_4" />
+          <SeatAnimInfo ref="SEAT_ANIM_SWAT_RANGER_SIDE_RIGHT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_LEFT_5" />
+          <SeatAnimInfo ref="SEAT_ANIM_SWAT_RANGER_SIDE_LEFT" />
+        </Item>
+        <Item>
+          <SeatInfo ref="SEAT_EXTRA_RIGHT_5" />
+          <SeatAnimInfo ref="SEAT_ANIM_SWAT_RANGER_SIDE_RIGHT" />
+        </Item>
+      </Seats>
+      <EntryPoints>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_STANDARD_FRONT_LEFT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_STD_BOBCAT_FRONT_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_STANDARD_FRONT_RIGHT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_STD_BOBCAT_FRONT_RIGHT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_STANDARD_REAR_LEFT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_STANDARD_REAR_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_STANDARD_REAR_RIGHT" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_STANDARD_REAR_RIGHT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_EXTRA_LEFT_2" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BISON_REAR_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_EXTRA_RIGHT_2" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BISON_REAR_RIGHT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_EXTRA_LEFT_3" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BISON_REAR_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_EXTRA_RIGHT_3" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_ANIM_BISON_REAR_RIGHT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_EXTRA_LEFT_4" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_SWAT_RANGER_SIDE_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_EXTRA_RIGHT_4" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_SWAT_RANGER_SIDE_RIGHT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_EXTRA_LEFT_5" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_SWAT_RANGER_SIDE_LEFT" />
+        </Item>
+        <Item>
+          <EntryPointInfo ref="ENTRY_POINT_EXTRA_RIGHT_5" />
+          <EntryPointAnimInfo ref="ENTRY_POINT_SWAT_RANGER_SIDE_RIGHT" />
+        </Item>
+      </EntryPoints>
+      <LayoutFlags>StreamAnims UseLeanSteerAnims UseFinerAlignTolerance</LayoutFlags>
+      <BicycleInfo ref="NULL" />
+      <HandsUpClipSetId>busted_vehicle_truck</HandsUpClipSetId>
+      <SteeringWheelOffset x="0.000000" y="0.350000" z="0.320000" />
+      <MaxXAcceleration value="4.00000" />
+      <BodyLeanXApproachSpeed value="5.00000" />
+      <BodyLeanXSmallDelta value="0.30000" />
+      <FirstPersonAdditiveIdleClipSets>
+        <Item>clipset@veh@truck@ds@idle_a</Item>
+        <Item>clipset@veh@truck@ds@idle_b</Item>
+        <Item>clipset@veh@truck@ds@idle_c</Item>
+        <Item>clipset@veh@truck@ds@idle_d</Item>
+        <Item>clipset@veh@truck@ds@idle_e</Item>
+      </FirstPersonAdditiveIdleClipSets>
+      <FirstPersonRoadRageClipSets>
+        <Item>clipset@veh@truck@ds@hit_wheel@idle_a</Item>
+        <Item>clipset@veh@truck@ds@hit_wheel@idle_b</Item>
+        <Item>clipset@veh@truck@ds@hit_wheel@idle_c</Item>
+      </FirstPersonRoadRageClipSets>
+    </Item>
+  </VehicleLayoutInfos>
+</CVehicleMetadataMgr>

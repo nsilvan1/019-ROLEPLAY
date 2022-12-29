@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleModelInfoVariation>
+<variationData>
+		<Item>
+			<modelName>emstalker</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">0 0 1 0 0 0</indices>
+					<liveries />
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges/>
+			<plateProbabilities>
+			<Probabilities>
+				<Item>
+					<Name>Police guv plate</Name>
+					<Value value="100"/>
+				</Item>
+			</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="1"/>
+			<sirenSettings value="145"/>
+		</Item>
+		<Item>
+			<modelName>fibc</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">147 147 147 0 0 0</indices>
+					<liveries />
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities>
+					<Item>
+						<Name>Standard White</Name>
+						<Value value="100" />
+					</Item>
+				</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="1648" />
+		</Item>
+		<Item>
+			<modelName>fibr2</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">147 147 147 0 0 0</indices>
+					<liveries />
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities>
+					<Item>
+						<Name>Standard White</Name>
+						<Value value="100" />
+					</Item>
+				</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="1648" />
+		</Item>
+		<Item>
+			<modelName>jugularspd</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array"> 21 21 21 0 </indices>
+					<liveries>
+						<Item value="true" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+					</liveries>
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities />
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="47902" />
+		</Item>
+		<Item>
+			<modelName>sugoispd</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array"> 21 21 21 0 </indices>
+					<liveries>
+						<Item value="true" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+					</liveries>
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities />
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="47902" />
+		</Item>
+		<Item>
+			<modelName>komodahc</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array"> 21 21 21 0 </indices>
+					<liveries>
+						<Item value="true" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+					</liveries>
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities />
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="47902" />
+		</Item>
+		<Item>
+			<modelName>coquettessd</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array"> 21 21 21 0 </indices>
+					<liveries>
+						<Item value="true" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+					</liveries>
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities />
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="47902" />
+		</Item>
+		<Item>
+			<modelName>caracarastd</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array"> 21 21 21 0 </indices>
+					<liveries>
+						<Item value="true" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+					</liveries>
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities />
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="47902" />
+		</Item>
+		<Item>
+			<modelName>carbonssd</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array"> 21 21 21 0 </indices>
+					<liveries>
+						<Item value="true" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+						<Item value="false" />
+					</liveries>
+				</Item>
+			</colors>
+			<kits>
+				<Item>0_default_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities />
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="87902" />
+		</Item>
+	</variationData>
+</CVehicleModelInfoVariation>
