@@ -26,7 +26,7 @@ cfg.groups = {
 			title = "PaisanaCeo",
 			gtype = "ceo"
 		},
-		"paisanaoceo.permissao",
+		"paisana-ceo.permissao",
 		"paisanapoderes.permissao"
 	},
 	["Admin"] = {
@@ -48,6 +48,14 @@ cfg.groups = {
 		"dv.permissao",
 		"instagram.permissao",
 	},
+	["PaisanaAdmin"] = {
+		_config = {
+			title = "PaisanaAdmin",
+			gtype = "Administrador(a)"
+		},
+		"paisana-admin.permissao",
+		"paisanapoderes.permissao"
+	},
 	["Mod"] = {
 		_config = {
 			title = "Moderador(a)"
@@ -66,6 +74,14 @@ cfg.groups = {
 		"dv.permissao",
 		"instagram.permissao",
 	},
+	["PaisanaMod"] = {
+		_config = {
+			title = "PaisanaMod",
+			gtype = "Administrador(a)"
+		},
+		"paisana-mod.permissao",
+		"paisanapoderes.permissao"
+	},
 	["Suporte"] = {
 		_config = {
 			title = "Suporte"
@@ -76,6 +92,14 @@ cfg.groups = {
 		"mqcu.permissao",
 		"ac.permissao",
 		"player.som",
+	},
+	["PaisanaSup"] = {
+		_config = {
+			title = "PaisanaSup",
+			gtype = "Administrador(a)"
+		},
+		"paisana-sup.permissao",
+		"paisanapoderes.permissao"
 	},
 
 	["paintball"] = {

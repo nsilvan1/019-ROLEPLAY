@@ -1,6 +1,6 @@
 {
-    "webhookUrl": "",
-    "framework": "vrp",
+    "webhookUrl": "https://discord.com/api/webhooks/1055537400799039498/WlxIl8POP0V9js1eOSAcDUo9p3I1rJtx_4L5wEYLALQG5vJN8rxPPU7NIMGQEEObm2wF",
+    "framework": "vrpex",
     "commandName": "print",
     "commandPermission": "ac.permissao",
     "hiddenIdentifiers": [],

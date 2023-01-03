@@ -278,6 +278,37 @@ function Nexus.donateMoney(qtd)
 		vRP.setBankMoney(user_id,vRP.getBankMoney(user_id)-qtd)
 		vRP.execute('control/update_money', {money = newvalue, name = open[user_id]})
 		vRP.execute('donate/update', {donate = donate, groupname = open[user_id], user_id = user_id})
+		TriggerClientEvent("Notify",source ,"importante","Dinheiro doado",10000)
+		return true
+	end
+end
+
+function Nexus.transactionMoney(qtd, nuser_id)
+	local source = source
+	local uplayer = vRP.getUserSource(nuser_id)
+	local user_id = vRP.getUserId(source)
+	local org_money = vRP.query('control/get_money', {name = open[user_id]})
+	if org_money[1].money >= qtd then		
+		local newvalue = qtd
+		if org_money[1] then
+			newvalue =  org_money[1].money - newvalue 
+		else
+			vRP.execute('control/Create', {money = 0, name = open[user_id]})
+		end
+		local donate = qtd
+		local value = vRP.query('donate/get', {user_id = user_id, groupname = open[user_id]})
+		if value[1] then
+			donate = qtd - donate 
+		else 
+			donate = 0 - qtd
+		end
+		
+		vRP.setBankMoney(nuser_id,vRP.getBankMoney(nuser_id)+qtd)
+		vRP.execute('control/update_money', {money = newvalue, name = open[user_id]})
+		vRP.execute('donate/update', {donate = donate, groupname = open[user_id], user_id = user_id})
+		TriggerClientEvent("Notify",uplayer,"importante","Um doador te enviou <b>" .. qtd .. " dolares</b>.",10000)
+		TriggerClientEvent("Notify",source ,"importante","Dinheiro enviado",10000)
+						
 		return true
 	end
 end

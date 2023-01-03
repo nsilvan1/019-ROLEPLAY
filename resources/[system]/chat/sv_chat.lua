@@ -8,8 +8,8 @@ vRPC = Tunnel.getInterface("vRP")
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- WEBHOOK
 -----------------------------------------------------------------------------------------------------------------------------------------
-local webhookchat = ""
-local webhookchatilegal = ""
+local webhookchat = "https://discord.com/api/webhooks/1058412691057807510/XKuAw6xEiFx_ZhHuK8H9dDdkwdJ2WgeK6aTZ9R1NNDqa5HgdqWFgevr3QqLr-10tV4UE"
+local webhookchatilegal = "https://discord.com/api/webhooks/1058412751061516288/RfwpnlYJbnFHDFCn68xmkMs_7ZJ47w3ilIxfsVrRs_az1Volh0rqjDWWKLftXvTo6csH"
 
 function SendWebhookMessage(webhook,message)
    if webhook ~= "none" then

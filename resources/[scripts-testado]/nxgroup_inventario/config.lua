@@ -1,21 +1,21 @@
 config = {}
 
-config.webhookrevistar = "https://discord.com/api/webhooks/1055569163915112548/vaJ8H2n7nA3EUWP5jo5geM0U4nbXpON-Qfls9YMSx11sJAq1xClLWuoBzlec2zgYI-xP"
-config.webhookroubar = "https://discord.com/api/webhooks/1055568478754590732/jHVDGuhdTodSsTxDXqQ_BNfvmdy_LGP1NOodUvT1hSYs-uzgf8DR3G_bamzUEHD5qwHs"
-config.webhookdropar = "https://discord.com/api/webhooks/1055538201428766792/5D7sSqUAugEtNOphNelVypWPoHgmOyzm32rvLTyA6PKe1Apy9VEy_mR5Wm0fLKxelifs"
-config.webhookenviar = "https://discord.com/api/webhooks/1055537883890589757/RbinvVmA6n1_Ox_onHigNxFzsNxFlhUKLO5KThkPxP0Yz43osUhuvd7_bNYLmYChHGNm"
-config.webhookequipar = "https://discord.com/api/webhooks/1055541597879672892/t_BSVljFn2aWH6gr-D4plIiNWF8e04GDeEH3D2WHZAZ5HMvinYV8i5RNUi98KCTEWGtT"
-config.webhookrecarregar = "https://discord.com/api/webhooks/1055568371971801128/s3F4QMMglSRcMXdh4CFpjzQuLSZgqFamTYpevj2dRBMWoDRtBP8i9wFHBtJzYtT8KhkS"
-config.webhookpegar = "https://discord.com/api/webhooks/1055568602805309530/ZJtPLCYjsPYt7mycBhwMfDnecfu1Nmdua-T1A02AfMDHkTWS1JsnmcczNIJBUaCOPSXm"
-config.webhookbaucarro = "https://discord.com/api/webhooks/1055568119038496778/7_fzFVE1OSz97kz5qYHyHOvfGjTLihoOOaM0itl9mhiQAk2mj0F6lNHdsWlJhn7BRyI6"
-config.webhookbau = "https://discord.com/api/webhooks/1055563571876085870/XOBJpwDuDZxdk3mavfQaIbIAzVfU8Az8ls6yyKJRYJ9Rtt9iUjHAN2RXjO0zHs7dVjBu"
-config.webhookbaucasas = "https://discord.com/api/webhooks/1055563354552418354/HMdDEKBsmlx0n7V7lAbAPfSLpIGuN6LczDrMehiS-p8ohSQwdLLCRv79pxTHwdyLJHdm"
-config.webhookGuardarArmas = "https://discord.com/api/webhooks/1055541668054573156/qngUM0Kwa1XlzU2301kIUmErArln3cYljkFOnGz8EfjTsnLVMbXY_SX-FzeKHzof1kvK"
-config.webhookSpawn = "https://discord.com/api/webhooks/1055569049599361135/3VYMMGB30Efc1dvDZ0STmRiC2RX_HHKHLsR1JH-Vsh924LHNuRzc_QeNFa_DND-s-9R5"
-config.webhookTryDup = "https://discord.com/api/webhooks/1055569163915112548/vaJ8H2n7nA3EUWP5jo5geM0U4nbXpON-Qfls9YMSx11sJAq1xClLWuoBzlec2zgYI-xP"
+config.webhookrevistar = "https://discord.com/api/webhooks/1058406657421475970/RQaPw-i12uJzB1CTDEX4-trbOzZ074YCazEr2M3eq4bBWjHDuESMF5waZqwpYj1coNZ1"
+config.webhookroubar = "https://discord.com/api/webhooks/1058406717395849316/y7qSH4j9c3bXnDhwlTXEujOjQULeSZ0CKyQUfRasdSfxB4sXSpsUOvft6CGH6a0RPQhQ"
+config.webhookdropar = "https://discord.com/api/webhooks/1058406770453782642/3SjmcxiWEAUQ-Ph5-9CN57I3B-9uYYsThqMba3ia3fAPNMYMGy5uTbKC187CYtXtEMZs"
+config.webhookenviar = "https://discord.com/api/webhooks/1058406840154718329/QMzlya1kveZlum0Sc6INIhZh3qByXxBjPtBDYs2QknetFaENrsz9hmg8Xx1nOA_u-LJC"
+config.webhookequipar = "https://discord.com/api/webhooks/1058406911139131432/GP4FJfBA52zJGWCzVhFSKFbSGpJ7fQ8CbbfvJ-_4vTDbibzd006fXLgJth2QvExYo7uL"
+config.webhookrecarregar = "https://discord.com/api/webhooks/1058406997743120456/qBXgCNpBkIC9Ihgy-lDQ8RPcINpV_nORV5z872H4jc36g0LU1pCheskMfURiPvEMJL9_"
+config.webhookpegar = "https://discord.com/api/webhooks/1058407124100718642/FA73DoZYm2z6jJ96pQTIr_ESP-gD_Mhq848Q5hm_-aVi0N3vLfYDN8SWZYLeRNb1_6YU"
+config.webhookbaucarro = "https://discord.com/api/webhooks/1058407181239734332/bBImpzeVMF5GDujyEKM_U-H30CPrJ0IGkSIY6PpNTcm6NCqbj20xSo7Sis1ipR_RTH2j"
+config.webhookbau = "https://discord.com/api/webhooks/1058407252081528883/TkT7s4pLRF_H5ZlnaBJ4cw9L1mu5YHsquua5j8Tm2sl6b9LZOvcdrJFAA9XZZl_CnUWv"
+config.webhookbaucasas = "https://discord.com/api/webhooks/1058407324462616668/rMkobtlDbUg2nM_pw6-_q64MRvc3uKhXfJBVEE8q10edU-ixKMXMzoNs5rIq84xzDhus"
+config.webhookGuardarArmas = "https://discord.com/api/webhooks/1058407374844592220/NLR5ClNB3JvfrqSS4asIeWA7Z1mC6sLsSWi9AQBpVdy7Wm-I_-W8mA1zT3NUivcnM2rO"
+config.webhookSpawn = "https://discord.com/api/webhooks/1058407433753600130/tQPLz4WBhzL_J1OnVN-XopBAdynD0PBCuQXocTEDFOtmCQAn8mv0UCrhYnKYJOt6jR67"
+config.webhookTryDup = "https://discord.com/api/webhooks/1058407486853496862/VLqu1zwoxCw4xQi0_7X4BlFo_2RqezjOTDcjJVX0TDjRoYsf7gXFoh3Fpv8eBmtIWpOa"
 
 --OPICIONAL DEPENDENDO DO ITEMS.LUA
-config.webhookLockpick = "https://discord.com/api/webhooks/1055569573291757629/SJuR_jvOhu4n2ttgaLtw4jlIVM6q5kYDlmTyQcfJGQbtXUdvCh6E4BSdXqXIcboljU_b"
+config.webhookLockpick = "https://discord.com/api/webhooks/1058407547108868137/D77ucFFeJe3d4lNVbGbsCjX12Mz4nJWIN5bLCarxFzcQgiFb_o1KWYUqi4v-1TJR2KQG"
 
 config.drawMarker = function(x,y,z)
 	DrawMarker(27,x,y,z-0.97,0,0,0,0,0,0,1.0,1.0,0.5,201, 0, 0,155,0,0,0,1)
@@ -67,10 +67,7 @@ config.chest = {
 
 	["Triade"] = { "Triade", 575.42,-3121.91,18.77,3000,"triade.permissao","https://discord.com/api/webhooks/1053496692030308402/kdvVzFGLCOmKaAIOUvE1bPJDV0iPc24uGyDHVp4se7gKNomBkzr0MRgKa186GowbeBpc" },
 
-	
 
-
-	
 	
 }
 

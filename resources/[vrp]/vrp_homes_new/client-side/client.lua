@@ -47,6 +47,7 @@ function cO.entranceHomes(homeName,interior,theft,homeNumber,visitation)
 				StartPlayerTeleport(PlayerId(),myHouse["interior"].x,myHouse["interior"].y,myHouse["interior"].z,0.0,0,1,0)
 				-- startVisit()
 			else
+				print(myHouse["interior"].x .. myHouse["interior"].y .. myHouse["interior"].z);
 				StartPlayerTeleport(PlayerId(),myHouse["interior"].x,myHouse["interior"].y,myHouse["interior"].z,0.0,0,1,0)
 				table.insert(internLocates,{ myHouse["interior"],"exit","SAIR" })
 				if not theft then 

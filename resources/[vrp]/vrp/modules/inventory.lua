@@ -6,7 +6,7 @@ local arena = Tunnel.getInterface("nxgroup_arena")
 
 local cfg = module("cfg/car")
 
-local webhookrevi = "https://discord.com/api/webhooks/1055813949410529420/IwK_MB_MSyeHAUdKofBniilmKywWwjkOeIX6Utff7WiyoqaYymmW2I9NZL0kngTUCUGP"
+local webhookrevi = "https://discord.com/api/webhooks/1058419279592173680/HaVL_RAZ4YWseMaffNNUzQn0QkI6t02Ec76qvCdm1P5VaDOBLbkz4UKiocZcdGwWo7Sv"
 
 function SendWebhookMessage(webhook,message)
 	if webhook ~= nil and webhook ~= "" then

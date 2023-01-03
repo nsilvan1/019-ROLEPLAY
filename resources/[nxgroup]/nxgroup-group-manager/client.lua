@@ -107,6 +107,12 @@ RegisterNUICallback("donate-money", function(data,cb)
     cb({success = success or false})
 end)
 
+RegisterNUICallback("transaction-money", function(data,cb)
+    local success = GMServer.transactionMoney(data.value, data.user_id)
+    cb({success = success or false})
+end)
+
+
 RegisterNUICallback('promote', function(data,cb)
     local success, gName = GMServer.promote(data.user_id)
     cb { success = success or false, gName = gName }

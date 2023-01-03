@@ -14,7 +14,7 @@ local bandagem = {}
 local actived = {}
 local pick = {}
 
-local webhooklockpick = "https://discord.com/api/webhooks/1055569573291757629/SJuR_jvOhu4n2ttgaLtw4jlIVM6q5kYDlmTyQcfJGQbtXUdvCh6E4BSdXqXIcboljU_b"
+local webhooklockpick = "https://discord.com/api/webhooks/1058407547108868137/D77ucFFeJe3d4lNVbGbsCjX12Mz4nJWIN5bLCarxFzcQgiFb_o1KWYUqi4v-1TJR2KQG"
 
 --[ BANDAGEM ]---------------------------------------------------------------------------------------------------------------------------
 Citizen.CreateThread(function()

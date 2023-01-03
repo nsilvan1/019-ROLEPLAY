@@ -83,6 +83,16 @@ function vRP.generatePhoneNumber(cbr)
 	return phone
 end
 
+
+function vRP.atualizaPlayer(user_id)
+	if user_id then    
+        local rows = vRP.query("vRP/get_user_identity",{ user_id = user_id })
+        cache['getUserIdentity'][user_id] = rows[1]
+    end
+
+	return true
+end
+
 AddEventHandler("vRP:playerJoin",function(user_id,source,name)
 	if not vRP.getUserIdentity(user_id) then
 		local registration = vRP.generateRegistrationNumber()

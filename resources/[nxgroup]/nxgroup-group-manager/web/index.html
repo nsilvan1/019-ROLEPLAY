@@ -60,7 +60,7 @@
                                 @keypress.enter="addPlayer">
                             </div>
                         </div>
-                        <!-- <div class="info">
+                        <div class="info">
                             <div class="imageArea">
                                 <img src="./assets/donate.png">
                             </div>
@@ -69,14 +69,27 @@
                                 <input type="text" placeholder="INSIRA O VALOR" v-model="donationValue"
                                     @keypress.enter="donateMoney">
                             </div>
-                        </div> -->
+                        </div>
+                        <div class="info">
+                            <div class="imageArea">
+                                <img src="./assets/donate.png">
+                            </div>
+                            <div class="infoData">
+                                <span>Transfirir Dinheiro</span>
+                                <input type="text" placeholder="INSIRA O VALOR" v-model="moneyValue"
+                                    @keypress.enter="transactionMoney">
+                                <input type="text" placeholder="INSIRA O PASSAPORTE" v-model="transactionValue"
+                                    @keypress.enter="moneyTransaction">
+                                <span v-if="moneyCorrect">Saldo insuficiente </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="tableData">
                         <div class="data-index-container">
                             <p>ID</p>
                             <p>CARGO</p>
                             <p>NOME</p>
-                            <p>DOAÇÕES</p>
+                            <!-- <p>DOAÇÕES</p> -->
                             <p>STATUS</p>
                         </div>
                          <div class="data-table" v-for="member in playerList"
@@ -85,7 +98,7 @@
                             <p>{{member.user_id}}</p>
                             <p>{{member.org_group}}</p>
                             <p>{{member.name}}</p>
-                            <p>${{member.donated_money}}</p>
+                            <!-- <p>${{member.donated_money}}</p> -->
                             <div class="status-ball"
                                 :style='{background: parseInt(member.status) === 0 ? "#429F2D" : "#464646"}'></div>
                         </div>

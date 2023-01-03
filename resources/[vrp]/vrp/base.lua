@@ -19,15 +19,15 @@ vRP.user_sources = {}
 -- WEBHOOK
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-local webhookentrada = "https://discord.com/api/webhooks/1055814312192643072/feKHWncHUH1F4UzBv_dZtX25drQmG8vFt7sFER4yuY0rj2Db4naJ0yQHMdBM4E8E0bzC"
-local webhookentradaIP = "https://discord.com/api/webhooks/1055814437619114024/-fC_RkIZGPBsPaognYn-N0U3sk1hZHpYmjuf5F_03oYFXX6CwL730M-GKuRzZpeicgF4"
-local webhooksaida = "https://discord.com/api/webhooks/1055814624714440704/NEdX7PPVLquIIce_4HnwVL5OL0r5MZQzujbnUgmHIp-IyYlyHMgHKhiedRVz55CmWGKu"
-local webhooksaidaIP = "https://discord.com/api/webhooks/1055814740724686928/gBQrLdnQkavM3cFh1Yuhjcfrr5RRzF4nKZHUBoVwhki12ECr9hfG5yvD-HOKvmZgwMzT"
-local webhookjoinmoney = "https://discord.com/api/webhooks/1055815035995291720/-028CCdUiFw9GQ13uipjq5XBr-WWIa2sIq5AAMc_Otm7_---mMzGGaRqT7TaklgWzKb7"
-local webhooksaidamoney = "https://discord.com/api/webhooks/1055815240803164232/7kA_WPBkisfaX5egu2-u4zGKxXDNoy9fJBa9Zm-hzJ8MImY_pjGVDvIS-JO9m58zjyDO"
+local webhookentrada = "https://discord.com/api/webhooks/1058417877553791067/smk-iHaGKVmorjYOUfLrG49iq4IQXrZUcGMt6I84lzgyEj7BEceuUyjI5nA-nRZ-Ojp5"
+local webhookentradaIP = ""
+local webhooksaida = "https://discord.com/api/webhooks/1058418322934337556/LE5_ryipa3wS7QQYhylvE3slqQQ4A3YQZRA0MEKZdUt-oBKPispsmSTRNhnM2KmNbklW"
+local webhooksaidaIP = "https://discord.com/api/webhooks/1058418322934337556/LE5_ryipa3wS7QQYhylvE3slqQQ4A3YQZRA0MEKZdUt-oBKPispsmSTRNhnM2KmNbklW"
+local webhookjoinmoney = ""
+local webhooksaidamoney = "v"
 
-local webhookquitarma = "https://discord.com/api/webhooks/1055815302966952037/Eq94GkPdD7YQHNYIHyVmCCOOiEySdlXfaEnmPWTTsvD8I7H_o8AnqQ4hnReqU1JJ9nSG"
-local webhookQuitVida = "https://discord.com/api/webhooks/1055815343802695701/QLTpWpHxkRsWSWcDhTV33EOycy6EF8Y-omuqTlijXHfkdKLmkQqWrWpPNalLZL9Z5CLt"
+local webhookquitarma = "https://discord.com/api/webhooks/1058418322934337556/LE5_ryipa3wS7QQYhylvE3slqQQ4A3YQZRA0MEKZdUt-oBKPispsmSTRNhnM2KmNbklW"
+local webhookQuitVida = "https://discord.com/api/webhooks/1058418322934337556/LE5_ryipa3wS7QQYhylvE3slqQQ4A3YQZRA0MEKZdUt-oBKPispsmSTRNhnM2KmNbklW"
 
 function SendWebhookMessage(webhook,message)
 	if webhook ~= nil and webhook ~= "" then
@@ -503,7 +503,7 @@ AddEventHandler("queue:playerConnecting",function(source,ids,name,setKickReason,
 						tmpdata.spawns = 0
 
 						TriggerEvent("vRP:playerJoin",user_id,source,name)
-						SendWebhookMessage(webhookjoins,"```prolog\n[ID]: "..user_id.." \n[IP]: "..GetPlayerEndpoint(source).." \n[ENTROU NO SERVIDOR]: "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+						SendWebhookMessage(webhookentrada,"```prolog\n[ID]: "..user_id.." \n[IP]: "..GetPlayerEndpoint(source).." \n[ENTROU NO SERVIDOR]: "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 						deferrals.done()
 					else
 						local tmpdata = vRP.getUserTmpTable(user_id)

@@ -1158,7 +1158,7 @@ end)
 ---------------------------------------------------------------------------------
 RegisterCommand('status',function(source,args,rawCommand)
     local user_id = vRP.getUserId(source)
-    if vRP.hasPermission(user_id,"ac.permissao") then
+    if vRP.hasPermission(user_id,"ceo.permissao") then
         local onlinePlayers = GetNumPlayerIndices()
         local policia = vRP.getUsersByPermission("policia.permissao")
         local paramedico = vRP.getUsersByPermission("paramedico.permissao")
@@ -1177,7 +1177,7 @@ RegisterCommand('status',function(source,args,rawCommand)
         local bahamas = vRP.getUsersByPermission("bahamas.permissao")
         local tequilala = vRP.getUsersByPermission("tequilala.permissao")
         local vanilla = vRP.getUsersByPermission("vanilla.permissao")
-        local hellangels = vRP.getUsersByPermission("hells.permissao")
+        local hells = vRP.getUsersByPermission("hells.permissao")
         local motoclub = vRP.getUsersByPermission("motoclub.permissao")
         
         local user_id = vRP.getUserId(source)        
@@ -1511,7 +1511,7 @@ local tempbanOptions = {
 local webhooktempban = 'https://discord.com/api/webhooks/1055571630774042684/jvFv9myLKO3grCepIljMzAftg0gJfdspXLraJOjcLpNDGJikhnbeCM1-wddT4K7UADPP'
 RegisterCommand('tempban',function(source,args)
 	local userId = vRP.getUserId(source)
-	if vRP.hasPermission(userId,'ajudante.permissao') then
+	if vRP.hasPermission(userId,'admin.permissao') then
 		local identity = vRP.getUserIdentity(userId)
 		local optionToBan = vRP.prompt(source,'Qual opção de tempbanimento você deseja? 1, 2 ou 3? Digite abaixo:','')
 		local otherId = parseInt(args[1])

@@ -18,8 +18,8 @@ Config.webhook = "https://discord.com/api/webhooks/1053085359975698552/s3zqQc9FO
 -----------------------------------------------------------------------------------------------------------------------------------------
 Config.permissaoadmin = "ceo.permissao" --Nome da permissão admin para usar o comando de teste
 Config.carroinicial = false --Habilita doação de carro para iniciantes (Para desligar, colocar false)
-Config.carrosiniciais = {"kuruma","akuma",} --(Quantidade ilimitada)
-Config.nomedovip = "VipOuro" --Nome do group do seu plano VIP
+Config.carrosiniciais = {"","",} --(Quantidade ilimitada)
+Config.nomedovip = "" --Nome do group do seu plano VIP
 Config.permissaodovip = "ouro.permissao" --Nome da permissão do seu plano VIP
 Config.tempodovip = 10 --Colocar números inteiros em dias
 Config.removervip = true --Utilizar nosso sistema para remover o VIP inicial após expirar. Útil para frameworks que não possuem nativamente essa função

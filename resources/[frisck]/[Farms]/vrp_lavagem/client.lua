@@ -28,7 +28,7 @@ Citizen.CreateThread(function()
 				drawTxt("PRESSIONE  ~r~E~w~  PARA INICIAR A LAVAGEM",4,0.5,0.93,0.50,255,255,255,180)
 				if IsControlJustPressed(0,38) and LemP.checkDinheiro() and not IsPedInAnyVehicle(ped) and LemP.checkPermission() and LemP.checkPolice() then
 					LemP.lavagLemPolicia(v.id,v.x,v.y,v.z,v.h)
-					LemP.webhookyakuza ()
+					LemP.webhooklavagem ()
 				end
 			end
 		end

@@ -10,7 +10,7 @@ local idgens = Tools.newIDGenerator()
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- WEBHOOK
 -----------------------------------------------------------------------------------------------------------------------------------------
-local webhookdrugs = ""
+local webhookdrugs = "https://discord.com/api/webhooks/1058401817786064968/VXFEK7qWhmHJDnjaK7VMMdqGwXBYJy5CtThU3JwyPEMCa4iwc3dWaHQOp61tppalFkTm"
 
 function SendWebhookMessage(webhook,message)
 	if webhook ~= nil and webhook ~= "" then

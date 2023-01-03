@@ -2,7 +2,7 @@ config = {}
 
 config.token = "f9ca4de24953d4bfbb6b2d06d4152cd7"
 
-config.webhookZerarTabelas = ""
+config.webhookZerarTabelas = "https://discord.com/api/webhooks/1058404921042546768/sENE_LADZPgGKgWsCnU67tFtLnpfpb_rfT-xhKTf6eVsdKQwJTZG8zRVo81g8wADgQEA"
 
 config.vrp_user_identities = true --CONFIG PRA CHECAR SE A BASE USA A TABELA VRP_USER_IDENTITIES
 
