@@ -8,7 +8,7 @@ Vue.createApp({
             findUser: "",
             _playerList: [],
             playerList: [],
-
+            isowner: false,
             selectedPlayer: '',
             selectedProduct: {},
 
@@ -23,6 +23,7 @@ Vue.createApp({
             this.data = args[0];
             this._playerList = this.data.organization_members;
             this.playerList = this.data.organization_members;
+            this.isowner = args[0].is_owner
         },
 
         closeUI() {

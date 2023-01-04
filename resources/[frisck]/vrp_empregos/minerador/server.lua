@@ -21,22 +21,22 @@ function Min.checkWeight()
     if user_id then
         porcentagem = math.random(100)
         if porcentagem <= 30 then
-            itemname = "mferro"
+            itemname = "ferro"
+        elseif porcentagem >= 31 and porcentagem <= 50 then
+            itemname = "safira"    
         elseif porcentagem >= 51 and porcentagem <= 60 then
-            itemname = "mbronze"
+            itemname = "bronze"
         elseif porcentagem >= 71 and porcentagem <= 80 then
             itemname = "mouro"
+        elseif porcentagem >= 81 and porcentagem <= 90 then
+            itemname = "rubi"
+        elseif porcentagem >= 91 and porcentagem <= 94 then
+            itemname = "topazio"
         elseif porcentagem >= 95 then
             itemname = "diamante"
-            quantidade[source] = 1
-        elseif porcentagem >= 90 then
-            itemname = "mesmeralda"
-            quantidade[source] = 1
-        elseif porcentagem >= 90 then
-            itemname = "mrubi"
-            quantidade[source] = 1
         end
-        if itemname == nil then itemname = "mbronze"; end
+        quantidade[source] = 1
+        if itemname == nil then itemname = "bronze"; end
         if source == nil then
             source = 1
         elseif source == 0 then

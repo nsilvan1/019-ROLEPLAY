@@ -33,7 +33,7 @@
                                 <h1>{{data.organization_members.length}}/{{data.maxMembers}}</h1>
                             </div>
                         </div>
-                        <div class="info">
+                        <div class="info" v-if="isowner" >
                             <div class="imageArea">
                                 <img src="./assets/money.png">
                             </div>
@@ -42,7 +42,7 @@
                                 <h1>${{data.money}}</h1>
                             </div>
                         </div>
-                        <div class="info">
+                        <div class="info" v-if="isowner">
                             <div class="imageArea">
                                 <img src="./assets/invite.png">
                             </div>
@@ -70,7 +70,7 @@
                                     @keypress.enter="donateMoney">
                             </div>
                         </div>
-                        <div class="info">
+                        <div class="info" v-if="isowner">
                             <div class="imageArea">
                                 <img src="./assets/donate.png">
                             </div>
@@ -89,7 +89,7 @@
                             <p>ID</p>
                             <p>CARGO</p>
                             <p>NOME</p>
-                            <!-- <p>DOAÇÕES</p> -->
+                            <p v-if="false" >Saldo Fac</p>
                             <p>STATUS</p>
                         </div>
                          <div class="data-table" v-for="member in playerList"
@@ -98,13 +98,13 @@
                             <p>{{member.user_id}}</p>
                             <p>{{member.org_group}}</p>
                             <p>{{member.name}}</p>
-                            <!-- <p>${{member.donated_money}}</p> -->
+                            <p v-if="false">${{member.donated_money}}</p>
                             <div class="status-ball"
                                 :style='{background: parseInt(member.status) === 0 ? "#429F2D" : "#464646"}'></div>
                         </div>
                     </div>
                 </div>
-                <div class="buttons">
+                <div class="buttons" v-if="isowner">
                     <button @click="makeAction('demitido')">EXPULSAR</button>
                     <button @click="makeAction('unpromote')">REBAIXAR</button>
                     <button @click="makeAction('promote')">PROMOVER</button>

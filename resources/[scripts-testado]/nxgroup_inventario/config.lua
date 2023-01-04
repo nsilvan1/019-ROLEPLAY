@@ -121,7 +121,7 @@ config.shopList = {
 		{ 568.09,-3126.8,18.77,"ammoCraft" },   --AZTECAS (DOCAS)
 		{ -2678.49,1330.4,140.89,"ammoCraft" }, --COSANOSTRA (MONTANHAS)
 	
-		{ -621.45,-231.87,38.06,"joalheriaStore" },
+		{ -621.45,-231.87,38.06,"joalheriaStore2" },
 		{ -1371.69,-626.51,30.82,"bebidasStore" },
 		{ 2885.11,4387.0,50.74,"departamentStoreGrao" }, -- venda de grão 
 		{ 1551.22,3798.98,34.41,"departamentStorePesca" }, -- venda de peixe 
@@ -195,19 +195,15 @@ config.itemShops = {
 		["joalheriaStore2"] = {
 			["perm"] = nil,
 			["cash"] = "limpo",
+			["method"]= "Sell",
 			["list"] = {
-				["ouro2"] = 400,
-				["ferro2"] = 300,
-				["bronze2"] = 350,
-				["topazio2"] = 300,
-				["ruby2"] = 300,
-				["safira2"] = 300,
 				["ouro"] = 300,
 				["ferro"] = 300,
 				["bronze"] = 300,
 				["topazio"] = 300,
-				["ruby"] = 300,
+				["rubi"] = 300,
 				["safira"] = 300,
+				["diamante"] = 3000,
 			}
 		},
 		["ammunationStore"] = {

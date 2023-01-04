@@ -172,7 +172,7 @@ config.organizations = {
 
 
     ---- começa entrou aqui 
-    ['vanilla'] = {
+    ['Vanilla'] = {
         ownerGroup = 'lider-Vanilla',
         groups = {
             'lider-Vanilla',

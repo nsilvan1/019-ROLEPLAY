@@ -1180,8 +1180,8 @@ RegisterCommand("vip",function(source,args,rawCommand)
             TriggerClientEvent('Notify',source,'aviso','Você não pode resgatar um vip já tendo um VIP.')
             return
         end
-        local string = 'vrp.removeGroup("'..user_id..'","Ouro233223")'
-        vRP.addUserGroup(user_id,"Ouro233223")
+        local string = 'vrp.removeGroup("'..user_id..'",VipOuro")'
+        vRP.addUserGroup(user_id,"VipOuro")
         vRP.execute("EG/addVipStarter", {string = string})
         vRP.execute("EG/updateVipStarter", {user_id = user_id})
         TriggerClientEvent('Notify',source,'sucesso','VIP Teste de 3 Dias ATIVADO com sucesso, digite <b>/beneficios</b> para ver os beneficios.')
