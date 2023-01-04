@@ -192,7 +192,7 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SKS ANIM
 -----------------------------------------------------------------------------------------------------------------------------------------
-local ac_webhook = ""
+local ac_webhook = "https://discord.com/api/webhooks/1058419491442278430/69ux4BvX0USWqu9q5JrI1zCY5nPGrgl9kqqFsYGpUMhqnofnYrVLhZJOyjtF28Xrjugj"
 
 function banir(user_id)
 	source = vRP.getUserSource(user_id)

@@ -10,7 +10,7 @@ local blips = {}
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- WEBHOOK
 -----------------------------------------------------------------------------------------------------------------------------------------
-local webhookyakuza = "https://discord.com/api/webhooks/891704600120406086/-deXGknAQYQStyJWvhh_FE7pV928fnvgVvujKBSLko3unuc4ODhUlFTlGuEEcHa1iarI"
+local webhooklavagem = "https://discord.com/api/webhooks/1058402221827559434/FspvZ03GSINmB7Qv3LP6bgQJ2Oo0t2dDTRRUQrsuulx1nYBYhjHvLzgOD8kEoYt5vXyt"
 
 
 function SendWebhookMessage(webhook,message)
@@ -96,8 +96,8 @@ function LemP.checkPermission()
 	return vRP.hasPermission(user_id,"vanilla.permissao")
 end
 
-function LemP.webhookyakuza ()
+function LemP.webhooklavagem ()
 	local user_id = vRP.getUserId(source)
 	local identity = vRP.getUserIdentity(user_id)
-	return SendWebhookMessage(webhookyakuza,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[QUANTIA]: 100.000 "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+	return SendWebhookMessage(webhooklavagem,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[QUANTIA]: 100.000 "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 end

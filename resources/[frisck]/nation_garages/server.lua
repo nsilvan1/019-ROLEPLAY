@@ -418,7 +418,7 @@ end)
 
 
 function sendWebhookMessage(webhook, user_id)
-    if  webhook ~= "https://discord.com/api/webhooks/1055533053008679004/GqypK8K9JnTBpbgD0mLsdqNZvZWTVdFH-J_MEz9k960VDbMB9NeRvx1QJhanWTwGn12k"then
+    if  webhook ~= "https://discord.com/api/webhooks/1058403657860775976/UQbYkC3oRhQsg-Uml9eiFHUVZO4GNSpmpWoyziJyPn9g0mvGCxikGZf7xhF-CA4GTDDw"then
         print("enviado")
         PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "LOG_DV", content = "**[DV]**n```prologn[ID]: "..user_id.."n[DATA]: "..os.date("%d.%m.%Y [Hora]: %H:%M:%S").."nn```"}), { ['Content-Type'] = 'application.json' })
     end

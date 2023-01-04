@@ -1,18 +1,25 @@
-fx_version "bodacious"
-game "gta5"
+shared_script "@ThnAC/natives.lua"
+ 
+
+fx_version 'adamant'
+game 'gta5'
 
 ui_page "web-side/index.html"
 
 client_scripts {
-	"@vrp/lib/utils.lua",
-	"client-side/*.lua",
-	"config-side/*.lua",
+	'@vrp/lib/utils.lua',
+	"@nxgroup_inventario/config.lua",
+	'config/config.lua',
+	'client/*.lua'
 }
 
 server_scripts {
-	"@vrp/lib/utils.lua",	
-	"config-side/*.lua",
-	'@vrp/modules/log.lua',
-	"server-side/server.lua",
-	"server-side/robbery.lua",
+	'@vrp/lib/utils.lua',
+	"@nxgroup_inventario/config.lua",
+	'config/config.lua',
+	'server/*.lua'
+}
+
+files {
+	"web-side/*"
 }              

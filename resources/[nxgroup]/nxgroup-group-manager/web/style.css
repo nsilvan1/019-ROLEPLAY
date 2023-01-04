@@ -48,7 +48,7 @@
 }
 
 .data {
-    height: 21.28125vw;
+    height: 30.28125vw;
     display: flex;
     gap: 1vw;
 }
@@ -64,7 +64,7 @@
 }
 
 .tableData {
-    width: 35.739583333333336vw;
+    width: 50.739583333333336vw;
     background: #080808;
     border-radius: 0.7vw;
     padding: .7vw;
@@ -167,7 +167,7 @@ button {
 }
 
 .imageArea {
-    height: 70%;
+    height: 80%;
     width: 5.5vw;
     display: flex;
     align-items: center;

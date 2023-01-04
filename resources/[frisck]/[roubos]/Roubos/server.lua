@@ -10,12 +10,12 @@ vCLIENT = Tunnel.getInterface("CruzRoubos")
 
 -- [CONFIG WEBHOOCK] --
 
-local lojadepartamento = "https://discord.com/api/webhooks/1055530300878372986/JZ5W6ne6recOOqtW58o7hrKC0uvJaCFQN2HzcfKRZrue700XNiKgoISvZmA0hWl9TQzI"
-local registradora = "https://discord.com/api/webhooks/1055530245417074758/0fOLPumyUFonmGdc-TF1rwQi9eBRu8EaOpZGHziNKpPzt4yzylifJDAdM-zE-TJPWcT4"
-local caixa = "https://discord.com/api/webhooks/1055530175724535848/fBVjth0gKiEoPjiLo7ChPkdPkv0USvLtVk2ANxkZhv3IqgPq8bBZqNkH6FDTADFJybiA"
-local bancopalleto = "https://discord.com/api/webhooks/1055530506852257802/zJW_CbVdc0Jfy-wTL4a0dAMJrjSHlRxKeNjDdbJZ2A_gux9LDQsGzyzx4T9obuywOG3W"
-local banco = "https://discord.com/api/webhooks/1055530506852257802/zJW_CbVdc0Jfy-wTL4a0dAMJrjSHlRxKeNjDdbJZ2A_gux9LDQsGzyzx4T9obuywOG3W"
-local AmmuNation = "https://discord.com/api/webhooks/1055530119432781984/CziWEkBXoX18pu597lqDv5nhi0qRUpFoJEkL1KWs_xZC1YkY7dYXYrVFOUEdmOZbfMzN"
+local lojadepartamento = "https://discord.com/api/webhooks/1058402958838083614/QXusg2oLtPll5-a_0j3Ba1o5mT9HsditRMWbj5KNK6QtZQo69w9JBWgZDdGfeOZ19nqC"
+local registradora = "https://discord.com/api/webhooks/1058403018959224842/xDId4xVuA1FFi2FFqNJOp2eFkt23v-xuE6HRZSiel0BUYuqPqQD1HKng-0aPTMBw27j2"
+local caixa = "https://discord.com/api/webhooks/1058403080619687988/s4TMFc3hwsL32mAEdrDFsmIysDTL_uDOAjCaeo14PwVHoxV01QjQD5nsDthCgnspgZ62"
+local bancopalleto = "https://discord.com/api/webhooks/1058403142905122967/IOgPYjeQba16ueoxWp3qg-Rjj3Kz9toVKyYTlcJvqEdbQcxxJVShkdAupKWvJQq9Kp5m"
+local banco = "https://discord.com/api/webhooks/1058403268142845952/iaQUQknRfrkpGSDCEXP_28RkYwVS8JA4Wnb9K1aFnZfXaGV8yuFgmMNgnQekWsjkogv1"
+local AmmuNation = "https://discord.com/api/webhooks/1058403360635625612/Nc4_HKSmWAkNMQwebjBbhMaFWbfl7oyyoUeAybBCwMJIpCZ6VPwabMB97IN4kngADm4Z"
 
 
 function SendWebhookMessage(webhook,message)

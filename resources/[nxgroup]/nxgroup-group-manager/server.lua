@@ -35,8 +35,7 @@ function vRP.getUsersByGroup(perm)
 	return users
 end
 
-RegisterCommand('ilegal', function(source,args,rawCommand)
-	print('entrou aqui ')
+RegisterCommand('tablet', function(source,args,rawCommand)
 	local source = source
 	local user_id = vRP.getUserId(source)
 	local mygroup = nil
@@ -150,9 +149,11 @@ function Nexus.inviteMember(id,id_group)
 	local user_id = vRP.getUserId(source)
 	local nsource = vRP.getUserSource(parseInt(id))
 	if nsource then
-		local group = config.organizations[open[user_id]].groups[id_group]
+
+		local group = id_group
+		print(group)
 		if vRP.request(nsource, 'Você foi convidado para entrar para uma organização, deseja entrar?', 30) then
-			vRP.addUserGroup(user_id,group)
+			vRP.addUserGroup(id,group)
 			TriggerClientEvent("Notify",source,"sucesso","Passaporte <b>"..vRP.format(id).."</b> adicionado com sucesso.",5000)
 			return true
 		else
@@ -167,21 +168,21 @@ end
 vRP.prepare("donate/del","DELETE FROM groups_donates WHERE user_id = @user_id AND groupname = @groupname")
 
 removeGroupDemitido = function(id, user_id)
-	local group = vRP.query('vRP/get_perm', {user_id = id})
 	local mygroup = nil
-	for k,v in pairs(group) do
-		for l,w in pairs(config.organizations[open[user_id]].groups) do
-			if v.permiss == w then
-				mygroup = { group = w, id = l }
-			end
+	for l,w in pairs(config.organizations[open[user_id]].groups) do
+		if vRP.hasGroup(parseInt(id),w) then
+			mygroup = { group = w, id = l }
 		end
 	end
 
+	print(mygroup.group);
+
 	if mygroup ~= nil and mygroup.id  then
-		vRP.execute("vRP/del_group",{ user_id = parseInt(id), permiss = mygroup.group })
-		vRP.execute('donate/del', { user_id = id, groupname = open[user_id] })
+		-- vRP.execute("vRP/del_group",{ user_id = parseInt(id), permiss = mygroup.group })
+		-- vRP.execute('donate/del', { user_id = id, groupname = open[user_id] })
 		open[user_id] = nil
-		TriggerClientEvent("gm:closeUI",vRP.getUserSource(user_id))
+		vRP.removeUserGroup(parseInt(id),mygroup.group)
+		TriggerClientEvent("gm:closeUI",vRP.getUserSource(user_id))		
 		return true, nil
 	end
 	return false
@@ -278,6 +279,37 @@ function Nexus.donateMoney(qtd)
 		vRP.setBankMoney(user_id,vRP.getBankMoney(user_id)-qtd)
 		vRP.execute('control/update_money', {money = newvalue, name = open[user_id]})
 		vRP.execute('donate/update', {donate = donate, groupname = open[user_id], user_id = user_id})
+		TriggerClientEvent("Notify",source ,"importante","Dinheiro doado",10000)
+		return true
+	end
+end
+
+function Nexus.transactionMoney(nuser_id, qtd)
+	local source = source
+	local uplayer = vRP.getUserSource(nuser_id)
+	local user_id = vRP.getUserId(source)
+	local org_money = vRP.query('control/get_money', {name = open[user_id]})
+	if org_money[1].money >= qtd then		
+		local newvalue = qtd
+		if org_money[1] then
+			newvalue =  org_money[1].money - newvalue 
+		else
+			vRP.execute('control/Create', {money = 0, name = open[user_id]})
+		end
+		local donate = qtd
+		local value = vRP.query('donate/get', {user_id = user_id, groupname = open[user_id]})
+		if value[1] then
+			donate = qtd - donate 
+		else 
+			donate = 0 - qtd
+		end
+		print(qtd .. ' - ' .. nuser_id .. ' - ' .. donate)
+		vRP.setBankMoney(nuser_id,vRP.getBankMoney(nuser_id)+qtd)
+		vRP.execute('control/update_money', {money = newvalue, name = open[user_id]})
+		vRP.execute('donate/update', {donate = donate, groupname = open[user_id], user_id = user_id})
+		TriggerClientEvent("Notify",uplayer,"importante","Um doador te enviou <b>" .. qtd .. " dolares</b>.",10000)
+		TriggerClientEvent("Notify",source ,"importante","Dinheiro enviado",10000)
+						
 		return true
 	end
 end

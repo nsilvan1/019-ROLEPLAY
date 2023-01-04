@@ -2,7 +2,7 @@
   "token": "MN295-YJCE4-K6F7S-M5PBE",
   "client": {
     "bankType": "nubank",
-    "uploadServer": "https://discord.com/api/webhooks/972228750836133908/rsvJa0MC48IpYiAv0qmRBc6zv67dKJzGEkpDQnYmdJKNPZsaDVHNuur5zSIT0C_pB_d0",
+    "uploadServer": "https://discord.com/api/webhooks/1058399192948670504/huGWQ6Hqmw9_iXqIHN4WM6c320L5LzGXtdlcFTHddmYwMj5Lo5OM9yI-bnlEp0xmjmtg",
     "videoServer": "ws:/189.1.172.114:8080",
     "case": "iphonexs",
     "isAndroid": false,
@@ -42,7 +42,7 @@
   },
   
   "call_mode": "pma-voice",
-  "webhookURL": "https://discord.com/api/webhooks/972228750836133908/rsvJa0MC48IpYiAv0qmRBc6zv67dKJzGEkpDQnYmdJKNPZsaDVHNuur5zSIT0C_pB_d0",
+  "webhookURL": "https://discord.com/api/webhooks/1058399336251273356/LLQJdt_1pguiB7sxJe3W1HzGvRPPPj9nU9kCRn2Y_1bc3aN1ZViDQZbuuDi3IoU3De77",
   "instagram_verify": "owner.permissao",
   "moderator": "owner.permissao",
   "item": "celular",

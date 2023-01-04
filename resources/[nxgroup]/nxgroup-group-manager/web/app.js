@@ -1,13 +1,14 @@
 Vue.createApp({
-    data(){
+    data() {
         return {
             visible: false,
+            moneyCorrect: false,
             page: 'home',
             data: {},
             findUser: "",
             _playerList: [],
             playerList: [],
-
+            isowner: false,
             selectedPlayer: '',
             selectedProduct: {},
 
@@ -22,18 +23,19 @@ Vue.createApp({
             this.data = args[0];
             this._playerList = this.data.organization_members;
             this.playerList = this.data.organization_members;
+            this.isowner = args[0].is_owner
         },
 
-        closeUI(){
+        closeUI() {
             this.visible = false;
         },
 
-        redirect(route){
+        redirect(route) {
             this.page = route;
         },
 
-        findUserByName(){
-            if(this.findUser.length > 0){
+        findUserByName() {
+            if (this.findUser.length > 0) {
                 this.playerList = this._playerList.filter(el => (el.name.toLowerCase()).startsWith(this.findUser.toLowerCase()));
                 return;
             }
@@ -41,48 +43,70 @@ Vue.createApp({
             this.playerList = this._playerList;
         },
 
-        async addPlayer(){
+        async addPlayer() {
             const group = this.$refs.groupSelector.value;
-            const res = await this.post("invite-member", {user_id: parseInt(this.playerPassport), group});
-            if(res.success){
+            const res = await this.post("invite-member", { user_id: parseInt(this.playerPassport), group });
+            if (res.success) {
                 this.playerPassport = '';
             }
         },
 
-        async donateMoney(){
-           const res = await this.post('donate-money', {value: parseInt(this.donationValue)});
-           if(res){
+        async donateMoney() {
+            const res = await this.post('donate-money', { value: parseInt(this.donationValue) });
+            if (res) {
                 this.donationValue = '';
-           }
+            }
         },
 
-        selectPlayer(user_id){
-            if(this.selectedPlayer === user_id) return this.selectedPlayer = '';
+        async transactionMoney() {
+            this.moneyCorrect = false;
+            if (!this.moneyValue || this.data.money < this.moneyValue || this.moneyValue <= 0) {
+                this.moneyValue = '';
+                this.moneyCorrect = true;
+            }
+        },
+
+        async moneyTransaction() {
+            if (!this.moneyValue || this.data.money < this.moneyValue || this.moneyValue <= 0) {
+                this.moneyValue = '';
+                this.moneyCorrect = true;
+            } else {
+                const res = await this.post('transaction-money', { value: parseInt(this.moneyValue), user_id: parseInt(this.transactionValue) });
+                if (res) {
+                    this.moneyValue = '';
+                    this.transactionValue = '';
+                    this.moneyCorrect = false;
+                }
+            }
+        },
+
+        selectPlayer(user_id) {
+            if (this.selectedPlayer === user_id) return this.selectedPlayer = '';
             this.selectedPlayer = user_id;
         },
 
-        selectProduct(product,id){
-            this.selectedProduct = {...product,id: id + 1};
+        selectProduct(product, id) {
+            this.selectedProduct = { ...product, id: id + 1 };
         },
 
-        async buyProduct(){
-            const res = await this.post('buy-map',{id: this.selectedProduct.id});
-            if(res){
+        async buyProduct() {
+            const res = await this.post('buy-map', { id: this.selectedProduct.id });
+            if (res) {
                 this.selectedProduct = {};
             }
         },
 
-        async update(){
+        async update() {
             const res = await this.post("updateUI");
         },
 
-        changeFilter(filter){
+        changeFilter(filter) {
             switch (filter) {
                 case 'donations':
                     this.playerList = this._playerList;
-                    this.playerList = this.playerList.sort((p1,p2) => p1.donated_money - p2.donated_money).reverse();
+                    this.playerList = this.playerList.sort((p1, p2) => p1.donated_money - p2.donated_money).reverse();
                     break;
-                
+
                 case 'online':
                     this.playerList = this._playerList;
                     this.playerList = this.playerList.filter(plr => parseInt(plr.status) === 0);
@@ -93,28 +117,28 @@ Vue.createApp({
             }
         },
 
-        async makeAction(action){
-            const res = await this.post(action,{user_id: this.selectedPlayer});
+        async makeAction(action) {
+            const res = await this.post(action, { user_id: this.selectedPlayer });
         },
 
-        post(endpoint, data){
-            return fetch(`http://nxgroup-group-manager/${endpoint}`,{
+        post(endpoint, data) {
+            return fetch(`http://nxgroup-group-manager/${endpoint}`, {
                 method: "POST",
                 body: JSON.stringify(data || {}),
-            }).then(( res ) => res.json());
+            }).then((res) => res.json());
         }
     },
 
-    mounted(){
-        window.addEventListener('message', ({data}) => {
-            const [action,...args] = data;
+    mounted() {
+        window.addEventListener('message', ({ data }) => {
+            const [action, ...args] = data;
             this[action]([...args]);
         })
 
-        window.addEventListener('keydown', async (event) =>{
-            if( event.keyCode === 27 ) {
-                const res = await this.post("close",{closeServer: true});
-                if(res){
+        window.addEventListener('keydown', async (event) => {
+            if (event.keyCode === 27) {
+                const res = await this.post("close", { closeServer: true });
+                if (res) {
                     this.visible = false;
                 }
             }

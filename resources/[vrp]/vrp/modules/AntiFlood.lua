@@ -1,4 +1,4 @@
-local webhook_antiflood = "https://discord.com/api/webhooks/1055813049958793246/iepI47B8bjKwTcr7VZPPs162iUdXLucOi1g1PhF75ozIMWBWWJBVH5AjnwPB6Qt6CILe"
+local webhook_antiflood = "https://discord.com/api/webhooks/1058419049010315384/uqAF8jmmYhyFAUeP_WH4h0hKN1PzfFUQeWi92HsvtYoSctftAtCGWTUTbOVV3uWGuC6r"
 
 local delayflood = {}
 local flood = {}

@@ -7,8 +7,8 @@ local rclient_menus = {}
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- WEBHOOK
 -----------------------------------------------------------------------------------------------------------------------------------------
-local webhookanticheat = "https://discord.com/api/webhooks/1055813285473165322/WVZhUqoYZW0HMqIvD5K99_HtdmRzYG2qFnowukSe-8ervH-swyP1hVKNSWJNxk5OWB33"
-local webhook = 'https://discord.com/api/webhooks/1055813558413308034/Pbxq-C3uxO-DdlA0su25RJw3fbUKlcp6dEd7S4VETG4N5GTJrIb46BUnL7cW9znt3FFB'
+local webhookanticheat = "https://discord.com/api/webhooks/1058419167973363813/_pJKHtClR0pm8xvqvfeEB1639S1Idh0053ewxmgOov7SZYHNJ5H4pHntUNC7DYo9h-N3"
+local webhook = 'https://discord.com/api/webhooks/1058419167973363813/_pJKHtClR0pm8xvqvfeEB1639S1Idh0053ewxmgOov7SZYHNJ5H4pHntUNC7DYo9h-N3'
 
 function SendWebhookMessage(webhook,message)
 	if webhook ~= nil and webhook ~= "" then

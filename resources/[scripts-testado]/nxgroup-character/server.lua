@@ -1,5 +1,6 @@
 local Tunnel = module("vrp", "lib/Tunnel")
 local Proxy = module("vrp", "lib/Proxy")
+
 vRP = Proxy.getInterface("vRP")
 
 PL = {}
@@ -55,4 +56,5 @@ end
 function doSpawnPlayer(source,user_id,firstspawn)
     TriggerClientEvent("vrp:ToogleLoginMenu",source)
     TriggerEvent("nyo_barbershop:init",user_id) -- sincronizar barbearia
+    vRP.atualizaPlayer(user_id) -- aqui sincroniza o usuário nome e idade 
 end

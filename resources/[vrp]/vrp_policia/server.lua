@@ -11,18 +11,18 @@ local idgens = Tools.newIDGenerator()
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --[ WEBHOOK ]------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-local webhookocorrencias = ""
-local webhookprender = ""
-local webhookparamedico = ""
-local webhookpolicia = ""
-local webhookarsenal = ""
-local webhookmecanico = ""
-local webhookmultas = ""
-local webhookdetido = ""
-local webhookpoliciaapreendidos = ""
+local webhookocorrencias = "https://discord.com/api/webhooks/1059921606702530620/S5oGr66N_B0654phlFzi4m20q6yb22-vgDNqEnK2w2fAkXQlawjYVT9eb-s3RbCmY_fW"
+local webhookprender = "https://discord.com/api/webhooks/1059920931423789096/KhBEyQxSJbqWZWf31r9l1kwAQIHRpnAgGaQhDAt-rAlcjZp5QNjpZzutlfnV3Nk8IUA_"
+local webhookparamedico = "https://discord.com/api/webhooks/1059922245524398171/UeXYw-_zhHqHbgW9KhVFzt-UGbMniJNa8pLSnXxYCa0PgrL3SNs0Xor-rCHmFNZUIyCF"
+local webhookpolicia = "https://discord.com/api/webhooks/1059919219623464970/BYhw19HxDJAibdZwOmO2lYgtT4zcpwP0mXXoXwe8mBxg53Cg1jjIsL67TOlRgJvEa4hL"
+local webhookarsenal = "https://discord.com/api/webhooks/1059921207006339102/lzlYEv_hL2LToXWSkdL4oRofsxDqdPVj_U0396mFMoODoVL0U1THmUV0AUsysCCIbR7k"
+local webhookmecanico = "https://discord.com/api/webhooks/1059922915954528318/fLEe1rc-MEStbQkpAoT0dVILQFKwGSpLgXuGiRl40tVg7-iYYgLQLVdhRfm4-6ClNGAm"
+local webhookmultas = "https://discord.com/api/webhooks/1059921321590542418/4-1rjTdu3jStyBfBEWQ5E-cNLWPEWeSfFOisDHD9xVZO5pK71hFuAKUCZE5LVyWL7nSK"
+local webhookdetido = "https://discord.com/api/webhooks/1059921416381796512/Vw9dR03CDlEJdB0agC9-eCaA8yDPqmWspoxBaC0QM0R5bGwBWEVP0RD1EfMNItSOaLkL"
+local webhookpoliciaapreendidos = "https://discord.com/api/webhooks/1059921069324124250/z5_XiffGs1f3a5RwpaModsO0GLukSjcM9ajW937Z-b1g301rWXkopC6pHWFl22OFeS7a"
 local webhookArmaAdmin = ""
-local webhookToogleAdm = ""
-local webhookAdv = ""
+local webhookToogleAdm = "https://discord.com/api/webhooks/1059922049298092172/xirBn-4spmSD43EKhjbVdGTBFUXI6Yr9vvUqG7euuIZLMBbK57_-0V2CVcie_ZM5oH3D"
+local webhookAdv = "https://discord.com/api/webhooks/1058477887503740980/0md0RXIlG7gm6WnL5_BrL696Z9NqmVctQi6_dqE1WHTPNQ1Ec7zg_9kb9_SeMQ3P4qTS"
 
 function SendWebhookMessage(webhook,message)
 	if webhook ~= nil and webhook ~= "" then
@@ -395,7 +395,7 @@ RegisterCommand('toogle',function(source,args,rawCommand)
     local identity = vRP.getUserIdentity(user_id)
     -- Verifica se a policia está ativa
     local status = "Entrou"
-	
+
 	local user_id = vRP.getUserId(source)
 	local identity = vRP.getUserIdentity(user_id)
 		
@@ -403,7 +403,7 @@ RegisterCommand('toogle',function(source,args,rawCommand)
 		TriggerEvent('eblips:remove',source)
 		vRP.addUserGroup(user_id,"paisana-policia")
 		TriggerClientEvent("Notify",source,"aviso","Você saiu de serviço.")
-		SendWebhookMessage(webhookpolicia,"```prolog\n[POLICIAL]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[===========SAIU DE SERVICO==========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+		SendWebhookMessage(webhookpolicia,"```prolog\n[POLICIA]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[===========SAIU DE SERVICO==========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 		TriggerClientEvent('desligarRadios',source)
 		-- vRPclient.giveWeapons(source,{},true)
 	elseif vRP.hasPermission(user_id,"paisana-policia.permissao") then
@@ -524,12 +524,12 @@ RegisterCommand('toogle2',function(source,args,rawCommand)
 	if vRP.hasPermission(user_id,"comando-acao-policia.permissao") then
 		vRP.addUserGroup(user_id,"comando-policia")
 		TriggerClientEvent("Notify",source,"aviso","Você saiu de ação.")
-		SendWebhookMessage(webhookpolicia,"```prolog\n[COMANDO-POLICIAL]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[===========SAIU DE ACAO==========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+		SendWebhookMessage(webhookpolicia,"```prolog\n[COMANDO-POLICIA]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[===========SAIU DE ACAO==========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 		TriggerClientEvent('desligarRadios',source)
 	elseif vRP.hasPermission(user_id,"comando-policia.permissao") then
 		vRP.addUserGroup(user_id,"comando-acao-policia")
 		TriggerClientEvent("Notify",source,"sucesso","Você entrou em ação.")
-		SendWebhookMessage(webhookpolicia,"```prolog\n[COMANDO-POLICIAL]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM ACAO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")	
+		SendWebhookMessage(webhookpolicia,"```prolog\n[COMANDO-POLICIA]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM ACAO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")	
 	
 	elseif vRP.hasPermission(user_id,"medico-acao-policia.permissao") then
 		vRP.addUserGroup(user_id,"medico-policia")
@@ -544,12 +544,12 @@ RegisterCommand('toogle2',function(source,args,rawCommand)
 	elseif vRP.hasPermission(user_id,"acao-policia.permissao") then
 		vRP.addUserGroup(user_id,"policia")
 		TriggerClientEvent("Notify",source,"aviso","Você saiu de ação.")
-		SendWebhookMessage(webhookpolicia,"```prolog\n[POLICIAL]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[===========SAIU DE ACAO==========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+		SendWebhookMessage(webhookpolicia,"```prolog\n[POLICIA]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[===========SAIU DE ACAO==========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 		TriggerClientEvent('desligarRadios',source)
 	elseif vRP.hasPermission(user_id,"policial.permissao") then
 		vRP.addUserGroup(user_id,"acao-policia")
 		TriggerClientEvent("Notify",source,"sucesso","Você entrou em ação.")
-		SendWebhookMessage(webhookpolicia,"```prolog\n[POLICIAL]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM ACAO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
+		SendWebhookMessage(webhookpolicia,"```prolog\n[POLICIA]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM ACAO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
 	end
 
 end)
@@ -560,37 +560,48 @@ RegisterCommand('toogleadm',function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
 	local identity = vRP.getUserIdentity(user_id)
 	if vRP.hasPermission(user_id,"ceo.permissao") then
-		vRP.removeUserGroup(user_id,"mindmaster157")
-		vRP.addUserGroup(user_id,"paisana-mind")
+		vRP.removeUserGroup(user_id,"CEO")
+		vRP.addUserGroup(user_id,"PaisanaCeo")
 		TriggerClientEvent("Notify",source,"aviso","Você saiu de serviço.")
-		SendWebhookMessage(webhookToogleAdm,"```prolog\n[ADM]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========SAIU DE SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")	
-	elseif vRP.hasPermission(user_id,"paisana-mind.permissao") then
-		vRP.addUserGroup(user_id,"mindmaster157")
-		vRP.removeUserGroup(user_id,"paisana-mind")
+		SendWebhookMessage(webhookToogleAdm,"```prolog\n[CEO]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========SAIU DE SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")	
+	elseif vRP.hasPermission(user_id,"paisana-ceo.permissao") then
+		vRP.addUserGroup(user_id,"CEO")
+		vRP.removeUserGroup(user_id,"PaisanaCeo")
 		TriggerClientEvent("Notify",source,"sucesso","Você entrou em serviço.")
-		SendWebhookMessage(webhookToogleAdm,"```prolog\n[ADM]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
-
+		SendWebhookMessage(webhookToogleAdm,"```prolog\n[CEO]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
 	elseif vRP.hasPermission(user_id,"admin.permissao") then
-		vRP.addUserGroup(user_id,"paisana-admin")
+		vRP.addUserGroup(user_id,"PaisanaAdmin")
 		vRP.removeUserGroup(user_id,"Admin")
 		TriggerClientEvent("Notify",source,"aviso","Você saiu de serviço.")
 		SendWebhookMessage(webhookToogleAdm,"```prolog\n[ADM]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========SAIU DE SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")	
 	elseif vRP.hasPermission(user_id,"paisana-admin.permissao") then
 		vRP.addUserGroup(user_id,"Admin")
-		vRP.removeUserGroup(user_id,"paisana-admin")
+		vRP.removeUserGroup(user_id,"PaisanaAdmin")
 		TriggerClientEvent("Notify",source,"sucesso","Você entrou em serviço.")
 		SendWebhookMessage(webhookToogleAdm,"```prolog\n[ADM]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
 
 	elseif vRP.hasPermission(user_id,"mod.permissao") then
-		vRP.addUserGroup(user_id,"paisana-mod")
+		vRP.addUserGroup(user_id,"PaisanaMod")
 		vRP.removeUserGroup(user_id,"Mod")
 		TriggerClientEvent("Notify",source,"aviso","Você saiu de serviço.")
-		SendWebhookMessage(webhookToogleAdm,"```prolog\n[ADM]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========SAIU DE SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
+		SendWebhookMessage(webhookToogleAdm,"```prolog\n[MOD]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========SAIU DE SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
 	elseif vRP.hasPermission(user_id,"paisana-mod.permissao") then
-		vRP.removeUserGroup(user_id,"paisana-mod")
+		vRP.removeUserGroup(user_id,"PaisanaMod")
 		vRP.addUserGroup(user_id,"Mod")
 		TriggerClientEvent("Notify",source,"sucesso","Você entrou em serviço.")
-		SendWebhookMessage(webhookToogleAdm,"```prolog\n[ADM]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
+		SendWebhookMessage(webhookToogleAdm,"```prolog\n[MOD]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
+
+	elseif vRP.hasPermission(user_id,"suporte.permissao") then
+		vRP.addUserGroup(user_id,"PaisanaSup")
+		vRP.removeUserGroup(user_id,"Suporte")
+		TriggerClientEvent("Notify",source,"aviso","Você saiu de serviço.")
+		SendWebhookMessage(webhookToogleAdm,"```prolog\n[SUP]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========SAIU DE SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
+	elseif vRP.hasPermission(user_id,"paisana-sup.permissao") then
+		vRP.removeUserGroup(user_id,"PaisanaSup")
+		vRP.addUserGroup(user_id,"Suporte")
+		TriggerClientEvent("Notify",source,"sucesso","Você entrou em serviço.")
+		SendWebhookMessage(webhookToogleAdm,"```prolog\n[SUP]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[==========ENTROU EM SERVICO=========] "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")		
+
 	end
 end)
 
@@ -617,7 +628,7 @@ RegisterCommand('ocorrencia',function(source,args,rawCommand)
 		local nplayer = vRP.getUserSource(parseInt(id))
 		local crm = user_id
 
-		PerformHttpRequest(webhookslaudomedico, function(err, text, headers) end, 'POST', json.encode({
+		PerformHttpRequest(webhookocorrencias, function(err, text, headers) end, 'POST', json.encode({
 			embeds = {
 				{ 
 					title = "OCORRENCIA:",
