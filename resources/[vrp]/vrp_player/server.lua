@@ -1169,12 +1169,12 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 --[ VIP FOX ]----------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand("vip",function(source,args,rawCommand)
+RegisterCommand("vipinicial",function(source,args,rawCommand)
     local source = source
     local user_id = vRP.getUserId(source)
     local resgate =  vRP.query("EG/getVipStarter", {user_id = user_id})
     local identity = vRP.getUserIdentity(user_id)
-    local message = "Resgatou seu VIP EXPERIMENTAL! use ^1/vip ^0para resgatar o seu!"
+    local message = "Resgatou seu VIP INICIAL! use ^1/vipinicial ^0para resgatar o seu!"
     if resgate[1].vipteste == 0 then
         if vRP.hasPermission(user_id,'bronze.permissao') or vRP.hasPermission(user_id,'basic.permissao') or vRP.hasPermission(user_id,'gold.permissao') or vRP.hasPermission(user_id,'platinium.permissao') or vRP.hasPermission(user_id,'diamante.permissao') or vRP.hasPermission(user_id,'esmeralda.permissao') or vRP.hasPermission(user_id,'ultimate.permissao') or vRP.hasPermission(user_id,'kingbellavista.permissao') then
             TriggerClientEvent('Notify',source,'aviso','Você não pode resgatar um vip já tendo um VIP.')
@@ -1182,19 +1182,20 @@ RegisterCommand("vip",function(source,args,rawCommand)
         end
         local string = 'vrp.removeGroup("'..user_id..'",VipOuro")'
         vRP.addUserGroup(user_id,"VipOuro")
+		vRP.execute("EG/add_vehicleLeads",{ user_id = user_id,  vehicle = 'g20wide', ipva = os.time(), free = 1, free_time = os.time() }) 
         vRP.execute("EG/addVipStarter", {string = string})
         vRP.execute("EG/updateVipStarter", {user_id = user_id})
-        TriggerClientEvent('Notify',source,'sucesso','VIP Teste de 3 Dias ATIVADO com sucesso, digite <b>/beneficios</b> para ver os beneficios.')
+        TriggerClientEvent('Notify',source,'sucesso','VIP INICIAL ATIVADO com sucesso.')
         TriggerClientEvent('chatMessage',-1,"",{255, 0, 0},"SISTEMA DE VIPS:  "..identity.name.." "..identity.firstname.. "  ^0"..message)
     else
         TriggerClientEvent('Notify',source,'aviso','Você já resgatou seu vip teste bonitão...')
     end
 end)
 
-RegisterCommand("beneficios",function(source,args,rawCommand)
-    local source = source
-    local user_id = vRP.getUserId(source)
-    if user_id then
-        TriggerClientEvent('Notify',source,'sucesso','- Salario de $3000 a cada 30 minutos.<br>- Liberado /tv<br>- Prioridade na fila: 70%<br>- Troca de roupas sem o item roupas.<br>    - Desconto na concessionaria.<br>       - Trocar a cor da arma com o /weaponcolor<br>   - Acesso ao sistema de suspensão a ar.<br>   - Acesso ao /attachs<br>- Acesso ao comando /som para colocar música no carro.',20000)
-    end
-end)
+-- RegisterCommand("beneficios",function(source,args,rawCommand)
+--     local source = source
+--     local user_id = vRP.getUserId(source)
+--     if user_id then
+--         TriggerClientEvent('Notify',source,'sucesso','- Salario de $3000 a cada 30 minutos.<br>- Liberado /tv<br>- Prioridade na fila: 70%<br>- Troca de roupas sem o item roupas.<br>    - Desconto na concessionaria.<br>       - Trocar a cor da arma com o /weaponcolor<br>   - Acesso ao sistema de suspensão a ar.<br>   - Acesso ao /attachs<br>- Acesso ao comando /som para colocar música no carro.',20000)
+--     end
+-- end)

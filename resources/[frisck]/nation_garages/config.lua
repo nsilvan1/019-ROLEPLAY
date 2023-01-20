@@ -38,7 +38,7 @@ end
 ----------------- BLIPS ----------------------
 ----------------------------------------------
 
-config.showBlips = false -- quando true, mostra os blips das garagens públicas no mapa
+config.showBlips = true -- quando true, mostra os blips das garagens públicas no mapa
 config.blipId = 357 -- id do blip
 config.blipColor = 3 -- cor do blip
 config.blipSize = 0.4 -- tamanho do blip

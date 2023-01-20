@@ -4,7 +4,7 @@ fx_version 'bodacious'
 game 'gta5'
 
 ui_page 'gui/index.html'
-loadscreen "loading/darkside.html"
+-- loadscreen "loading/darkside.html"
 
 server_scripts {
 	'lib/utils.lua',
@@ -41,7 +41,7 @@ client_scripts {
 }
 
 files {
-	"loading/*",
+	-- "loading/*",
 	'lib/Tunnel.lua',
 	'lib/Proxy.lua',
 	'lib/Luaseq.lua',
