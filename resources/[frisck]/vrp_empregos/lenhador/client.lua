@@ -133,7 +133,7 @@ end
 local blips = false
 local servico = false
 local selecionado = 0
-local CoordenadaX = 1213.98 --- -1869.38, 4640.04, 300.02
+local CoordenadaX = 1213.98 --- 1213.98,-1251.08,36.33
 local CoordenadaY = -1251.08
 local CoordenadaZ = 36.33
 -----------------------------------------------------------------------------------------------------------------------------------------

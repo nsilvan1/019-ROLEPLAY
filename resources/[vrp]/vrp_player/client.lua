@@ -31,20 +31,45 @@ RegisterCommand('record',function(source, args)
     end
 end)
 
+-- Citizen.CreateThread(function()
+--     while true do
+--         Citizen.Wait(10000)
+-- 		local players = GlobalState.qtdPl or 0--vRPdc.GetDCpresence()
+--     	SetDiscordAppId(936250353450627102)
+--         SetDiscordRichPresenceAsset('AZTLAN')
+--         SetDiscordRichPresenceAssetText('CITY AZTLAN')
+--         SetDiscordRichPresenceAssetSmall('capa')
+--         SetDiscordRichPresenceAssetSmallText('discord.gg/BRhMcVGRWT')
+--         SetRichPresence("Jogadores online: "..players.."")
+-- 		SetDiscordRichPresenceAction(0, "JOGAR", "fivem://connect/3boqe8")
+-- 		SetDiscordRichPresenceAction(1, "DISCORD", "discord.gg/BRhMcVGRWT")
+--     end
+-- end)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+-- STATUS DO DISCORD
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(10000)
-		local players = GlobalState.qtdPl or 0--vRPdc.GetDCpresence()
-    	SetDiscordAppId(936250353450627102)
-        SetDiscordRichPresenceAsset('AZTLAN')
-        SetDiscordRichPresenceAssetText('CITY AZTLAN')
-        SetDiscordRichPresenceAssetSmall('Capa')
-        SetDiscordRichPresenceAssetSmallText('discord.gg/BRhMcVGRWT')
-        SetRichPresence("Jogadores online: "..players.."")
-		SetDiscordRichPresenceAction(0, "JOGAR", "fivem://connect/3boqe8")
-		SetDiscordRichPresenceAction(1, "DISCORD", "discord.gg/BRhMcVGRWT")
+        players = {}
+        -- for i = 0,1024 do
+        --     if NetworkIsPlayerActive(i) then
+        --         table.insert(players,i)
+        --     end
+        -- end
+        SetDiscordAppId(936250353450627102) -- ID DO APP AQUI
+		SetDiscordRichPresenceAssetText('AZTLAN, WL ABERTA!') -- PNG DESCRIÇÃO 1 TEXTO
+        SetDiscordRichPresenceAsset('capa')
+		SetDiscordRichPresenceAction(0, "Discord", "https://discord.gg/BRhMcVGRWT/")
+		SetDiscordRichPresenceAction(1, "Instagram", "https://www.instagram.com/aztlanrp/")
+		SetRichPresence("Players Online: 38 de 680")	
+        -- SetRichPresence("Cidadões Online: "..#players "1024")
+		
     end
 end)
+
 
 local started = false
 RegisterCommand("manobras", function()

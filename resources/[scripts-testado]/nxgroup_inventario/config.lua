@@ -216,8 +216,11 @@ config.itemShops = {
 				["wbody|WEAPON_POOLCUE"] = 50000,
 				["wbody|WEAPON_WRENCH"] = 50000,
 				["wbody|WEAPON_BAT"] = 50000,
+				["wbody|WEAPON_HATCHET"] = 50000,
+				["wbody|WEAPON_BATTLEAXE"] = 50000,
 				["wbody|GADGET_PARACHUTE"] = 10000,
 				-- ["modificacaodearma"] = 25000,
+				
 			}
 		},
 		["ammunationStore2"] = {

@@ -470,10 +470,10 @@ local teleport = {
 		positionFrom = { 224.60,-1511.02,29.29 },
 		positionTo = { 997.24,-3158.00,-38.90 }
 	},
-	["ESCRITORIO2"] = {
-		positionFrom = { -1194.46,-1189.31,7.69 },
-		positionTo = { 1173.55,-3196.68,-39.00 }
-	},
+	-- ["ESCRITORIO2"] = {
+	-- 	positionFrom = { -1194.46,-1189.31,7.69 },
+	-- 	positionTo = { 1173.55,-3196.68,-39.00 }
+	-- },
 	["ESCRITORIO3"] = {
 		positionFrom = { -1007.12,-486.67,39.97 },
 		positionTo = { -1003.05,-477.92,50.02 }
@@ -486,9 +486,13 @@ local teleport = {
 		positionFrom = { 254.1,225.41,101.88 },
 		positionTo = { 253.31,222.99,101.69 }
 	},
-	["ELEVADORH"] = {
-		positionFrom = { 335.84,-580.34,43.3 },
-		positionTo = { 335.84,-580.36,74.08 }
+	["ELEVADOHP1"] = {
+		positionFrom = { 330.47,-600.93,43.29 },
+		positionTo = { 341.45,-580.98,28.8 }
+	},
+	["ELEVADOHP2"] = {
+		positionFrom = { 327.32,-603.93,43.29 },
+		positionTo = { 338.66,-583.83,74.17 }
 	},
 	-- ["DELEGACIAH"] = {
 	-- 	positionFrom = { 2504.47,-341.89,101.93 },
@@ -638,7 +642,7 @@ Citizen.CreateThread( function()
         local vehicle = GetVehiclePedIsIn(ped, false)
         local speed = GetEntitySpeed(vehicle)
             if ( ped ) then
-                if math.floor(speed*3.6) == 220 then --Velocidade limitada em 250
+                if math.floor(speed*3.6) == 250 then --Velocidade limitada em 250
                     cruise = GetEntitySpeed(GetVehiclePedIsIn(GetPlayerPed(-1), false))
                     SetEntityMaxSpeed(GetVehiclePedIsIn(GetPlayerPed(-1), false), cruise)
                 end
