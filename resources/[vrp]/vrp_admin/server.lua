@@ -935,7 +935,8 @@ end)
 --[ PLAYERSON ]--------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('pon',function(source,args,rawCommand)
-    local user_id = vRP.getUserId(source)
+    local user_id = vRP.getUserId(source)    
+	TriggerClientEvent('chatMessage',source,"ALERTA",{255,70,50},"Jogadores online: "..onlinePlayers)
     if vRP.hasPermission(user_id,"mod.permissao") or vRP.hasPermission(user_id,"ceo.permissao") then
         local users = vRP.getUsers()
         local players = ""
@@ -947,7 +948,8 @@ RegisterCommand('pon',function(source,args,rawCommand)
             players = players..k
             quantidade = quantidade + 1
         end
-        TriggerClientEvent('chatMessage',source,"TOTAL ONLINE",{255,160,0},quantidade)
+        local onlinePlayers = GetNumPlayerIndices()
+        TriggerClientEvent('chatMessage',source,"TOTAL ONLINE",{255,160,0},onlinePlayers)
         TriggerClientEvent('chatMessage',source,"ID's ONLINE",{255,160,0},players)
     end
 end)

@@ -1428,9 +1428,9 @@ config.garages = {
 		  [3] = { vec3(323.59, -586.1, 28.8), h = 336.69 },
 		},
 		vehicles = {
-	  		{ vehicle = 'VRtahoe', modelo = 'Tahoe' },  
+	  		{ vehicle = 'FD2', modelo = 'Dodge Charger 2018' },  
 	  		{ vehicle = 'Wrasprinter', modelo = 'Ambulancia' },  
-	  		{ vehicle = 'WRr1200', modelo = 'Resgate Rapido' },  
+	  		-- { vehicle = 'WRr1200', modelo = 'Resgate Rapido' },  
 		}
 	},
 	[5] = { type = 'service', coords = vec3(338.33,-586.60,74.16), perm = 'paramedico.permissao',  --// Heli Paramédico

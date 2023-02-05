@@ -31,18 +31,36 @@ RegisterNetEvent("NotifyPush")
 AddEventHandler("NotifyPush",function(data)
 	data["street"] = GetStreetNameFromHashKey(GetStreetNameAtCoord(data["x"],data["y"],data["z"]))
 
-	SendNUIMessage({ action = "notify", data = data })
+	 SendNUIMessage({ action = "notify", data = data })
+    -- numberBlips = numberBlips + 1
+	-- timeBlips[numberBlips] = 0
+	-- showBlips[numberBlips] = AddBlipForRadius(data["x"],data["y"],data["z"],150.0)
+	-- SetBlipColour(showBlips[numberBlips],data["blipColor"])
+	-- SetBlipAlpha(showBlips[numberBlips],150)
 
-	numberBlips = numberBlips + 1
+	-- if data["code"] == "QRT" then
+	-- 	TriggerEvent("vrp_sound:source",'deathcop',0.7)
+	-- end
+end)
 
-	timeBlips[numberBlips] = 60
-	showBlips[numberBlips] = AddBlipForRadius(data["x"],data["y"],data["z"],150.0)
-	SetBlipColour(showBlips[numberBlips],data["blipColor"])
-	SetBlipAlpha(showBlips[numberBlips],150)
+-----------------------------------------------------------------------------------------------------------------------------------------
+-- NOTIFYPUSHAtirador
+-----------------------------------------------------------------------------------------------------------------------------------------
 
-	if data["code"] == "QRT" then
-		TriggerEvent("vrp_sound:source",'deathcop',0.7)
-	end
+local blips = {}
+RegisterNetEvent("NotifyPushAtirador")
+AddEventHandler("NotifyPushAtirador",function(data)
+	data["street"] = GetStreetNameFromHashKey(GetStreetNameAtCoord(data["x"],data["y"],data["z"]))
+	blips[data["user_id"]] = AddBlipForCoord(data["x"],data["y"],data["z"])
+	SetBlipScale(data["user_id"],0.5)
+	SetBlipSprite(data["user_id"],10)
+	SetBlipColour(data["user_id"],49)
+	 SendNUIMessage({ action = "notify", data = data })
+	SetTimeout(500,function()
+		if DoesBlipExist(blips[data["user_id"]]) then
+			RemoveBlip(blips[data["user_id"]])
+		end
+	end)
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- THREADBLIPS

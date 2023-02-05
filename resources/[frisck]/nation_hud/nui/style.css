@@ -17,7 +17,7 @@ body {
     width: 12vh;
     height: 12vh;
     transform: rotateY(0deg);
-    left: 0; right: 0; top: 1vh; margin: auto;
+    left: 0; right: 0; top: 2vh; margin: auto;
     opacity: .7;
 }
 

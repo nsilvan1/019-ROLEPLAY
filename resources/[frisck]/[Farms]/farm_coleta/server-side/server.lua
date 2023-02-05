@@ -17,11 +17,11 @@ function emP.checkPermission()
 	local user_id = vRP.getUserId(source)
 	if user_id then
 		if vRP.hasPermission(user_id,"motoclub.permissao") or
-		   vRP.hasPermission(user_id,"mafia.permissao") 	or
+		   vRP.hasPermission(user_id,"municao.permissao") 	or
 		   vRP.hasPermission(user_id,"hells.permissao")  or
-		   vRP.hasPermission(user_id,"bratva.permissao") or 
+		   vRP.hasPermission(user_id,"armas.permissao") or 
 		   vRP.hasPermission(user_id,"cartel.permissao") or 
-		   vRP.hasPermission(user_id,"vagos.permissao") then
+		   vRP.hasPermission(user_id,"lsd.permissao") then
 			return true
 		else
 			TriggerClientEvent("Notify",source,"negado","Você não tem acesso.")
@@ -36,7 +36,7 @@ function emP.checkPayment()
 	local source = source
 	local user_id = vRP.getUserId(source)
 	if user_id then
-		if vRP.hasPermission(user_id,"vagos.permissao") then
+		if vRP.hasPermission(user_id,"lsd.permissao") then
 			local itens = math.random(100)
 			local quantidade = math.random(2,3)
 			if itens <= 100 then
@@ -80,7 +80,7 @@ function emP.checkPayment()
 				end
 			end	
 
-		elseif vRP.hasPermission(user_id,"mafia.permissao") then
+		elseif vRP.hasPermission(user_id,"municao.permissao") then
 			local itens = math.random(100)
 			local quantidade = math.random(2,3)
 			if itens <= 100 then

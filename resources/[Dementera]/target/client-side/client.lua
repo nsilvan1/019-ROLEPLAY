@@ -5,6 +5,7 @@ local Tunnel = module("vrp","lib/Tunnel")
 local Proxy = module("vrp","lib/Proxy")
 vRP = Proxy.getInterface("vRP")
 vRPclient = Tunnel.getInterface("vRP")
+check = Tunnel.getInterface("target")
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- VARIABLES
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -100,42 +101,42 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- PARAMEDICMENU
 -----------------------------------------------------------------------------------------------------------------------------------------
--- local paramedicMenu = {
--- 	{
--- 		event = "paramedic:reanimar",
--- 		label = "Reanimar",
--- 		tunnel = "paramedic"
--- 	},
--- 	{
--- 		event = "paramedic:diagnostico",
--- 		label = "Diagnóstico",
--- 		tunnel = "paramedic"
--- 	},
--- 	{
--- 		event = "paramedic:tratamento",
--- 		label = "Tratamento",
--- 		tunnel = "paramedic"
--- 	},
+local paramedicMenu = {
+	{
+		event = "re",
+		label = "Reanimar",
+		tunnel = "paramedic"
+	},
+	{
+		event = "tratamentoRapido",
+		label = "Tratamento externo",
+		tunnel = "paramedic"
+	},
+	{
+		event = "tratamento",
+		label = "Tratamento",
+		tunnel = "paramedic"
+	},
 -- 	{
 -- 		event = "paramedic:sangramento",
 -- 		label = "Sangramento",
 -- 		tunnel = "paramedic"
 -- 	},
--- 	{
--- 		event = "paramedic:maca",
--- 		label = "Deitar Paciente",
--- 		tunnel = "paramedic"
--- 	}
--- }
+	-- {
+	-- 	event = "target:pacienteDeitar",
+	-- 	label = "Deitar Paciente",
+	-- 	tunnel = "client"
+	-- }
+}
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- POLICEVEH
 -----------------------------------------------------------------------------------------------------------------------------------------
--- local policeVeh = {
--- 	{
--- 		event = "police:runPlate",
--- 		label = "Verificar Placa",
--- 		tunnel = "police"
--- 	},
+ local policeVeh = {
+ 	{
+ 		event = "police:runPlate",
+ 		label = "Verificar Placa",
+ 		tunnel = "police"
+ 	},
 -- 	{
 -- 		event = "police:impound",
 -- 		label = "Registrar Veículo",
@@ -146,7 +147,7 @@ end)
 -- 		label = "Detenção do Veículo",
 -- 		tunnel = "police"
 -- 	}
--- }
+}
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- PLAYERVEH
@@ -158,7 +159,7 @@ local playerVeh = {
 	-- 	tunnel = "server"
 	-- },
 	{
-		event = "target:enterTrunk",
+		event = "cloneplates",
 		label = "Entrar/Sair do Porta-Mala",
 		tunnel = "server"
 	},
@@ -169,32 +170,42 @@ local playerVeh = {
 	-- 	tunnel = "server"
 	-- },
 
-	-- {
-	-- 	event = "inventory:clonando",
-	-- 	label = "Clonar placa",
-	-- 	tunnel = "server"
-	-- },
+	{
+		event = "target:clonando",
+		label = "Clonar placa",
+		tunnel = "server"
+	},
 	{
 		event = "target:repairkit",
 		label = "Arrumar veiculo",
 		tunnel = "server"
 	},
+	{
+		event = "police:runPlate",
+		label = "Verificar Placa",
+		tunnel = "police"
+	},
 }
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- POLICEPED
 -----------------------------------------------------------------------------------------------------------------------------------------
--- local policePed = {
--- 	{
--- 		event = "police:runInspect",
--- 		label = "Revistar",
--- 		tunnel = "police"
--- 	},
+ local policePed = {
+ 	-- {
+ 	-- 	event = "SV:REVISTAR",
+ 	-- 	label = "Revistar",
+ 	-- 	tunnel = "police"
+ 	-- },
+	{
+		event = "SV:apreender",
+		label = "Apreender",
+		tunnel = "police"
+	},
 -- 	{
 -- 		event = "police:prisonClothes",
 -- 		label = "Uniforme do Presídio",
 -- 		tunnel = "police"
 -- 	}
--- }
+ }
 -- -----------------------------------------------------------------------------------------------------------------------------------------
 -- ADMINMENU
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -228,9 +239,9 @@ function playerTargetEnable()
 			local ped = PlayerPedId()
 			local coords = GetEntityCoords(ped)
 			local hit,entCoords,entity = RayCastGamePlayCamera(setDistance)
-
 			if hit == 1 then
 				if GetEntityType(entity) ~= 0 then
+					
 					if adminService then
 						if DoesEntityExist(entity) then
 							if #(coords - entCoords) <= setDistance then
@@ -308,8 +319,8 @@ function playerTargetEnable()
 
 							SendNUIMessage({ response = "leftTarget" })
 						end
-					elseif IsPedAPlayer(entity) and policeService then
-						if #(coords - entCoords) <= 1.0 then
+					elseif IsPedAPlayer(entity) and check.checkServicesPolice() then
+						if #(coords - entCoords) <= 5.0 then
 							local index = NetworkGetPlayerIndexFromPed(entity)
 							local source = GetPlayerServerId(index)
 
@@ -338,7 +349,7 @@ function playerTargetEnable()
 
 							SendNUIMessage({ response = "leftTarget" })
 						end
-					elseif IsPedAPlayer(entity) and paramedicService then
+					elseif IsPedAPlayer(entity) and check.checkServicesParamedic() then
 						if #(coords - entCoords) <= 1.0 then
 							local index = NetworkGetPlayerIndexFromPed(entity)
 							local source = GetPlayerServerId(index)
@@ -489,7 +500,8 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterNetEvent("target:pacienteDeitar")
 AddEventHandler("target:pacienteDeitar",function()
-	local ped = PlayerPedId()
+	print('ped admin')
+	local handle,ped = FindFirstPed()
 	local coords = GetEntityCoords(ped)
 
 	for k,v in pairs(beds) do
@@ -499,7 +511,6 @@ AddEventHandler("target:pacienteDeitar",function()
 
 			SetEntityCoords(ped,objCoords["x"],objCoords["y"],objCoords["z"] + v[1],1,0,0,0)
 			SetEntityHeading(ped,GetEntityHeading(object) + v[2] - 180.0)
-
 			vRP.playAnim(false,{"anim@gangops@morgue@table@","body_search"},true)
 			break
 		end
@@ -648,6 +659,26 @@ AddEventHandler("target:enterTrunk",function()
 		SetVehicleDoorShut(vehicle,5)
     end
 end)
+
+---------------------------------------------------------------------------------------------------------------------------------------
+-- CLONAR PLACAS ----------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+RegisterNetEvent('cloneplates')
+AddEventHandler('cloneplates',function()
+    local ped = PlayerPedId()
+    local vehicle = GetVehiclePedIsUsing(ped)
+    local clonada = GetVehicleNumberPlateText(vehicle)
+    if IsEntityAVehicle(vehicle) then
+        PlateIndex = GetVehicleNumberPlateText(vehicle)
+        SetVehicleNumberPlateText(vehicle,"CLONADA")
+        -- FreezeEntity(vehicle,false)
+        if clonada == CLONADA then 
+            SetVehicleNumberPlateText(vehicle,PlateIndex)
+            PlateIndex = nil
+        end
+    end
+end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- PLAYERTARGETDISABLE
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -661,6 +692,60 @@ function playerTargetDisable()
 		SendNUIMessage({ response = "closeTarget" })
 	end
 end
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+--[ TRATAMENTO ]-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+local tratamento = false
+RegisterNetEvent("tratamento")
+AddEventHandler("tratamento",function()
+    local ped = PlayerPedId()
+    local health = GetEntityHealth(ped)
+
+    SetEntityHealth(ped,health)
+	
+	if emMaca then
+		if tratamento then
+			return
+		end
+
+		tratamento = true
+		TriggerEvent("Notify","sucesso","Tratamento iniciado, aguarde a liberação do <b>profissional médico.</b>.",8000)
+		
+
+		if tratamento then
+			repeat
+				Citizen.Wait(600)
+				if GetEntityHealth(ped) > 101 then
+					SetEntityHealth(ped,GetEntityHealth(ped)+3)
+				end
+			until GetEntityHealth(ped) >= 399 or GetEntityHealth(ped) <= 101
+				TriggerEvent("Notify","sucesso","Tratamento concluido.",8000)
+				tratamento = false
+		end
+	else
+		TriggerEvent("Notify","negado","Você precisa estar deitado em uma maca para ser tratado.",8000)
+	end
+end)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+--[ TRATAMENTO Rapido ]-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+local tratamento = false
+RegisterNetEvent("tratamentoRapido")
+AddEventHandler("tratamentoRapido",function()
+    local ped = PlayerPedId()
+    local health = GetEntityHealth(ped)
+
+    SetEntityHealth(ped,health)
+	
+	TriggerEvent("Notify","sucesso","Tratamento iniciado.",8000)
+		Citizen.Wait(600)
+		SetEntityHealth(ped,GetEntityHealth(ped)+50)
+		TriggerEvent("Notify","sucesso","Tratamento concluido.",8000)	
+end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SELECTTARGET
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -673,13 +758,13 @@ RegisterNUICallback("selectTarget",function(data,cb)
 	if data["tunnel"] == "client" then
 		TriggerEvent(data["event"],innerEntity)
 	elseif data["tunnel"] == "paramedic" then
-		TriggerServerEvent(data["event"],innerEntity[1])
+		TriggerServerEvent(data["event"])
 	elseif data["tunnel"] == "police" then
-		TriggerServerEvent(data["event"],innerEntity,data["service"])
+		TriggerServerEvent(data["event"])
 
-		if data["service"] then
-			SetEntityHeading(ped,innerEntity[5])
-		end
+		-- if data["service"] then
+		-- 	SetEntityHeading(ped,innerEntity[5])
+		-- end
 	elseif data["tunnel"] == "objects" then
 		TriggerServerEvent(data["event"],innerEntity[3])
 	elseif data["tunnel"] == "admin" then
@@ -689,6 +774,7 @@ RegisterNUICallback("selectTarget",function(data,cb)
 		TriggerEvent(data["event"])
 	end
 end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- CLOSETARGET
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -697,6 +783,17 @@ RegisterNUICallback("closeTarget",function(data,cb)
 	targetActive = false
 	SetNuiFocus(false,false)
 end)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+-- REVISTAR
+-----------------------------------------------------------------------------------------------------------------------------------------
+RegisterNetEvent("REVISTAR")
+AddEventHandler("REVISTAR",function()
+	SetNuiFocus(true,true)
+	StartScreenEffect("MenuMGSelectionIn", 0, true)
+	SendNUIMessage({ action = "updateRevistar", name = "REVISTAR"})
+end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- ROTATIONTODIRECTION
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -733,6 +830,7 @@ function RayCastGamePlayCamera(distance)
 
 	return b,c,e
 end
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- ADDCIRCLEZONE
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -762,6 +860,7 @@ function AddTargetModel(models,parameteres)
 		Models[v] = parameteres
 	end
 end
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- EXPORTS
 -----------------------------------------------------------------------------------------------------------------------------------------

@@ -315,11 +315,11 @@ RegisterCommand("descolado",function(source,args)
 	end
 end)
 
---RegisterCommand("corridinha",function(source,args)
---	if not prisioneiro then
---	vRP.loadAnimSet("move_m@quick")
---	end
---end)
+RegisterCommand("corridinha",function(source,args)
+	if not prisioneiro then
+	vRP.loadAnimSet("move_m@quick")
+	end
+end)
 
 RegisterCommand("piriguete",function(source,args)
 	if not prisioneiro then
@@ -478,7 +478,7 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- WEAPONCOLOR
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand("weaponcolor",function(source,args)
+RegisterCommand("cor",function(source,args)
     local ped = PlayerPedId()
     local weapon = GetSelectedPedWeapon(ped)
     if src.checkMasterPerm() then
@@ -801,58 +801,74 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETMASCARA
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setmascara')
-AddEventHandler('setmascara',function(modelo,cor)
-	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() then
-		if modelo == nil then
-			vRP._playAnim(true,{{"missfbi4","takeoff_mask"}},false)
-			Wait(1100)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,1,0,0,2)
-			return
-		end
-		if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") or GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
-			vRP._playAnim(true,{{"misscommon@van_put_on_masks","put_on_mask_ps"}},false)
-			Wait(1500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,1,parseInt(modelo),parseInt(cor),2)
-		end
+-- RegisterNetEvent('setmascara')
+-- AddEventHandler('setmascara',function(modelo,cor)
+-- 	local ped = PlayerPedId()
+-- 	if GetEntityHealth(ped) > 101 then
+-- 		print('teste 1')
+-- 		if modelo == nil then
+-- 			print('teste 2')
+-- 			vRP._playAnim(true,{{"missfbi4","takeoff_mask"}},false)
+-- 			Wait(1100)
+-- 			ClearPedTasks(ped)
+-- 			SetPedComponentVariation(ped,1,0,0,2)
+-- 			return
+-- 		end
+-- 		if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") or GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
+-- 			print('teste 3')
+-- 			vRP._playAnim(true,{{"misscommon@van_put_on_masks","put_on_mask_ps"}},false)
+-- 			Wait(1500)
+-- 			ClearPedTasks(ped)
+-- 			SetPedComponentVariation(ped,1,parseInt(modelo),parseInt(cor),2)
+-- 		end
+-- 	end
+-- end)
+RegisterNetEvent("mascara")
+AddEventHandler("mascara",function(index,color)
+	local ped = GetPlayerPed(-1)
+	if index == nil then
+		vRP.playAnim(true,{{"misscommon@std_take_off_masks","take_off_mask_ps",1}},false)
+		Wait(1700)
+		ClearPedTasks(ped)
+		SetPedComponentVariation(ped,1,0,0,2)
+		return
+	end
+	if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") or GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
+		vRP.playAnim(true,{{"misscommon@van_put_on_masks","put_on_mask_ps",1}},false)
+		Wait(1700)
+		ClearPedTasks(ped)
+		SetPedComponentVariation(ped,1,parseInt(index),parseInt(color),2)
 	end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETBLUSA
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setblusa')
-AddEventHandler('setblusa',function(modelo,cor)
-	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() then
-		if not modelo then
-			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
-			Wait(2500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,8,15,0,2)
-			return
-		end
-		if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") then
-			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
-			Wait(2500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,8,parseInt(modelo),parseInt(cor),2)
-		elseif GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
-			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
-			Wait(2500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,8,parseInt(modelo),parseInt(cor),2)
-		end
+RegisterNetEvent("blusa")
+AddEventHandler("blusa",function(index,color)
+	local ped = GetPlayerPed(-1)
+	if index == nil then
+		SetPedComponentVariation(ped,8,15,0,2)
+		return
+	end
+	if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") then
+		vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
+		Wait(5000)
+		SetPedComponentVariation(ped,8,parseInt(index),parseInt(color),2)
+		ClearPedTasks(ped)
+	elseif GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
+		vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
+		Wait(5000)
+		SetPedComponentVariation(ped,8,parseInt(index),parseInt(color),2)
+		ClearPedTasks(ped)
 	end
 end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETMOCHILA
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setmochila')
-AddEventHandler('setmochila',function(modelo,cor)
-    local ped = PlayerPedId()
+RegisterNetEvent('mochila')
+AddEventHandler('mochila',function(modelo,cor)
+	local ped = PlayerPedId()
     if GetEntityHealth(ped) > 101 then
         if not modelo then
             vRP._playAnim(true,{{"missmic4","michael_tux_fidget"}},false)
@@ -877,64 +893,55 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETCOLETE
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setcolete')
-AddEventHandler('setcolete',function(modelo,cor)
-	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() then
-		if not modelo then
-			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
-			Wait(2500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,9,0,0,2)
-			return
-		end
-		if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") then
-			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
-			Wait(2500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,9,parseInt(modelo),parseInt(cor),2)
-		elseif GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
-			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
-			Wait(2500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,9,parseInt(modelo),parseInt(cor),2)
-		end
+RegisterNetEvent("colete")
+AddEventHandler("colete",function(index,color)
+	local ped = GetPlayerPed(-1)
+	if index == nil then
+		SetPedComponentVariation(ped,11,15,0,2)
+		return
+	end
+	if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") then
+		vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
+		Wait(5000)
+		SetPedComponentVariation(ped,9,parseInt(index),parseInt(color),2)
+		ClearPedTasks(ped)
+	elseif GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
+		vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
+		Wait(5000)
+		SetPedComponentVariation(ped,9,parseInt(index),parseInt(color),2)
+		ClearPedTasks(ped)
 	end
 end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETJAQUETA
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setjaqueta')
-AddEventHandler('setjaqueta',function(modelo,cor)
-	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() then
-		if not modelo then
-			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
-			Wait(2500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,11,15,0,2)
-			return
-		end
-		if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") then
-			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
-			Wait(2500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,11,parseInt(modelo),parseInt(cor),2)
-		elseif GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
-			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
-			Wait(2500)
-			ClearPedTasks(ped)
-			SetPedComponentVariation(ped,11,parseInt(modelo),parseInt(cor),2)
-		end
+RegisterNetEvent("jaqueta")
+AddEventHandler("jaqueta",function(index,color)
+	local ped = GetPlayerPed(-1)
+	if index == nil then
+		SetPedComponentVariation(ped,11,15,0,2)
+		return
+	end
+	if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") then
+		vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
+		Wait(5000)
+		SetPedComponentVariation(ped,11,parseInt(index),parseInt(color),2)
+		ClearPedTasks(ped)
+	elseif GetEntityModel(ped) == GetHashKey("mp_f_freemode_01") then
+		vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
+		Wait(5000)
+		SetPedComponentVariation(ped,11,parseInt(index),parseInt(color),2)
+		ClearPedTasks(ped)
 	end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETMAOS
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setmaos')
-AddEventHandler('setmaos',function(modelo,cor)
+RegisterNetEvent('maos')
+AddEventHandler('maos',function(modelo,cor)
 	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() then
+	if GetEntityHealth(ped) > 101 then
 		if not modelo then
 			vRP._playAnim(true,{{"clothingshirt","try_shirt_positive_d"}},false)
 			Wait(2500)
@@ -958,10 +965,10 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETCALCA
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setcalca')
-AddEventHandler('setcalca',function(modelo,cor)
+RegisterNetEvent('calca')
+AddEventHandler('calca',function(modelo,cor)
 	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() then
+	if GetEntityHealth(ped) > 101 then
 		if not modelo then
 			if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") then
 				vRP._playAnim(true,{{"clothingtrousers","try_trousers_neutral_c"}},false)
@@ -992,10 +999,10 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETACESSORIOS
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setacessorios')
-AddEventHandler('setacessorios',function(modelo,cor)
+RegisterNetEvent('acessorios')
+AddEventHandler('acessorios',function(modelo,cor)
 	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() then
+	if GetEntityHealth(ped) > 101 then
 		if not modelo then
 			SetPedComponentVariation(ped,7,0,0,2)
 			return
@@ -1010,10 +1017,10 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETSAPATOS
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setsapatos')
-AddEventHandler('setsapatos',function(modelo,cor)
+RegisterNetEvent('sapatos')
+AddEventHandler('sapatos',function(modelo,cor)
 	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() and not IsPedInAnyVehicle(ped) then
+	if GetEntityHealth(ped) > 101  and not IsPedInAnyVehicle(ped) then
 		if not modelo then
 			if GetEntityModel(ped) == GetHashKey("mp_m_freemode_01") then
 				vRP._playAnim(false,{{"clothingshoes","try_shoes_positive_d"}},false)
@@ -1048,10 +1055,10 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETCHAPEU
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setchapeu')
-AddEventHandler('setchapeu',function(modelo,cor)
+RegisterNetEvent('chapeu')
+AddEventHandler('chapeu',function(modelo,cor)
 	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() then
+	if GetEntityHealth(ped) > 101 then
 		if not modelo then
 			vRP._playAnim(true,{{"veh@common@fp_helmet@","take_off_helmet_stand"}},false)
 			Wait(700)
@@ -1072,10 +1079,10 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SETOCULOS
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNetEvent('setoculos')
-AddEventHandler('setoculos',function(modelo,cor)
+RegisterNetEvent('oculos')
+AddEventHandler('oculos',function(modelo,cor)
 	local ped = PlayerPedId()
-	if GetEntityHealth(ped) > 101 and src.checkRoupas() then
+	if GetEntityHealth(ped) > 101 then
 		if not modelo then
 			vRP._playAnim(true,{{"mini@ears_defenders","takeoff_earsdefenders_idle"}},false)
 			Wait(500)

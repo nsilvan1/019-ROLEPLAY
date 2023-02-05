@@ -49,10 +49,11 @@ config.chest = {
 
 	
 	["Vanilla"] = { "Vanilla", 94.1,-1290.96,29.27,3000,"vanilla.permissao","https://discord.com/api/webhooks/1053471537753247834/mnxqVw8jPgytaVtKco2vFTAZFqp0Derh2quPrakVkrod5sOhZF2HEoOClobZESrVqNM3" },
-	["Bahamas"] = { "Bahamas", -1386.74,-608.53,30.32,3000,"bahamas.permissao","https://discord.com/api/webhooks/974874799778193478/cmzXZkHomdkwVjNsQlq3hKV7XTMX-9XlygyMT6Obj0CLKiCjTK9_Z_ifC_ezc5mM0pj1" },
-	-- ["Tequilala"] = { "Tequilala", 2557.31,-769.1,85.34,3000,"tequilala.permissao","https://discord.com/api/webhooks/1053473736784875570/MMnfy-bULfbM2J-T10YjT8F2YbLHiLQue2KcheITE2sDFbynLJfeHfV4W3LesVNcvkgN" },
+	["Bahamas"] = { "Bahamas", -1389.25,-610.86,30.32,3000,"bahamas.permissao","https://discord.com/api/webhooks/974874799778193478/cmzXZkHomdkwVjNsQlq3hKV7XTMX-9XlygyMT6Obj0CLKiCjTK9_Z_ifC_ezc5mM0pj1" },
+	-- ["Tequilala"] = { "Tequilala", -573.81,293.51,79.18,3000,"tequilala.permissao","https://discord.com/api/webhooks/1053473736784875570/MMnfy-bULfbM2J-T10YjT8F2YbLHiLQue2KcheITE2sDFbynLJfeHfV4W3LesVNcvkgN" },
 	
 	["Groove"] = { "Groove", 1527.1,-640.93,138.41,3000,"groove.permissao","https://discord.com/api/webhooks/1053476188678520833/q4p1v97uRtY6Gs6i476XGlfw9pkROY_QNWGbGr2VTfT8ZDLgpyjU7I-ec56ZOg2iV4l-" },
+	["Groove2"] = { "Groove", 1397.74,-741.48,72.17,500,"groove.permissao","https://discord.com/api/webhooks/1053476188678520833/q4p1v97uRtY6Gs6i476XGlfw9pkROY_QNWGbGr2VTfT8ZDLgpyjU7I-ec56ZOg2iV4l-" },
 	["Vagos"] = { "Vagos", 353.15,-2055.32,22.25,3000,"vagos.permissao","https://discord.com/api/webhooks/977798576308617228/1vDrG-kE2ok31JAlAG7F9xqDtHHLgHtUcyxDPjKUGLWcRmUFfA45ekRVtrXqdL6w-gw3" },
 	["Ballas"] = { "Ballas", 106.38,-1981.22,20.97,3000,"ballas.permissao","https://discord.com/api/webhooks/1053477032694132736/s7DeJg9UOBNVrmGL_Alobn7X2j3MYwsMHeO9_gBaXC97o7jWG_6lfhhXkkAZwGEM_Ev3" },
 	["Bloods"] = { "Bloods", 66.02,621.89,201.37,3000,"bloods.permissao","https://discord.com/api/webhooks/1053477668248625254/KjVDHOPFKNefARO0YgP_2yQvkgLl6qoJXDysjo7Y55_gvCnzKS2nuJ90oQPW5aIBel7N" },
@@ -478,6 +479,7 @@ config.itemlist = {
 	["polvora"] = { index = "polvora", nome = "Polvora", type = "usar", peso = 0.1 },
 	["graos"] = { index = "graos", nome = "Graos", type = "usar", peso = 0.8 },
 	["graosimpuros"] = { index = "graosimpuros", nome = "Graos Impuros", type = "usar", peso = 0.8 },
+	["tora"] = { index = "tora", nome = "tora", type = "usar", peso = 1 },
 	["wbody|GADGET_PARACHUTE"] = { index = "paraquedas", nome = "Paraquedas", type = "equipar", peso = 5 },
 	["wbody|WEAPON_STICKYBOMB"] = { index = "bombaadesiva", nome = "Bomba Adesiva", type = "equipar", peso = 5 },
 	["wbody|WEAPON_GRENADE"] = { index = "granada", nome = "Granada", type = "equipar", peso = 5 },

@@ -1375,6 +1375,8 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------
 local nation = Tunnel.getInterface("nation_paintball")
 local wCooldown = {}
+
+
 function guardarArmas(id)
 	local source = vRP.getUserSource(id)
 	local user_id = id

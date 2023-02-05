@@ -703,7 +703,7 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('attachs',function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
-	if vRP.getInventoryItemAmount(user_id,"modificacaodearma") == 1 or vRP.hasPermission(user_id,"master.permissao") or vRP.hasPermission(user_id,"policia.permissao") then
+	if vRP.getInventoryItemAmount(user_id,"modificacaodearma") == 1 or vRP.hasPermission(user_id,"suporte.permissao") or vRP.hasPermission(user_id,"policia.permissao") then
 		TriggerClientEvent("setattachs",source,args[1])
 		return true
 	else
@@ -714,168 +714,171 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- /mascara
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand('mascara',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					TriggerClientEvent("setmascara",source,args[1],args[2])
-				end
-			end
-		end
-	end
+-- RegisterCommand('mascara',function(source,args,rawCommand)
+-- 	local user_id = vRP.getUserId(source)
+-- 	if vRPclient.getHealth(source) > 101 then
+-- 		if not vRPclient.isHandcuffed(source) then
+-- 			if not vRP.searchReturn(source,user_id) then
+-- 				if user_id then
+-- 					TriggerClientEvent("setmascara",source,args[1],args[2])
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+-- end)
+RegisterCommand('mascara', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('mascara', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- /blusa
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand('blusa',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					if args[1] == '123' then
-						if vRP.getInventoryItemAmount(user_id,"kitdemergulho") == 1 then
-							TriggerClientEvent("setblusa",source,args[1],args[2])
-						else
-							TriggerClientEvent("Notify",source,"negado","Você não tem kit de mergulho.") 
-						end
-					else
-						TriggerClientEvent("setblusa",source,args[1],args[2])
-					end
-				end
-			end
-		end
-	end
+-- RegisterCommand('blusa',function(source,args,rawCommand)
+-- 	local user_id = vRP.getUserId(source)
+-- 	if vRPclient.getHealth(source) > 101 then
+-- 		if not vRPclient.isHandcuffed(source) then
+-- 			if not vRP.searchReturn(source,user_id) then
+-- 				if user_id then
+-- 					if args[1] == '123' then
+-- 						if vRP.getInventoryItemAmount(user_id,"kitdemergulho") == 1 then
+-- 							TriggerClientEvent("setblusa",source,args[1],args[2])
+-- 						else
+-- 							TriggerClientEvent("Notify",source,"negado","Você não tem kit de mergulho.") 
+-- 						end
+-- 					else
+-- 						TriggerClientEvent("setblusa",source,args[1],args[2])
+-- 					end
+-- 				end
+-- 			end
+-- 		end
+-- 	end
+-- end)
+RegisterCommand('blusa', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('blusa', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- /colete
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand('colete',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					TriggerClientEvent("setcolete",source,args[1],args[2])
-				end
-			end
-		end
-	end
+RegisterCommand('colete', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('colete', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- /jaqueta
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand('jaqueta',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					TriggerClientEvent("setjaqueta",source,args[1],args[2])
-				end
-			end
-		end
-	end
+RegisterCommand('jaqueta', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('jaqueta', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
-
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- /maos
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand('maos',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					TriggerClientEvent("setmaos",source,args[1],args[2])
-				end
-			end
-		end
-	end
+RegisterCommand('maos', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('maos', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- /calca
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand('calca',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					TriggerClientEvent("setcalca",source,args[1],args[2])
-				end
-			end
-		end
-	end
+RegisterCommand('calca', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('calca', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- /acessorios
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterCommand('acessorios',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					TriggerClientEvent("setacessorios",source,args[1],args[2])
-				end
-			end
-		end
-	end
+RegisterCommand('acessorios', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('acessorios', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
 -----------------------------------------------
 -- /sapatos ------------------------------------
 -----------------------------------------------
-RegisterCommand('sapatos',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					TriggerClientEvent("setsapatos",source,args[1],args[2])
-				end
-			end
-		end
-	end
+RegisterCommand('sapatos', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('sapatos', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
 -----------------------------------------------
 -- /chapeu ------------------------------------
 -----------------------------------------------
-RegisterCommand('chapeu',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					TriggerClientEvent("setchapeu",source,args[1],args[2])
-				end
-			end
-		end
-	end
+RegisterCommand('chapeu', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('chapeu', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
 -----------------------------------------------
 -- /oculos ------------------------------------
 -----------------------------------------------
-RegisterCommand('oculos',function(source,args,rawCommand)
-	local user_id = vRP.getUserId(source)
-	if vRPclient.getHealth(source) > 101 then
-		if not vRPclient.isHandcuffed(source) then
-			if not vRP.searchReturn(source,user_id) then
-				if user_id then
-					TriggerClientEvent("setoculos",source,args[1],args[2])
-				end
-			end
-		end
-	end
+RegisterCommand('oculos', function(source, args, rawCommand)
+    local user_id = vRP.getUserId(source)
+    if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
+        vRP.hasPermission(user_id, "paramedico.permissao") then
+        TriggerClientEvent('oculos', source, args[1], args[2])
+    else
+        TriggerClientEvent("Notify", source, "negado",
+                           "Você precisa de roupas para trocar de roupa.")
+    end
 end)
 -----------------------------------------------
 -- /mochila -----------------------------------
 -----------------------------------------------
 RegisterCommand('mochila',function(source,args,rawCommand)
     local user_id = vRP.getUserId(source)
-    if vRPclient.getHealth(source) > 101 then
+	if vRPclient.getHealth(source) > 101 then
         if not vRPclient.isHandcuffed(source) then
             if not vRP.searchReturn(source,user_id) then
                 if user_id then
