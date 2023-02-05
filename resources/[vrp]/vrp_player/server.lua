@@ -882,7 +882,7 @@ RegisterCommand('mochila',function(source,args,rawCommand)
         if not vRPclient.isHandcuffed(source) then
             if not vRP.searchReturn(source,user_id) then
                 if user_id then
-                    TriggerClientEvent("setmochila",source,args[1],args[2])
+                    TriggerClientEvent("mochila",source,args[1],args[2])
                 end
             end
         end
