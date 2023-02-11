@@ -1149,7 +1149,7 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('extras',function(source,args,rawCommand)
     local user_id = vRP.getUserId(source)
-    if vRP.hasPermission(user_id,"policia.permissao") then
+    if vRP.hasPermission(user_id,"policia.permissao") or vRP.hasPermission(user_id,"paramedico.permissao") then
         if vRPclient.isInVehicle(source) then
             TriggerClientEvent('extras',source)
         end
@@ -1167,7 +1167,7 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('cone',function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
-	if vRP.hasPermission(user_id,"policia.permissao") then
+    if vRP.hasPermission(user_id,"policia.permissao") or vRP.hasPermission(user_id,"paramedico.permissao")  or vRP.hasPermission(user_id,"mecanico.permissao") then
 		TriggerClientEvent('cone',source,args[1])
 	end
 end)
@@ -1176,7 +1176,7 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('barreira',function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
-	if vRP.hasPermission(user_id,"policia.permissao") then
+    if vRP.hasPermission(user_id,"policia.permissao") or vRP.hasPermission(user_id,"paramedico.permissao")  or vRP.hasPermission(user_id,"mecanico.permissao") then
 		TriggerClientEvent('barreira',source,args[1])
 	end
 end)
@@ -1185,7 +1185,7 @@ end)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('spike',function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
-	if vRP.hasPermission(user_id,"policia.permissao") then
+    if vRP.hasPermission(user_id,"policia.permissao") or vRP.hasPermission(user_id,"paramedico.permissao")  or vRP.hasPermission(user_id,"mecanico.permissao") then
 		TriggerClientEvent('spike',source,args[1])
 	end
 end)
