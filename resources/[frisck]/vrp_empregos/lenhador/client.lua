@@ -130,11 +130,11 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- ENTREGAS
 -----------------------------------------------------------------------------------------------------------------------------------------
-local blips = false
+
 local servico = false
 local selecionado = 0
-local CoordenadaX = 1213.98 --- -1869.38, 4640.04, 300.02
-local CoordenadaY = -1251.08
+local CoordenadaX = 1213.29 --- 1213.29,-1251.14,36.33
+local CoordenadaY = -1251.14
 local CoordenadaZ = 36.33
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- RESIDENCIAS
@@ -164,10 +164,10 @@ Citizen.CreateThread(function()
 
 			if distance <= 30.0 then
 				skips = 1
-				-- DrawMarker(23,CoordenadaX,CoordenadaY,CoordenadaZ-0.97,0,0,0,0,0,0,1.0,1.0,0.5,240,200,80,20,0,0,0,0)
+				 DrawMarker(23,CoordenadaX,CoordenadaY,CoordenadaZ-0.97,0,0,0,0,0,0,1.0,1.0,0.5,240,200,80,20,0,0,0,0)
 				if distance <= 1.2 then
 					skips = 1
-					-- drawTxt("PRESSIONE  ~b~E~w~  PARA INICIAR ENTREGAS",4,0.5,0.93,0.50,255,255,255,180)
+					drawTxt("PRESSIONE  ~b~E~w~  PARA INICIAR ENTREGAS",4,0.5,0.93,0.50,255,255,255,180)
 					if IsControlJustPressed(0,38) then
 						servico = true
 						selecionado = math.random(9)
@@ -199,7 +199,7 @@ Citizen.CreateThread(function()
 					drawTxt("PRESSIONE  ~b~E~w~  PARA ENTREGAR TORAS DE MADEIRA",4,0.5,0.93,0.50,255,255,255,255)
 					if IsControlJustPressed(0,38) then
 						if lenha.checkPayment1() then
-							RemoveBlip(blips)
+							RemoveBlip(blip)
 							backentrega = selecionado
 							while true do
 								if backentrega == selecionado then
@@ -227,7 +227,7 @@ Citizen.CreateThread(function()
 		if servico then		
 			if IsControlJustPressed(0,168) then
 				servico = false
-				RemoveBlip(blips)
+				RemoveBlip(blip)
 			end
 		end
 	end
@@ -247,13 +247,13 @@ function drawTxt(text,font,x,y,scale,r,g,b,a)
 end
 
 function CriandoBlip(locs,selecionado)
-	blips = AddBlipForCoord(locs[selecionado].x,locs[selecionado].y,locs[selecionado].z)
-	SetBlipSprite(blips,1)
-	SetBlipColour(blips,5)
-	SetBlipScale(blips,0.4)
-	SetBlipAsShortRange(blips,false)
-	SetBlipRoute(blips,true)
+	blip = AddBlipForCoord(locs[selecionado].x,locs[selecionado].y,locs[selecionado].z)
+	Setblipprite(blip,1)
+	SetBlipColour(blip,5)
+	Setblipcale(blip,0.4)
+	SetBlipAsShortRange(blip,false)
+	SetBlipRoute(blip,true)
 	BeginTextCommandSetBlipName("STRING")
 	AddTextComponentString("Entrega de Madeira")
-	EndTextCommandSetBlipName(blips)
+	EndTextCommandSetBlipName(blip)
 end

@@ -25,7 +25,7 @@ function LemP.checkDinheiro()
 	local source = source
 	local user_id = vRP.getUserId(source)
 	if user_id then
-		if vRP.getInventoryItemAmount(user_id,"notafalsa") >= 10000  then
+		if vRP.getInventoryItemAmount(user_id,"dinheiro-sujo") >= 100000  then
 			return true 
 		else
 			TriggerClientEvent("Notify",source,"negado","Dinheiro insuficiente ou você não tem o item para Lavagem.") 
@@ -37,9 +37,9 @@ end
 function LemP.checkPayment()
     local source = source
     local user_id = vRP.getUserId(source)
-    local policia = vRP.getUsersByPermission("vanilla.permissao")
+    local policia = vRP.getUsersByPermission("lavagem.permissao")
     if user_id then
-		if vRP.tryGetInventoryItem(user_id,"notafalsa",100000)  then
+		if vRP.tryGetInventoryItem(user_id,"dinheiro-sujo",100000)  then
                 vRP.giveMoney(user_id,parseInt(100000*("1.")))
             end
         end
@@ -93,7 +93,7 @@ end
 function LemP.checkPermission()
 	local source = source
 	local user_id = vRP.getUserId(source)
-	return vRP.hasPermission(user_id,"vanilla.permissao")
+	return vRP.hasPermission(user_id,"lavagem.permissao")
 end
 
 function LemP.webhooklavagem ()

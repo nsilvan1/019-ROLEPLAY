@@ -16,17 +16,18 @@ local selecionado = 0
 -----------------------------------------------------------------------------------------------------------------------------------------
 local Coordenadas = {
 
-	{350.02, -2057.41, 22.25}, -- Vagos lsd
+	{122.89,-1909.93,21.32}, -- lsd 
 
 	-- {125.79, -1956.84, 20.74}, --  GOOVE
 	-- {580.58, -3112.87, 6.07}, -- Cartel Galpão
 	-- {-2425.99, 1793.88, 185.49}, --Laranjas
 
-	{975.73,-140.24,74.88}, -- The Lost
-    {511.4,-1335.76,29.73}, -- hells
+	-- {975.73,-140.24,74.88}, -- The Lost
+    -- {511.4,-1335.76,29.73}, -- hells
 	-- armas
-	{-1890.51,2063.95,145.58},-- Bratva
-	{-1466.84,-44.58,54.65}, -- mafia
+	{701.75,-303.46,59.25},-- Bratva
+	{-313.6,-1035.65,30.54}, -- mafia
+
 
 	-- {95.55, -1294.31, 29.27}, -- Vanilla
 	-- {674.88, -314.07, 60.73}, -- Verdes
@@ -238,7 +239,7 @@ Citizen.CreateThread(function()
 						RusherOtimizar = 1
 						drawTxt("PRESSIONE  ~b~E~w~  PARA INICIAR COLETA",4,0.5,0.93,0.35,255,255,255,200)
 						if IsControlJustPressed(0,38) and emP.checkPermission() then -- Ok
-							if GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),350.02, -2057.41, 22.25,true) <= 1.2 then -- Vagos
+							if GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),122.89,-1909.93,21.32,true) <= 1.2 then -- Vagos
 								servico = true	
 								inicio = 1
 								fim = 33					
@@ -274,14 +275,14 @@ Citizen.CreateThread(function()
 							   selecionado = inicio
 							   CriandoBlip(locs,selecionado)
 							   TriggerEvent("Notify","importante","Você iniciou o serviço.")
-							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),-1890.51,2063.95,145.58,true) <= 1.2 then -- bratva
+							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),701.75,-303.46,59.25,true) <= 1.2 then -- bratva
 								servico = true
 								inicio = 78
 								fim = 88
 								selecionado = inicio
 								CriandoBlip(locs,selecionado)
 								TriggerEvent("Notify","importante","Você iniciou o serviço.")
-							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),-1466.84,-44.58,54.65,true) <= 1.2 then -- mafia
+							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),-313.6,-1035.65,30.54,true) <= 1.2 then -- mafia
 								servico = true							
 								inicio = 33
 								fim = 55					

@@ -81,7 +81,7 @@ RegisterCommand("moc",function()
           TriggerEvent("nyo_notify", "#FFA500","Importante", "Você nâo pode abrir o inventario muito rapido", 5000)
         end 
       else
-        TriggerEvent("Notify","negado","Você não pode abrir o inventário quando está sendo roubado")
+        TriggerEvent("Notify","negado","Você não pode abrir o inventário neste momento")
       end
     end
 end)

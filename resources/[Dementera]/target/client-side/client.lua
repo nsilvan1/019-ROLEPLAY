@@ -4,6 +4,8 @@
 local Tunnel = module("vrp","lib/Tunnel")
 local Proxy = module("vrp","lib/Proxy")
 vRP = Proxy.getInterface("vRP")
+vRPclient = Tunnel.getInterface("vRP")
+check = Tunnel.getInterface("target")
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- VARIABLES
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -101,119 +103,128 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 local paramedicMenu = {
 	{
-		event = "paramedic:reanimar",
+		event = "re",
 		label = "Reanimar",
 		tunnel = "paramedic"
 	},
 	{
-		event = "paramedic:diagnostico",
-		label = "Diagnóstico",
+		event = "tratamentoRapido",
+		label = "Tratamento externo",
 		tunnel = "paramedic"
 	},
 	{
-		event = "paramedic:tratamento",
+		event = "tratamento",
 		label = "Tratamento",
 		tunnel = "paramedic"
 	},
-	{
-		event = "paramedic:sangramento",
-		label = "Sangramento",
-		tunnel = "paramedic"
-	},
-	{
-		event = "paramedic:maca",
-		label = "Deitar Paciente",
-		tunnel = "paramedic"
-	}
+-- 	{
+-- 		event = "paramedic:sangramento",
+-- 		label = "Sangramento",
+-- 		tunnel = "paramedic"
+-- 	},
+	-- {
+	-- 	event = "target:pacienteDeitar",
+	-- 	label = "Deitar Paciente",
+	-- 	tunnel = "client"
+	-- }
 }
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- POLICEVEH
 -----------------------------------------------------------------------------------------------------------------------------------------
-local policeVeh = {
-	{
-		event = "police:runPlate",
-		label = "Verificar Placa",
-		tunnel = "police"
-	},
-	{
-		event = "police:impound",
-		label = "Registrar Veículo",
-		tunnel = "police"
-	},
-	{
-		event = "police:runArrest",
-		label = "Detenção do Veículo",
-		tunnel = "police"
-	}
+ local policeVeh = {
+ 	{
+ 		event = "police:runPlate",
+ 		label = "Verificar Placa",
+ 		tunnel = "police"
+ 	},
+-- 	{
+-- 		event = "police:impound",
+-- 		label = "Registrar Veículo",
+-- 		tunnel = "police"
+-- 	},
+-- 	{
+-- 		event = "police:runArrest",
+-- 		label = "Detenção do Veículo",
+-- 		tunnel = "police"
+-- 	}
 }
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- PLAYERVEH
 -----------------------------------------------------------------------------------------------------------------------------------------
 local playerVeh = {
-	{
-		event = "inventory:stealTrunk",
-		label = "Arrombar Porta-Malas",
-		tunnel = "server"
-	},
+	-- {
+	-- 	event = "inventory:stealTrunk",
+	-- 	label = "Arrombar Porta-Malas",
+	-- 	tunnel = "server"
+	-- },
 	{
 		event = "target:enterTrunk",
 		label = "Entrar/Sair do Porta-Mala",
 		tunnel = "server"
 	},
 
-	{
-		event = "target:enterTrunkp",
-		label = "Colocar/Tirar do Porta-Mala",
-		tunnel = "server"
-	},
+	-- {
+	-- 	event = "target:enterTrunkp",
+	-- 	label = "Colocar/Tirar do Porta-Mala",
+	-- 	tunnel = "server"
+	-- },
 
 	{
-		event = "inventory:clonando",
+		event = "target:clonando",
 		label = "Clonar placa",
 		tunnel = "server"
 	},
 	{
-		event = "inventory:repairkit",
+		event = "target:repairkit",
 		label = "Arrumar veiculo",
 		tunnel = "server"
+	},
+	{
+		event = "police:runPlate",
+		label = "Verificar Placa",
+		tunnel = "police"
 	},
 }
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- POLICEPED
 -----------------------------------------------------------------------------------------------------------------------------------------
-local policePed = {
+ local policePed = {
+ 	-- {
+ 	-- 	event = "SV:REVISTAR",
+ 	-- 	label = "Revistar",
+ 	-- 	tunnel = "police"
+ 	-- },
 	{
-		event = "police:runInspect",
-		label = "Revistar",
+		event = "SV:apreender",
+		label = "Apreender",
 		tunnel = "police"
 	},
-	{
-		event = "police:prisonClothes",
-		label = "Uniforme do Presídio",
-		tunnel = "police"
-	}
-}
------------------------------------------------------------------------------------------------------------------------------------------
+-- 	{
+-- 		event = "police:prisonClothes",
+-- 		label = "Uniforme do Presídio",
+-- 		tunnel = "police"
+-- 	}
+ }
+-- -----------------------------------------------------------------------------------------------------------------------------------------
 -- ADMINMENU
 -----------------------------------------------------------------------------------------------------------------------------------------
-local adminMenu = {
-	{
-		event = "tryDeleteObject",
-		label = "Deletar Objeto",
-		tunnel = "admin"
-	},
-	{
-		event = "garages:deleteVehicle",
-		label = "Deletar Veículo",
-		tunnel = "admin"
-	}
-}
+-- local adminMenu = {
+-- 	{
+-- 		event = "tryDeleteObject",
+-- 		label = "Deletar Objeto",
+-- 		tunnel = "admin"
+-- 	},
+-- 	{
+-- 		event = "garages:deleteVehicle",
+-- 		label = "Deletar Veículo",
+-- 		tunnel = "admin"
+-- 	}
+-- }
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- PLAYERTARGETENABLE
 -----------------------------------------------------------------------------------------------------------------------------------------
 function playerTargetEnable()
---	print(playerActive)
 	if playerActive then
 		if success or IsPedArmed(PlayerPedId(),6) or IsPedInAnyVehicle(PlayerPedId()) then
 			return
@@ -228,9 +239,9 @@ function playerTargetEnable()
 			local ped = PlayerPedId()
 			local coords = GetEntityCoords(ped)
 			local hit,entCoords,entity = RayCastGamePlayCamera(setDistance)
-
 			if hit == 1 then
 				if GetEntityType(entity) ~= 0 then
+					
 					if adminService then
 						if DoesEntityExist(entity) then
 							if #(coords - entCoords) <= setDistance then
@@ -277,6 +288,7 @@ function playerTargetEnable()
 								SendNUIMessage({ response = "leftTarget" })
 							end
 						end
+					-- aqui é sincronismo do Veiculo
 					elseif IsEntityAVehicle(entity) then
 						if #(coords - entCoords) <= 1.0 then
 							success = true
@@ -298,7 +310,7 @@ function playerTargetEnable()
 									SetNuiFocus(true,true)
 								end
 
-								if GetEntityType(entity) == 0 or #(coords - entCoords) > 1.0 then
+								if GetEntityType(entity) == 0 or #(coords - entCoords) > 1.0 then									
 									success = false
 								end
 
@@ -307,8 +319,8 @@ function playerTargetEnable()
 
 							SendNUIMessage({ response = "leftTarget" })
 						end
-					elseif IsPedAPlayer(entity) and policeService then
-						if #(coords - entCoords) <= 1.0 then
+					elseif IsPedAPlayer(entity) and check.checkServicesPolice() then
+						if #(coords - entCoords) <= 5.0 then
 							local index = NetworkGetPlayerIndexFromPed(entity)
 							local source = GetPlayerServerId(index)
 
@@ -337,7 +349,7 @@ function playerTargetEnable()
 
 							SendNUIMessage({ response = "leftTarget" })
 						end
-					elseif IsPedAPlayer(entity) and paramedicService then
+					elseif IsPedAPlayer(entity) and check.checkServicesParamedic() then
 						if #(coords - entCoords) <= 1.0 then
 							local index = NetworkGetPlayerIndexFromPed(entity)
 							local source = GetPlayerServerId(index)
@@ -488,7 +500,8 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterNetEvent("target:pacienteDeitar")
 AddEventHandler("target:pacienteDeitar",function()
-	local ped = PlayerPedId()
+	print('ped admin')
+	local handle,ped = FindFirstPed()
 	local coords = GetEntityCoords(ped)
 
 	for k,v in pairs(beds) do
@@ -498,7 +511,6 @@ AddEventHandler("target:pacienteDeitar",function()
 
 			SetEntityCoords(ped,objCoords["x"],objCoords["y"],objCoords["z"] + v[1],1,0,0,0)
 			SetEntityHeading(ped,GetEntityHeading(object) + v[2] - 180.0)
-
 			vRP.playAnim(false,{"anim@gangops@morgue@table@","body_search"},true)
 			break
 		end
@@ -602,36 +614,73 @@ AddEventHandler("target:animSentar",function()
 end)
 
 -----------------------------------------------------------------------------------------------------------------------------------------
+-- target:repairkit
+-----------------------------------------------------------------------------------------------------------------------------------------
+RegisterNetEvent("target:repairkit")
+AddEventHandler("target:repairkit",function()
+	TriggerServerEvent('useRepairKit')
+end)
+-----------------------------------------------------------------------------------------------------------------------------------------
 -- ENTERTRUNK
 -----------------------------------------------------------------------------------------------------------------------------------------
--- local inTrunk = false
--- RegisterNetEvent("target:enterTrunk")
--- AddEventHandler("target:enterTrunk",function()
---     local ped = PlayerPedId()
---     if not inTrunk then
---         local vehicle = vRP.vehList(11)
---         if DoesEntityExist(vehicle) then
---                 local coords = GetEntityCoords(ped)
---                 local coordsEnt = GetWorldPositionOfEntityBone(vehicle,trunk)
---                 local distance = #(coords - coordsEnt)
---                 if distance <= 3.0 then
---                     timeDistance = 4
---                     if GetVehicleDoorAngleRatio(vehicle,5) < 0.9 and GetVehicleDoorsLockedForPlayer(vehicle,PlayerId()) ~= 1 then
---                         SetCarBootOpen(vehicle)
---                         SetEntityVisible(ped,false,false)
---                         Citizen.Wait(750)
---                         AttachEntityToEntity(ped,vehicle,-1,0.0,-2.2,0.5,0.0,0.0,0.0,false,false,false,false,20,true)
---                         inTrunk = true
---                         Citizen.Wait(500)
---                         SetVehicleDoorShut(vehicle,5)
---                     end
---                 end
---         end
---     end
+--[ ENTRAR NO PORTA MALA ]---------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+local inTrunk = false
+RegisterNetEvent("target:enterTrunk")
+AddEventHandler("target:enterTrunk",function()
+	
+    local ped = PlayerPedId()	
+	local plyid = PlayerId()
+	local vehicle = vRP.vehList(11)
+    if not inTrunk then
+        if DoesEntityExist(vehicle) then
+                local coords = GetEntityCoords(ped)
+                local coordsEnt = GetWorldPositionOfEntityBone(vehicle,trunk)
+                local distance = #(coords - coordsEnt)
+                if distance <= 3.0 then
+                    timeDistance = 4
+                    if GetVehicleDoorAngleRatio(vehicle,5) < 0.9 and GetVehicleDoorsLockedForPlayer(vehicle,PlayerId()) ~= 1 then
+                        SetCarBootOpen(vehicle)
+                        SetEntityVisible(ped,false)
+                        Citizen.Wait(750)
+                        AttachEntityToEntity(ped,vehicle,-1,0.0,-2.2,0.5,0.0,0.0,0.0,false,false,false,false,20,true)
+                        inTrunk = true
+                        Citizen.Wait(500)
+                        SetVehicleDoorShut(vehicle,5)
+                    end
+                end
+        end
+	else 
+		SetCarBootOpen(vehicle)
+		SetEntityVisible(ped, true)
+		Citizen.Wait(550)
+		TriggerServerEvent('chuveiro')
+		AttachEntityToEntity(ped,vehicle,-1,0.0,-2.2,0.5,0.0,0.0,0.0,true,true,true,true,1,true)
+		inTrunk = false
+		Citizen.Wait(500)
+		SetVehicleDoorShut(vehicle,5)
+    end
+end)
 
+---------------------------------------------------------------------------------------------------------------------------------------
+-- CLONAR PLACAS ----------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+RegisterNetEvent('cloneplates')
+AddEventHandler('cloneplates',function()
+    local ped = PlayerPedId()
+    local vehicle = GetVehiclePedIsUsing(ped)
+    local clonada = GetVehicleNumberPlateText(vehicle)
+    if IsEntityAVehicle(vehicle) then
+        PlateIndex = GetVehicleNumberPlateText(vehicle)
+        SetVehicleNumberPlateText(vehicle,"CLONADA")
+        -- FreezeEntity(vehicle,false)
+        if clonada == CLONADA then 
+            SetVehicleNumberPlateText(vehicle,PlateIndex)
+            PlateIndex = nil
+        end
+    end
+end)
 
-
--- end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- PLAYERTARGETDISABLE
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -645,6 +694,60 @@ function playerTargetDisable()
 		SendNUIMessage({ response = "closeTarget" })
 	end
 end
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+--[ TRATAMENTO ]-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+local tratamento = false
+RegisterNetEvent("tratamento")
+AddEventHandler("tratamento",function()
+    local ped = PlayerPedId()
+    local health = GetEntityHealth(ped)
+
+    SetEntityHealth(ped,health)
+	
+	if emMaca then
+		if tratamento then
+			return
+		end
+
+		tratamento = true
+		TriggerEvent("Notify","sucesso","Tratamento iniciado, aguarde a liberação do <b>profissional médico.</b>.",8000)
+		
+
+		if tratamento then
+			repeat
+				Citizen.Wait(600)
+				if GetEntityHealth(ped) > 101 then
+					SetEntityHealth(ped,GetEntityHealth(ped)+3)
+				end
+			until GetEntityHealth(ped) >= 399 or GetEntityHealth(ped) <= 101
+				TriggerEvent("Notify","sucesso","Tratamento concluido.",8000)
+				tratamento = false
+		end
+	else
+		TriggerEvent("Notify","negado","Você precisa estar deitado em uma maca para ser tratado.",8000)
+	end
+end)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+--[ TRATAMENTO Rapido ]-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+local tratamento = false
+RegisterNetEvent("tratamentoRapido")
+AddEventHandler("tratamentoRapido",function()
+    local ped = PlayerPedId()
+    local health = GetEntityHealth(ped)
+
+    SetEntityHealth(ped,health)
+	
+	TriggerEvent("Notify","sucesso","Tratamento iniciado.",8000)
+		Citizen.Wait(600)
+		SetEntityHealth(ped,GetEntityHealth(ped)+50)
+		TriggerEvent("Notify","sucesso","Tratamento concluido.",8000)	
+end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SELECTTARGET
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -654,25 +757,26 @@ RegisterNUICallback("selectTarget",function(data,cb)
 	SetNuiFocus(false,false)
 	local ped = PlayerPedId()
 	SendNUIMessage({ response = "closeTarget" })
-
 	if data["tunnel"] == "client" then
 		TriggerEvent(data["event"],innerEntity)
 	elseif data["tunnel"] == "paramedic" then
-		TriggerServerEvent(data["event"],innerEntity[1])
+		TriggerServerEvent(data["event"])
 	elseif data["tunnel"] == "police" then
-		TriggerServerEvent(data["event"],innerEntity,data["service"])
+		TriggerServerEvent(data["event"])
 
-		if data["service"] then
-			SetEntityHeading(ped,innerEntity[5])
-		end
+		-- if data["service"] then
+		-- 	SetEntityHeading(ped,innerEntity[5])
+		-- end
 	elseif data["tunnel"] == "objects" then
 		TriggerServerEvent(data["event"],innerEntity[3])
 	elseif data["tunnel"] == "admin" then
 		TriggerServerEvent(data["event"],innerEntity[1],innerEntity[2])
 	else
-		TriggerServerEvent(data["event"])
+
+		TriggerEvent(data["event"])
 	end
 end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- CLOSETARGET
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -681,6 +785,17 @@ RegisterNUICallback("closeTarget",function(data,cb)
 	targetActive = false
 	SetNuiFocus(false,false)
 end)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+-- REVISTAR
+-----------------------------------------------------------------------------------------------------------------------------------------
+RegisterNetEvent("REVISTAR")
+AddEventHandler("REVISTAR",function()
+	SetNuiFocus(true,true)
+	StartScreenEffect("MenuMGSelectionIn", 0, true)
+	SendNUIMessage({ action = "updateRevistar", name = "REVISTAR"})
+end)
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- ROTATIONTODIRECTION
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -717,6 +832,7 @@ function RayCastGamePlayCamera(distance)
 
 	return b,c,e
 end
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- ADDCIRCLEZONE
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -746,6 +862,7 @@ function AddTargetModel(models,parameteres)
 		Models[v] = parameteres
 	end
 end
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- EXPORTS
 -----------------------------------------------------------------------------------------------------------------------------------------

@@ -76,7 +76,7 @@ config.descontos = {
 
 config.vehList = {
 	
-	{ hash = 1897985918, name = 'imola', price = 900000, banido = false, modelo = 'Imola', capacidade = 30, tipo = 'carros' },
+{ hash = 1897985918, name = 'imola', price = 900000, banido = false, modelo = 'Imola', capacidade = 30, tipo = 'carros' },
 { hash = -2049278303, name = 'ben17', price = 900000, banido = false, modelo = 'Ben 17', capacidade = 30, tipo = 'carros' },
 { hash = -905399718, name = 'a80', price = 900000, banido = false, modelo = 'Supra A80', capacidade = 30, tipo = 'carros' },
 { hash = 1920158251, name = '500gtrlam', price = 900000, banido = false, modelo = '500GTR Lam', capacidade = 30, tipo = 'carros' },

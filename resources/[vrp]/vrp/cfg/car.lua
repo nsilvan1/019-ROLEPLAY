@@ -4,6 +4,10 @@ car = {}
 
 car.vehList = {
 	
+
+	['fd2'] = {  ['hash'] = -253262092, ['name'] = 'fd2', ['price'] = 40000,['modelo'] = 'fd2', ['capacidade'] = 40, ['tipo'] = 'outros' },
+	['Wrasprinter'] = {  ['hash'] = -1284811839, ['name'] = 'Wrasprinter', ['price'] = 40000,['modelo'] = 'Wrasprinter', ['capacidade'] = 40, ['tipo'] = 'outros' },
+
 	['stunt'] = {  ['hash'] = -2122757008, ['name'] = 'stunt', ['price'] = 45000,['modelo'] = 'stunt', ['capacidade'] = 350, ['tipo'] = 'avioes' },
 	['ninef'] = {  ['hash'] = 1032823388, ['name'] = 'ninef', ['price'] = 80000,['modelo'] = 'ninef', ['capacidade'] = 15, ['tipo'] = 'outros' },
 	['argiu'] = {  ['hash'] = 1545394406, ['name'] = 'argiu', ['price'] = 150000,['modelo'] = 'argiu', ['capacidade'] = 15, ['tipo'] = 'outros' },

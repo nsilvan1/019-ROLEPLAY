@@ -41,6 +41,7 @@ RegisterCommand('re',function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
 	if vRP.hasPermission(user_id,"admin.permissao") or vRP.hasPermission(user_id,"paramedico.permissao") or vRP.hasPermission(user_id,"policia.permissao") then
 		local nplayer = vRPclient.getNearestPlayer(source,2)
+		print(source)
 		if nplayer then
 			if vRPclient.isInComa(nplayer) then
 				local identity_user = vRP.getUserIdentity(user_id)

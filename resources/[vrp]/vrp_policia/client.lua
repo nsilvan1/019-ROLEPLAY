@@ -155,7 +155,7 @@ Citizen.CreateThread(function()
 
 			if not in_arena and IsPedShooting(ped) and not blacklistweapon then
 				TriggerServerEvent('atirando',x,y,z)
-				Wait(30000)
+				Wait(300)
 			end
 		end
 		blacklistweapon = false
@@ -169,7 +169,6 @@ AddEventHandler('notificacao',function(x,y,z,user_id)
 	if not DoesBlipExist(blips[user_id]) then
 		PlaySoundFrontend(-1,"Enter_1st","GTAO_FM_Events_Soundset",true)
 		TriggerEvent("NotifyPush",{ code = 10, title = "Ocorrência em andamento", x = x, y = y, z = z, badge = "Disparos de arma de fogo" })
-		TriggerEvent('chatMessage',"911",{64,64,255},"Disparos de arma de fogo aconteceram, verifique o ocorrido.")
 		blips[user_id] = AddBlipForCoord(x,y,z)
 		SetBlipScale(blips[user_id],0.5)
 		SetBlipSprite(blips[user_id],10)
@@ -178,7 +177,7 @@ AddEventHandler('notificacao',function(x,y,z,user_id)
 		AddTextComponentString("Disparos de arma de fogo")
 		EndTextCommandSetBlipName(blips[user_id])
 		SetBlipAsShortRange(blips[user_id],true)
-		SetTimeout(30000,function()
+		SetTimeout(1500,function()
 			if DoesBlipExist(blips[user_id]) then
 				RemoveBlip(blips[user_id])
 			end

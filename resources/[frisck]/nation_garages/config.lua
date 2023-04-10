@@ -61,6 +61,8 @@ config.imgDir = "http://189.1.172.114/images/" -- url ou diretorio das imagens
 ----------------------------------------------
 config.vehList = {
 
+	{ hash = -1284811839, name = 'Wrasprinter', price = 45000, banido = false, modelo = 'Wrasprinter', capacidade = 40, tipo = 'serviço' },
+	{ hash = -253262092, name = 'fd2', price = 45000, banido = false, modelo = 'fd2', capacidade = 40, tipo = 'serviço' },
 	{ hash = -2122757008, name = 'stunt', price = 45000, banido = false, modelo = 'stunt', capacidade = 350, tipo = 'avioes' },
 	{ hash = 1032823388, name = 'ninef', price = 80000, banido = false, modelo = 'ninef', capacidade = 15, tipo = 'outros' },
 	{ hash = 1545394406, name = 'argiu', price = 150000, banido = false, modelo = 'argiu', capacidade = 15, tipo = 'outros' },
@@ -1428,9 +1430,9 @@ config.garages = {
 		  [3] = { vec3(323.59, -586.1, 28.8), h = 336.69 },
 		},
 		vehicles = {
-	  		{ vehicle = 'VRtahoe', modelo = 'Tahoe' },  
+	  		{ vehicle = 'FD2', modelo = 'Dodge Charger 2018' },  
 	  		{ vehicle = 'Wrasprinter', modelo = 'Ambulancia' },  
-	  		{ vehicle = 'WRr1200', modelo = 'Resgate Rapido' },  
+	  		-- { vehicle = 'WRr1200', modelo = 'Resgate Rapido' },  
 		}
 	},
 	[5] = { type = 'service', coords = vec3(338.33,-586.60,74.16), perm = 'paramedico.permissao',  --// Heli Paramédico
@@ -1438,7 +1440,7 @@ config.garages = {
 	 	 [1] = { vec3(350.57,-587.35,74.02), h = 245.40 },
 		},
 		vehicles = {
-		{ vehicle = 'frogger', modelo = 'Helicoptero' },
+		{ vehicle = 'supervolito', modelo = 'Resgate Aereo' },
 		{ vehicle = 'seasparrow', modelo = 'seasparrow' },
 		}
 	},
@@ -1467,14 +1469,14 @@ config.garages = {
 			{ vehicle = 'taxi', modelo = 'taxi' },  
 		}
 	},
-	[9] = { type = 'service', coords = vec3(-537.10,-886.54, 25.208), perm = nil, --  // Weazel (CARRO)
-		vehiclePositions = {
-			[1] = { vec3(-542.19, -892.47, 24.643), h = 100.0 },
-		},
-		vehicles = {
-			{ vehicle = 'rumpo', modelo = 'rumpo' },  
-		}
-	},	
+	-- [9] = { type = 'service', coords = vec3(-537.10,-886.54, 25.208), perm = nil, --  // Weazel (CARRO)
+	-- 	vehiclePositions = {
+	-- 		[1] = { vec3(-542.19, -892.47, 24.643), h = 100.0 },
+	-- 	},
+	-- 	vehicles = {
+	-- 		{ vehicle = 'rumpo', modelo = 'rumpo' },  
+	-- 	}
+	-- },	
 	[10] = { type = 'service', coords = vec3(-341.19,-1567.68,25.22), perm = nil, -- // Lixeiro
 		vehiclePositions = {
 			[1] = { vec3(-336.67,-1563.24,24.95), h = 90.84 },
@@ -1810,7 +1812,7 @@ config.garages = {
 	},
   },
 
-  [52] = { type = 'public', coords = vec3(-348.72, -874.77, 31.32), perm = nil, -- Aeroporto //
+  [52] = { type = 'public', coords = vec3(-348.72, -874.77, 31.32), perm = nil, -- Vermelho //
 	vehiclePositions = {
 	  [1] = { vec3(-343.51, -875.98, 30.73), h = 167.60 },
 	  [2] = { vec3(-339.74, -876.19, 30.73), h = 167.60 },
@@ -1819,16 +1821,30 @@ config.garages = {
 	},
   },
 
-  [53] = { type = 'public', coords = vec3(-276.3,-1913.97,29.95), perm = nil, -- Aeroporto //
-  vehiclePositions = {
-	[1] = { vec3(-271.48,-1905.32,27.76), h = 167.60 },
-	vehicles = {
-		{ vehicle = 'swift', modelo = 'Swift' },
-		
-	}
+--   [53] = { type = 'public', coords = vec3(-276.3,-1913.97,29.95), perm = nil, -- Arena //
+--   vehiclePositions = {
+-- 	[1] = { vec3(-271.48,-1905.32,27.76), h = 167.60 },
+-- 	vehicles = {
+-- 		{ vehicle = 'swift', modelo = 'Swift' },		
+-- 	}
 
-  },
-},
+--   },
+[54] = { type = 'service', coords = vec3(-852.79,-128.78,37.66), perm = nil, -- BIKES AEROPORTO//
+		vehiclePositions = {
+	  		[1] = { vec3(-857.4,-132.93,37.79), h = 244.29 },
+	 		[2] = { vec3(-859.07,-129.77,37.86), h = 244.29 }, 
+	  		[3] = { vec3(-859.62,-127.56,37.84), h = 244.29 },
+		},
+		vehicles = {
+			{ vehicle = 'scorcher', modelo = 'scorcher' },
+			{ vehicle = 'tribike', modelo = 'tribike' },
+			{ vehicle = 'tribike2', modelo = 'tribike2' },
+			{ vehicle = 'tribike3', modelo = 'tribike3' },
+			{ vehicle = 'fixter', modelo = 'fixter' },
+			{ vehicle = 'cruiser', modelo = 'cruiser' },
+			{ vehicle = 'bmx', modelo = 'bmx' },  
+		}
+	},
 }
 -----------------------------------------------------------------
 ------------------ GARAGENS DAS CASAS ---------------------------

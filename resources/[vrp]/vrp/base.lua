@@ -108,6 +108,7 @@ function vRP.getUData(user_id,key,cbr)
 end
 
 function vRP.remUData(user_id,key)
+	print('quit')
 	vRP.execute("vRP/rem_u_data",{ user_id = parseInt(user_id), key = key })
 end
 
@@ -336,9 +337,9 @@ function vRP.dropPlayer(source,reason, data)
 			end
 			
 			local identity = vRP.getUserIdentity(user_id)
-
 			if vRP.hasGroup(user_id,"policia") then
 				vRP.addUserGroup(user_id,"paisana-policia")
+				
 
 				SendWebhookMessage(webhookpoliciaponto,"```prolog\n[ID]: "..user_id.." \n[=========SAIU DE SERVICO=========]"..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").."\r```")
 
@@ -529,6 +530,15 @@ AddEventHandler("queue:playerConnecting",function(source,ids,name,setKickReason,
 		deferrals.done("Ocorreu um problema de identidade.")
 		TriggerEvent("queue:playerConnectingRemoveQueues",ids)
 	end
+end)
+AddEventHandler("playerDropped",function(reason)
+ 	local source = source
+ 	local ped = GetPlayerPed(source)
+ 	vRP.dropPlayer(source,reason,{
+ 		health = GetEntityHealth(ped),
+ 		armour = GetPedArmour(ped),
+ 		coords = GetEntityCoords(ped),
+ 	})
 end)
 
 RegisterServerEvent("vRPcli:playerSpawned")

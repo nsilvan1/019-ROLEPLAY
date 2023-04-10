@@ -17,23 +17,8 @@
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item menu-items active">
-            <button class="nav-link" onclick="openDiv('empregado')">
-              <span class="menu-title">Empregados</span>
-            </button>
-          </li>
-          <li class="nav-item menu-items active">
-            <button class="nav-link" onclick="openDiv('procurado')">
-              <span class="menu-title">Procurados</span>
-            </button>
-          </li>
-          <li class="nav-item menu-items active">
-            <button class="nav-link" onclick="openDiv('hierarquia')">
-              <span class="menu-title">Hierarquia</span>
-            </button>
-          </li>
-
+        <ul class="nav"  id="menuPRocurado">
+         
         </ul>
       </nav>
       <!-- partial -->
@@ -60,7 +45,8 @@
                         <tr>
                           <th> Passaporte </th>
                           <th> Nome </th>
-                          <th> Fone</th>
+                          <th> Sobrenome </th>
+                          <th> Celular</th>
                           <th> Hierarquia</th>
                           <th> </th>
                           <th> </th>
@@ -107,7 +93,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <div class="row" id="hierarquia" name="hierarquia" style="display: none;">
             <div class="col-12 grid-margin">
@@ -135,6 +120,38 @@
 
                       </tbody>
                     </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="addprocuradoAll" name="addprocuradoAll" style="display: none;">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-8 grid-margin">
+                      <h4 class="card-title">Procurados</h4>
+                    </div>
+                    <div class="col-4 grid-margin">
+                      <button class="badge btn-outline-info" id='btnProcuradoAll' style="display: none;" onclick="modalDinamicAddUser('procuradoAll')"> Adicionar</button>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th> Passaporte</th>
+                            <th> Nome </th>
+                            <th> Sobrenome</th>
+                            <th> Motivo</th>
+                            <th> </th>
+                            <th> </th>
+                          </tr>
+                        </thead>
+                        <tbody id="procuradosAllTable">
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>

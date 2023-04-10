@@ -1,5 +1,6 @@
     local model =  'mp_m_freemode_01'
     local spawncds = vector4(-826.0,-112.99,27.99,161.57)
+    
     local spawnLocations =  nil 
 
     CreateThread(function()

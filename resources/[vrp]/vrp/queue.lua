@@ -27,10 +27,10 @@ Config.Language = {
 	connecting = " [ AZTLAN CITY ] \n\nConectando...",
 	err = " [ AZTLAN CITY ] \n\nNão foi possível identificar sua Steam ou Social Club.",
 	_err = " [ AZTLAN CITY ] \n\nVocê foi desconectado por demorar demais na fila.",
-	pos = " [ AZTLAN CITY ] \n\nVocê é o %d/%d da fila, aguarde sua conexão...\n\nAdquira VIP para obter prioridade na fila: loja.EVO.com",
-	connectingerr = " [ AZTLAN CITY ] \n\nNão foi possível adiciona-lo na fila.\ninstagram.com/evoroleplay",
-    wlonly = " [ AZTLAN CITY ] \n\nVocê não está aprovado na whitelist.\n\ninstagram.com/evoroleplay",
-	banned = " [ AZTLAN CITY ] \n\nSeu passaporte foi revogado na cidade.\n\ninstagram.com/evoroleplay",
+	pos = " [ AZTLAN CITY ] \n\nVocê é o %d/%d da fila, aguarde sua conexão...",
+	connectingerr = " [ AZTLAN CITY ] \n\nNão foi possível adiciona-lo na fila.\ninstagram.com/aztlanrp",
+    wlonly = " [ AZTLAN CITY ] \n\nVocê não está aprovado na whitelist.\n\ninstagram.com/aztlanrp",
+	banned = " [ AZTLAN CITY ] \n\nSeu passaporte foi revogado na cidade.\n\ninstagram.com/aztlanrp",
 	steam = " [ AZTLAN CITY ] \n\nVocê precisa estar com a Steam aberta para conectar."
 }
 
