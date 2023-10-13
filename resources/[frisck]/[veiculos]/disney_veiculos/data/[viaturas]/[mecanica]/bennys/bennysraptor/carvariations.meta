@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CVehicleModelInfoVariation>
+  <variationData>
+    <Item>
+      <modelName>bennysraptor</modelName>
+       <colors>
+        <Item>
+          <indices content="char_array">
+            12
+            1
+            5
+            1	
+          </indices>
+          <liveries>
+            <Item value="true" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+            <Item value="false" />
+          </liveries>
+        </Item>
+      </colors>
+      <kits>
+        <Item>0</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+      	<Probabilities>
+      		<Item>
+      			<Name>yankton plate</Name>
+      			<Value value="100" />
+      		</Item>
+      	</Probabilities>
+      </plateProbabilities>
+      <lightSettings value="998" />
+      <sirenSettings value="0" />
+    </Item>
+  </variationData>
+</CVehicleModelInfoVariation>

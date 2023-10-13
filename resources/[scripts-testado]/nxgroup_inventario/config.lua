@@ -21,7 +21,7 @@ config.drawMarker = function(x,y,z)
 	DrawMarker(27,x,y,z-0.97,0,0,0,0,0,0,1.0,1.0,0.5,201, 0, 0,155,0,0,0,1)
 end
 
-config.images = "https://flushrp.com/img/inv/"
+config.images = "http://189.1.172.224/img/"
 config.permSpawn = "ceo.permissao" --PERMISSAO PRA ACESSO AO COMANDO /arma e /item
 config.nationGarages = true
 config.nyoGarages = false
@@ -133,14 +133,14 @@ config.itemShops = {
 			["perm"] = nil,
 			["cash"] = "limpo",
 			["list"] = {
-				["celular"] = 10000,
+				["celular"] = 5000,
 				["repairkit"] = 15000,
-				["radio"] = 5000,
+				["radio"] = 2000,
 				["mochila"] = 15000,
 				["roupas"] = 5000,
 				-- ["alianca"] = 20000,
-				["energetico"] = 7000,
-				["isca"] = 200,
+				["energetico"] = 1000,
+				["isca"] = 100,
 			}
 		},
 		["departamentStorePesca"] = {
@@ -148,15 +148,15 @@ config.itemShops = {
 			["method"]= "Sell",
 			["cash"] = "limpo",
 			["list"] = {
-				["lambari"] = 400,
-				["dourado"] = 450,
-				["corvina"] = 470,
-				["salmao"] = 500,
-				["pacu"] = 550,
-				["pintado"] = 570,
-				["pirarucu"] = 600,
-				["tilapia"] = 650,
-				["tucunare"] = 700,
+				["lambari"] = 100,
+				["dourado"] = 150,
+				["corvina"] = 170,
+				["salmao"] = 200,
+				["pacu"] = 150,
+				["pintado"] = 170,
+				["pirarucu"] = 200,
+				["tilapia"] = 150,
+				["tucunare"] = 100,
 				["isca"] = 100,
 			}
 		},
@@ -165,7 +165,7 @@ config.itemShops = {
 			["method"]= "Sell",
 			["cash"] = "limpo",
 			["list"] = {
-				["graos"] = 350,
+				["graos"] = 100,
 			}
 		},
 		["bebidasStore"] = {
@@ -198,13 +198,13 @@ config.itemShops = {
 			["cash"] = "limpo",
 			["method"]= "Sell",
 			["list"] = {
-				["ouro"] = 300,
-				["ferro"] = 300,
-				["bronze"] = 300,
-				["topazio"] = 300,
-				["rubi"] = 300,
-				["safira"] = 300,
-				["diamante"] = 3000,
+				["ouro"] = 100,
+				["ferro"] = 100,
+				["bronze"] = 100,
+				["topazio"] = 100,
+				["rubi"] = 100,
+				["safira"] = 100,
+				["diamante"] = 400,
 			}
 		},
 		["ammunationStore"] = {
@@ -238,17 +238,17 @@ config.itemShops = {
 			["cash"] = "sujo",
 			["list"] = {
 				["polvora"] = 250,
-				["molas"] = 5000,
-				["gatilho"] = 5000,
-				["placa-metal"] = 10000,
+				["molas"] = 1000,
+				["gatilho"] = 2000,
+				["placa-metal"] = 9000,
 			}
 		},
 		["ilegalStore2"] = {
 			["perm"] = nil,
 			["cash"] = "limpo",
 			["list"] = {
-				["algema"] = 5000,
-				["capuz"] = 3000,
+				["algema"] = 3000,
+				["capuz"] = 1000,
 				["modificacaodearma"] = 20000,
 
 			}

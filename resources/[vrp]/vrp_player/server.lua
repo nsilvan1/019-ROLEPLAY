@@ -138,9 +138,9 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 local salarios = {
 	-- VIPS
-	{ ['permissao'] = "bronze.permissao", ['nome'] = "Bronze", ['payment'] = 2000 },
-	{ ['permissao'] = "prata.permissao", ['nome'] = "Prata", ['payment'] = 4000 },
-    { ['permissao'] = "ouro.permissao", ['nome'] = "Ouro", ['payment'] = 6000 },
+	{ ['permissao'] = "bronze.permissao", ['nome'] = "Bronze", ['payment'] = 500 },
+	{ ['permissao'] = "prata.permissao", ['nome'] = "Prata", ['payment'] = 1000 },
+    { ['permissao'] = "ouro.permissao", ['nome'] = "Ouro", ['payment'] = 1500 },
     { ['permissao'] = "diamante4.permissao", ['nome'] = "Diamante", ['payment'] = 8000 },
     { ['permissao'] = "esmeralda.permissao", ['nome'] = "Esmeralda", ['payment'] = 12000 },
 
@@ -766,7 +766,7 @@ RegisterCommand('blusa', function(source, args, rawCommand)
         TriggerClientEvent('blusa', source, args[1], args[2])
     else
         TriggerClientEvent("Notify", source, "negado",
-                           "Você precisa de roupas para trocar de roupa.")
+                           "Você precisa de roupas para trocar de blusa.")
     end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -786,6 +786,7 @@ end)
 -- /jaqueta
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('jaqueta', function(source, args, rawCommand)
+	
     local user_id = vRP.getUserId(source)
     if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
         vRP.hasPermission(user_id, "paramedico.permissao") then

@@ -5,7 +5,7 @@ vRP = Proxy.getInterface("vRP")
 config = {}
 Proxy.addInterface("nation_concessionaria", config)
 
-config.imgDir = "http://189.1.172.114/images/" -- DIRETORIO DAS IMAGENS DOS VEÍCULOS
+config.imgDir = "http://189.1.172.224/img/" -- DIRETORIO DAS IMAGENS DOS VEÍCULOS
 --config.imgDir = "/nui/images/"
 -- LISTA DOS VEÍCULOS EM DESTAQUE
 
@@ -37,7 +37,7 @@ config.conceClasses = {
 	{ class = "sedans", img = "https://img.indianautosblog.com/2018/09/25/india-bound-2019-honda-civic-images-front-three-qu-e966.jpg" },
 	{ class = "suvs", img = "https://www.otokokpit.com/wp-content/uploads/2017/11/yeni-range-rover-evoque-landmark-edition-1.jpg" },
 	{ class = "imports", img = "https://besthqwallpapers.com/Uploads/25-6-2019/97150/thumb2-lamborghini-gallardo-supercars-motion-blur-road-gray-gallardo.jpg" },
-	{ class = "trucks", img = "https://images3.alphacoders.com/149/thumb-1920-149257.jpg" },
+	{ class = "trucks", img = "http://189.1.172.224/img/truck.jpeg" },
 	{ class = "motos", img = "https://i.pinimg.com/originals/cc/92/dd/cc92dda56f23a2a41682e80e7fe0f744.jpg" },
 	{ class = "outros", img = "https://besthqwallpapers.com/Uploads/13-5-2018/52433/thumb2-ford-transit-custom-sport-4k-2018-cars-motion-blur-orange-ford-transit.jpg" },
 }

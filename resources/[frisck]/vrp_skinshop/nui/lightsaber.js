@@ -66,7 +66,7 @@ $(document).ready(function() {
             for (var i = 0; i <= item.drawa; i++) {
                 $("footer").append(`
                     <div class="item-clothe" data-id="${i}" onclick="select(this)">
-                        <div class="img-clothe" style="background-image: url('http://135.148.145.240/images/${item.category}/${item.sexo}/${item.prefix}(${i}).jpg')">  
+                        <div class="img-clothe" style="background-image: url('http://189.1.172.224/image/${item.category}/${item.sexo}/${item.prefix}(${i}).jpg')">  
                             <div class="overlay">
                                 <span>${i}</span>
                             </div>
@@ -81,7 +81,7 @@ $(document).ready(function() {
             for (var i = 0; i <= item.drawa; i++) {
                 $("footer").append(`
                     <div class="item-clothe" data-id="${i}" onclick="select(this)">
-                        <div class="img-clothe" style="background-image: url('http://135.148.145.240/images/${item.category}/${item.sexo}/${item.prefix}(${i}).jpg')">  
+                        <div class="img-clothe" style="background-image: url('http://189.1.172.224/image/${item.category}/${item.sexo}/${item.prefix}(${i}).jpg')">  
                             <div class="overlay">
                                 <span>${i}</span>
                             </div>

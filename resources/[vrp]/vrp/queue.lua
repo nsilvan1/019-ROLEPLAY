@@ -23,15 +23,15 @@ Config.IsBanned = function(src,callback)
 end
 
 Config.Language = {
-	joining = " [ AZTLAN CITY ] \n\nEntrando...",
-	connecting = " [ AZTLAN CITY ] \n\nConectando...",
-	err = " [ AZTLAN CITY ] \n\nNão foi possível identificar sua Steam ou Social Club.",
-	_err = " [ AZTLAN CITY ] \n\nVocê foi desconectado por demorar demais na fila.",
-	pos = " [ AZTLAN CITY ] \n\nVocê é o %d/%d da fila, aguarde sua conexão...",
-	connectingerr = " [ AZTLAN CITY ] \n\nNão foi possível adiciona-lo na fila.\ninstagram.com/aztlanrp",
-    wlonly = " [ AZTLAN CITY ] \n\nVocê não está aprovado na whitelist.\n\ninstagram.com/aztlanrp",
-	banned = " [ AZTLAN CITY ] \n\nSeu passaporte foi revogado na cidade.\n\ninstagram.com/aztlanrp",
-	steam = " [ AZTLAN CITY ] \n\nVocê precisa estar com a Steam aberta para conectar."
+	joining = " [ 019RP CITY ] \n\nEntrando...",
+	connecting = " [ 019RP CITY ] \n\nConectando...",
+	err = " [ 019RP CITY ] \n\nNão foi possível identificar sua Steam ou Social Club.",
+	_err = " [ 019RP CITY ] \n\nVocê foi desconectado por demorar demais na fila.",
+	pos = " [ 019RP CITY ] \n\nVocê é o %d/%d da fila, aguarde sua conexão...",
+	connectingerr = " [ 019RP CITY ] \n\nNão foi possível adiciona-lo na fila.\ninstagram.com/019_roleplay/",
+    wlonly = " [ 019RP CITY ] \n\nVocê não está aprovado na whitelist.\n\ninstagram.com/019_roleplay/",
+	banned = " [ 019RP CITY ] \n\nSeu passaporte foi revogado na cidade.\n\ninstagram.com/019_roleplay/",
+	steam = " [ 019RP CITY ] \n\nVocê precisa estar com a Steam aberta para conectar."
 }
 
 local Queue = {}

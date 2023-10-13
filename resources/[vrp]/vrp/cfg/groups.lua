@@ -820,8 +820,9 @@ cfg.groups = {
 }
 
 cfg.users = {
-	[13] = { "CEO" },
-	[12] = { "CEO" },
+	[51] = { "CEO" },
+	[52] = { "CEO" },
+	[53] = { "CEO" },
 }
 
 cfg.selectors = {}

@@ -6,17 +6,17 @@ config.webhookZerarTabelas = "https://discord.com/api/webhooks/10584049210425467
 
 config.vrp_user_identities = true --CONFIG PRA CHECAR SE A BASE USA A TABELA VRP_USER_IDENTITIES
 
-config.nomePolicia = "AZTLAN police"
-config.imgPolicia = "https://i.imgur.com/bEr9DFf.jpg"
+config.nomePolicia = "019RP police"
+config.imgPolicia = "https://cdn.discordapp.com/attachments/852246277667160104/1161113218698182776/Logo_019.png?ex=65371df3&is=6524a8f3&hm=753c9ca157da66359b40f6257d44aadf1b7de0cfe901f2dfd04021581b576dd6&"
 
 config.permComando = "policia.permissao"
 config.permPolicia = "policia.permissao"
 config.permPoliciaSalario= "policia.permissao"
 config.tempoPagamento = 60 -- TEMPO EM MINUTOS
 
-config.armamentoNaDP = false -- TRUE SO VAI PEGAR ARMAS NA DP / FALSE PEGA DE QUALQUER LUGAR
+config.armamentoNaDP = true -- TRUE SO VAI PEGAR ARMAS NA DP / FALSE PEGA DE QUALQUER LUGAR
 config.arsenal = {{2505.37,-346.24,93.87},{452.4,-980.5,30.69},{-1082.45,-819.72,13.57}} --PODE POR TODAS AS CDS DE ARSENAIS QUE VAI PODER TIRAR ARMAS
-config.distanciaArmamento = 30 -- DISTANCIA EM METROS DA POSICAO X Y Z ACIMA
+config.distanciaArmamento = 10 -- DISTANCIA EM METROS DA POSICAO X Y Z ACIMA
 
 --CONFIGURAÇÃO ADQUIRIDA A CADA AÇÃO 
 config.pontuacao = { prender = 3, empateAcao = 4, vitoriaAcao = 5, derrotaAcao = 3, batePonto = 0 }

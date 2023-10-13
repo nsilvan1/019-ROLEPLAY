@@ -46,7 +46,6 @@ Citizen.CreateThread(function()
 					if distance <= 3.1 then
 						if IsControlJustPressed(0,38)  then
 							if EMP.checkVehicle() then
-								print('entrou aqui ')
 								tVehicle = EMP.tipoVeiculo()
 								roubando = true
 								segundos = 40

@@ -1392,14 +1392,14 @@ config.garages = {
 		},
 		vehicles = {
 			{ vehicle = 'amg45', modelo = 'Mercedes a45' },
-			{ vehicle = 'risegolf', modelo = 'Golf gti' },
+			-- { vehicle = 'risegolf', modelo = 'Golf gti' },
 			{ vehicle = 'cls63sp', modelo = 'CLS 63' },
-			{ vehicle = 'VRrs6av', modelo = 'RS6av' },
+			-- { vehicle = 'VRrs6av', modelo = 'RS6av' },
 			{ vehicle = 'maseratinfp', modelo = 'Maserati' },
-			{ vehicle = 'pol718', modelo = 'Cayman' },
+			-- { vehicle = 'pol718', modelo = 'Cayman' },
 			{ vehicle = 'VRdm1200', modelo = 'DM 1200' },
-			{ vehicle = 'WRclassxv2', modelo = 'Mercedes 4x4' },
-			{ vehicle = 'mbsprinter', modelo = 'Transporte de presos' },
+			-- { vehicle = 'WRclassxv2', modelo = 'Mercedes 4x4' },
+			-- { vehicle = 'mbsprinter', modelo = 'Transporte de presos' },
 		
 		}
 	},   
@@ -1461,14 +1461,14 @@ config.garages = {
 			{ vehicle = 'coach', modelo = 'Mic.Onibus' },
 		}
 	},
-	[8] = { type = 'service', coords = vec3(899.6, -174.57, 73.92), perm = nil,  -- // Taxi
-		vehiclePositions = {
-			[1] = { vec3(900.34, -181.21, 73.39), h = 237.10 },
-		},
-		vehicles = {
-			{ vehicle = 'taxi', modelo = 'taxi' },  
-		}
-	},
+	-- [8] = { type = 'service', coords = vec3(899.6, -174.57, 73.92), perm = nil,  -- // Taxi
+	-- 	vehiclePositions = {
+	-- 		[1] = { vec3(900.34, -181.21, 73.39), h = 237.10 },
+	-- 	},
+	-- 	vehicles = {
+	-- 		{ vehicle = 'taxi', modelo = 'taxi' },  
+	-- 	}
+	-- },
 	-- [9] = { type = 'service', coords = vec3(-537.10,-886.54, 25.208), perm = nil, --  // Weazel (CARRO)
 	-- 	vehiclePositions = {
 	-- 		[1] = { vec3(-542.19, -892.47, 24.643), h = 100.0 },
@@ -1476,7 +1476,32 @@ config.garages = {
 	-- 	vehicles = {
 	-- 		{ vehicle = 'rumpo', modelo = 'rumpo' },  
 	-- 	}
-	-- },	
+	-- },
+	[8] = { type = 'public', coords = vec3(-348.72, -874.77, 31.32), perm = nil, -- Vermelho //
+	vehiclePositions = {
+	  [1] = { vec3(-343.51, -875.98, 30.73), h = 167.60 },
+	  [2] = { vec3(-339.74, -876.19, 30.73), h = 167.60 },
+	  [3] = { vec3(-336.4, -877.14, 30.73), h = 167.60 },
+
+	},
+  },
+	[9] = { type = 'service', coords = vec3(-852.79,-128.78,37.66), perm = nil, -- BIKES AEROPORTO//
+		vehiclePositions = {
+	  		[1] = { vec3(-857.4,-132.93,37.79), h = 244.29 },
+	 		[2] = { vec3(-859.07,-129.77,37.86), h = 244.29 }, 
+	  		[3] = { vec3(-859.62,-127.56,37.84), h = 244.29 },
+		},
+		vehicles = {
+			{ vehicle = 'scorcher', modelo = 'scorcher' },
+			{ vehicle = 'tribike', modelo = 'tribike' },
+			{ vehicle = 'tribike2', modelo = 'tribike2' },
+			{ vehicle = 'tribike3', modelo = 'tribike3' },
+			{ vehicle = 'fixter', modelo = 'fixter' },
+			{ vehicle = 'cruiser', modelo = 'cruiser' },
+			{ vehicle = 'bmx', modelo = 'bmx' },  
+		}
+	},
+	
 	[10] = { type = 'service', coords = vec3(-341.19,-1567.68,25.22), perm = nil, -- // Lixeiro
 		vehiclePositions = {
 			[1] = { vec3(-336.67,-1563.24,24.95), h = 90.84 },
@@ -1829,22 +1854,6 @@ config.garages = {
 -- 	}
 
 --   },
-[54] = { type = 'service', coords = vec3(-852.79,-128.78,37.66), perm = nil, -- BIKES AEROPORTO//
-		vehiclePositions = {
-	  		[1] = { vec3(-857.4,-132.93,37.79), h = 244.29 },
-	 		[2] = { vec3(-859.07,-129.77,37.86), h = 244.29 }, 
-	  		[3] = { vec3(-859.62,-127.56,37.84), h = 244.29 },
-		},
-		vehicles = {
-			{ vehicle = 'scorcher', modelo = 'scorcher' },
-			{ vehicle = 'tribike', modelo = 'tribike' },
-			{ vehicle = 'tribike2', modelo = 'tribike2' },
-			{ vehicle = 'tribike3', modelo = 'tribike3' },
-			{ vehicle = 'fixter', modelo = 'fixter' },
-			{ vehicle = 'cruiser', modelo = 'cruiser' },
-			{ vehicle = 'bmx', modelo = 'bmx' },  
-		}
-	},
 }
 -----------------------------------------------------------------
 ------------------ GARAGENS DAS CASAS ---------------------------

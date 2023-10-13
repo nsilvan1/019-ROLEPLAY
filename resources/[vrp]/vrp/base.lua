@@ -514,11 +514,11 @@ AddEventHandler("queue:playerConnecting",function(source,ids,name,setKickReason,
 						deferrals.done()
 					end
 				else
-					deferrals.done("[AZTLAN] Entre no nosso Discord: https://discord.gg/tSxveGVB9q e libere seu ID:"..user_id)
+					deferrals.done("[019 RP] Entre no nosso Discord: https://discord.gg/FDTJvYtHf2 e libere seu ID:"..user_id)
 					TriggerEvent("queue:playerConnectingRemoveQueues",ids)
 				end
 			else
-				deferrals.done("[AZTLAN] Você foi banido entre em nosso discord para recorrer. https://discord.gg/tSxveGVB9q")
+				deferrals.done("[019 RP] Você foi banido entre em nosso discord para recorrer. https://discord.gg/FDTJvYtHf2")
 				--print(user_id)
 				TriggerEvent("queue:playerConnectingRemoveQueues",ids)
 			end

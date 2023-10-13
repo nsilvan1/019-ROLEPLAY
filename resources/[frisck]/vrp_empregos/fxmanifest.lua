@@ -30,7 +30,7 @@ client_scripts {
 	'/leiteirocoleta/client.lua',
 	'/leiteiroentrega/client.lua',
 	'/lenhador/client.lua',
-	'/pescador/client.lua',
+	-- '/pescador/client.lua',
 	'/desmanche_itens/client.lua',
 	'/emp_paramedico/client.lua',
 	'/emprego_colheita/client.lua'

@@ -59,11 +59,11 @@ Citizen.CreateThread(function()
         --         table.insert(players,i)
         --     end
         -- end
-        SetDiscordAppId(936250353450627102) -- ID DO APP AQUI
-		SetDiscordRichPresenceAssetText('AZTLAN, WL ABERTA!') -- PNG DESCRIÇÃO 1 TEXTO
-        SetDiscordRichPresenceAsset('capa')
-		SetDiscordRichPresenceAction(0, "Discord", "https://discord.gg/BRhMcVGRWT/")
-		SetDiscordRichPresenceAction(1, "Instagram", "https://www.instagram.com/aztlanrp/")
+        SetDiscordAppId(1155927977146732544) -- ID DO APP AQUI
+		SetDiscordRichPresenceAssetText('019, WL ABERTA!') -- PNG DESCRIÇÃO 1 TEXTO
+        SetDiscordRichPresenceAsset('logo')
+		SetDiscordRichPresenceAction(0, "Discord", "https://discord.gg/FDTJvYtHf2/")
+		SetDiscordRichPresenceAction(1, "Instagram", "https://www.instagram.com/019_roleplay/")
 		SetRichPresence("Players Online: 38 de 680")	
         -- SetRichPresence("Cidadões Online: "..#players "1024")
 		
@@ -918,6 +918,7 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterNetEvent("jaqueta")
 AddEventHandler("jaqueta",function(index,color)
+	print("entou no client")
 	local ped = GetPlayerPed(-1)
 	if index == nil then
 		SetPedComponentVariation(ped,11,15,0,2)
@@ -1938,9 +1939,9 @@ Citizen.CreateThread(function()
     SetScenarioPedDensityMultiplierThisFrame(0.2, 0.2) --seleciona a densidade de Npc a andar pela cidade
     SetGarbageTrucks(true) --Desactiva os Camioes do Lixo de dar Spawn Aleatoriamente
     SetRandomBoats(false) --Desactiva os Barcos de dar Spawn na agua
-    SetCreateRandomCops(false) --Desactiva a Policia a andar pela cidade
-    SetCreateRandomCopsNotOnScenarios(false) --Para o Spanw Aleatorio de Policias Fora do Cenario
-    SetCreateRandomCopsOnScenarios(false) --Para o Spanw Aleatorio de Policias no Cenario
+    SetCreateRandomCops(0) --Desactiva a Policia a andar pela cidade
+    SetCreateRandomCopsNotOnScenarios(0) --Para o Spanw Aleatorio de Policias Fora do Cenario
+    SetCreateRandomCopsOnScenarios(0) --Para o Spanw Aleatorio de Policias no Cenario
     DisablePlayerVehicleRewards(PlayerId()) --Nao mexer --> Impossibilita que os players possam ganhar armas nas viaturas da policia e ems
     RemoveAllPickupsOfType(0xDF711959) --Carbine rifle
     RemoveAllPickupsOfType(0xF9AFB48F) --Pistol
