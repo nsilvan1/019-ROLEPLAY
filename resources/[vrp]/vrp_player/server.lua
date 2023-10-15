@@ -1154,7 +1154,7 @@ AddEventHandler('survavel:playerdeath',function(nSource,weapon)
 			local killer_identity = vRP.getUserIdentity(user_id)
 			local victim_identity = vRP.getUserIdentity(nuser_id)
 
-			sendLog('LogMorte',"[ID]: "..nuser_id.." - '"..victim_identity.name.." "..victim_identity.firstname.."'\n[MATOU O ID]: "..user_id.." - '"..killer_identity.name.." "..killer_identity.firstname.."'\n[ARMA]: '"..weapon.."' [HASH]: "..hash.."\n[LOCAL ASSASSINO]: "..kx..","..ky..","..kz.."\n[LOCAL VITIMA]: "..vx..","..vy..","..vz.."\n"..date.."```",true)
+			-- sendLog('LogMorte',"[ID]: "..nuser_id.." - '"..victim_identity.name.." "..victim_identity.firstname.."'\n[MATOU O ID]: "..user_id.." - '"..killer_identity.name.." "..killer_identity.firstname.."'\n[ARMA]: '"..weapon.."' [HASH]: "..hash.."\n[LOCAL ASSASSINO]: "..kx..","..ky..","..kz.."\n[LOCAL VITIMA]: "..vx..","..vy..","..vz.."\n"..date.."```",true)
 			local admin = vRP.getUsersByPermission("ac.permissao")
 			for l,w in pairs(admin) do
 				if  NotifyMortes[w] then

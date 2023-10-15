@@ -1111,7 +1111,7 @@ local reboque = nil
 local rebocado = nil
 RegisterCommand('tow',function(source,args)
     local vehicle = GetPlayersLastVehicle()
-    local vehicletow = IsVehicleModel(vehicle,GetHashKey("flatbed"))
+    local vehicletow = IsVehicleModel(vehicle,GetHashKey("bennysscania"))
 
     if vehicletow and not IsPedInAnyVehicle(PlayerPedId()) then
         rebocado = getVehicleInDirection(GetEntityCoords(PlayerPedId()),GetOffsetFromEntityInWorldCoords(PlayerPedId(),0.0,5.0,0.0))

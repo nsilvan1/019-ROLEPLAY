@@ -49,8 +49,8 @@ config.chest = {
 
 	
 	["Vanilla"] = { "Vanilla", 94.1,-1290.96,29.27,3000,"vanilla.permissao","https://discord.com/api/webhooks/1053471537753247834/mnxqVw8jPgytaVtKco2vFTAZFqp0Derh2quPrakVkrod5sOhZF2HEoOClobZESrVqNM3" },
-	["Bahamas"] = { "Bahamas", -1389.25,-610.86,30.32,3000,"bahamas.permissao","https://discord.com/api/webhooks/974874799778193478/cmzXZkHomdkwVjNsQlq3hKV7XTMX-9XlygyMT6Obj0CLKiCjTK9_Z_ifC_ezc5mM0pj1" },
-	-- ["Tequilala"] = { "Tequilala", -573.81,293.51,79.18,3000,"tequilala.permissao","https://discord.com/api/webhooks/1053473736784875570/MMnfy-bULfbM2J-T10YjT8F2YbLHiLQue2KcheITE2sDFbynLJfeHfV4W3LesVNcvkgN" },
+	-- ["Bahamas"] = { "Bahamas", -1389.25,-610.86,30.32,3000,"bahamas.permissao","https://discord.com/api/webhooks/974874799778193478/cmzXZkHomdkwVjNsQlq3hKV7XTMX-9XlygyMT6Obj0CLKiCjTK9_Z_ifC_ezc5mM0pj1" },
+	["Tequilala"] = { "Tequilala", -573.81,293.51,79.18,3000,"tequilala.permissao","https://discord.com/api/webhooks/1053473736784875570/MMnfy-bULfbM2J-T10YjT8F2YbLHiLQue2KcheITE2sDFbynLJfeHfV4W3LesVNcvkgN" },
 	
 	["Groove"] = { "Groove", 1527.1,-640.93,138.41,3000,"groove.permissao","https://discord.com/api/webhooks/1053476188678520833/q4p1v97uRtY6Gs6i476XGlfw9pkROY_QNWGbGr2VTfT8ZDLgpyjU7I-ec56ZOg2iV4l-" },
 	["Groove2"] = { "Groove", 1397.74,-741.48,72.17,500,"groove.permissao","https://discord.com/api/webhooks/1053476188678520833/q4p1v97uRtY6Gs6i476XGlfw9pkROY_QNWGbGr2VTfT8ZDLgpyjU7I-ec56ZOg2iV4l-" },
@@ -64,7 +64,7 @@ config.chest = {
 	["Bratva"] = { "Bratva", -1875.56,2062.39,145.58,3000,"bratva.permissao","https://discord.com/api/webhooks/974875649808408586/Hs1wseCf3cHfxhk_tH5t-7Rbm2j9LzjFOBXTrxzEilQh0xGKCn-pkik1s3HIfQ_cdrFC" },
 
 	["Crips"] = { "Crips", -1460.86,-45.08,58.41,3000,"crips.permissao","https://discord.com/api/webhooks/1053493116365181050/b2xPyHPYEJD2HG0q6d8_4Giisb3uNHERsHy6yYNgG7WCuguB7bQlJFnec3iKeQYiF986" },
-	["Mafia"] = { "Mafia", -1476.72,-38.18,54.61,3000,"mafia.permissao","https://discord.com/api/webhooks/1053461939549905017/F8EyFFwOGbMkWFqXyTu5kjdqe_9RrPLQ8CPvP9Zw6RNzFWBzEMTUt-70EUWvCfa1rPvJ" },
+	["Mafia"] = { "Mafia", -3218.6,800.54,14.08,3000,"mafia.permissao","https://discord.com/api/webhooks/1053461939549905017/F8EyFFwOGbMkWFqXyTu5kjdqe_9RrPLQ8CPvP9Zw6RNzFWBzEMTUt-70EUWvCfa1rPvJ" },
 
 	["Triade"] = { "Triade", 575.42,-3121.91,18.77,3000,"triade.permissao","https://discord.com/api/webhooks/1053496692030308402/kdvVzFGLCOmKaAIOUvE1bPJDV0iPc24uGyDHVp4se7gKNomBkzr0MRgKa186GowbeBpc" },
 

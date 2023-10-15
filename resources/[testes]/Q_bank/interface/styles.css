@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    162.76deg,
+    rgba(39, 39, 39, 0.9) 11.85%,
+    rgb(255, 179, 92) 198.42%
+  );
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#exit {
+  color: rgb(255, 179, 92);
+  font-size: 1.091vw;
+
+  top: 1.455vw;
+  right: 1.455vw;
+  position: absolute;
+
+  width: 3vw;
+  height: 3vw;
+  border-radius: 0.545vw;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bank header {
+  margin-bottom: 1.864vw;
+}
+
+#bank header h1 {
+  font-weight: 700;
+  font-size: 2.364vw;
+  line-height: 2.909vw;
+  color: #ffffff;
+}
+
+#bank header h1 span {
+  color: rgb(255, 179, 92);
+}
+
+#bank header p {
+  font-weight: 500;
+  font-size: 1.273vw;
+  line-height: 1.545vw;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main {
+  gap: 1.455vw;
+  display: flex;
+  align-items: center;
+}
+
+#bank main section#menu-options {
+  width: 26.818vw;
+}
+
+#bank main section#options {
+  width: 30.909vw;
+}
+
+#bank main section#menu-options ul {
+  list-style: none;
+
+  gap: 0.455vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#bank main section#menu-options ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 26.818vw;
+  height: 4.136vw;
+  border-radius: 0.318vw;
+  background: rgba(0, 0, 0, 0.6);
+
+  padding: 0 1.273vw;
+}
+
+#bank main section#menu-options ul li i {
+  width: 1.364vw;
+  height: 1.364vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 1.182vw;
+}
+
+#bank main section#menu-options ul li .option-name h3 {
+  font-weight: 600;
+  font-size: 0.955vw;
+  line-height: 1.182vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#menu-options ul li .option-name p {
+  font-weight: 400;
+  font-size: 0.727vw;
+  line-height: 0.909vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#menu-options .welcome-message {
+  width: 26.818vw;
+  height: 3.591vw;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.364vw;
+  margin-top: 0.773vw;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 0 0.955vw;
+}
+
+#bank main section#menu-options .welcome-message h6 {
+  font-weight: 600;
+  font-size: 0.727vw;
+  line-height: 0.864vw;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#menu-options .welcome-message p {
+  font-weight: 400;
+  font-size: 0.727vw;
+  line-height: 0.864vw;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#menu-options .welcome-message p span {
+  color: rgb(255, 179, 92);
+}
+
+#bank main section#options #home {
+  gap: 0.3vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#bank main section#options #home .option {
+  width: 30.909vw;
+  height: 8.727vw;
+
+  border-radius: 0.364vw;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 1.636vw;
+}
+
+#bank main section#options #home .option h4 {
+  font-weight: 600;
+  font-size: 1.045vw;
+  line-height: 1.273vw;
+
+  color: rgb(255, 179, 92);
+}
+
+#bank main section#options #home .option p {
+  font-weight: 400;
+  font-size: 0.727vw;
+  line-height: 0.864vw;
+
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.727vw;
+}
+
+#bank main section#options #home .option .option-interaction {
+  gap: 0.364vw;
+  display: flex;
+  align-items: center;
+}
+
+#bank main section#options #home .option .option-interaction input {
+  width: 5.818vw;
+  height: 2.091vw;
+
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 0.273vw;
+  background: rgba(0, 0, 0, 0.4);
+
+  color: white;
+  font-size: 0.545vw;
+}
+
+#bank main section#options #home .option .option-interaction input.value {
+  width: 8.227vw;
+  height: 2.091vw;
+
+  border: none;
+  outline: none;
+  border-radius: 0.273vw;
+  text-align: center;
+
+  font-weight: 600;
+  font-size: 0.545vw;
+  line-height: 0.682vw;
+  /* identical to box height */
+
+  color: rgba(255, 255, 255, 0.55);
+
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#bank main section#options #home .option .option-interaction button {
+  width: 8.227vw;
+  height: 2.091vw;
+
+  border: none;
+  border-radius: 0.273vw;
+  background: rgb(255, 179, 92);
+  box-shadow: 0vw 0vw 0.591vw rgba(255, 179, 92, 0.377);
+
+  font-weight: 700;
+  font-size: 0.545vw;
+  line-height: 0.682vw;
+  /* identical to box height */
+
+  color: rgba(255, 255, 255, 1);
+  transition: 0.2s linear;
+}
+
+#bank main section#options #home .option .option-interaction button:hover {
+  background: rgb(255, 179, 92);
+}
+
+#bank main section#options #others-options {
+  width: 100%;
+  height: 26.750vw;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.364vw;
+}
+
+#bank main section#options #others-options .other-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.409vw 1.682vw;
+}
+
+#bank main section#options #others-options .other-title button {
+  width: 7.455vw;
+  height: 1.682vw;
+
+  border: none;
+  border-radius: 0.227vw;
+  background: rgba(0, 0, 0, 0.4);
+
+  font-weight: 600;
+  font-size: 0.5vw;
+  line-height: 0.591vw;
+
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.2s linear;
+}
+
+#bank main section#options #others-options .other-title button:hover {
+  background:rgb(255, 179, 92)
+}
+
+#bank main section#options #others-options .other-title .title-message h4 {
+  font-weight: 600;
+  font-size: 1.045vw;
+  line-height: 1.273vw;
+  color: rgb(255, 179, 92);
+}
+
+#bank main section#options #others-options .other-title .title-message p {
+  font-weight: 400;
+  font-size: 0.727vw;
+  line-height: 0.909vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#options #others-options .other-items {
+  gap: 0.091vw;
+  display: flex;
+  flex-direction: column;
+  height: 555px;
+  overflow: auto; 
+}
+#bank main section#options #others-options .other-items::-webkit-scrollbar {
+  width: 0px; /* define a largura da barra de rolagem como 0 */
+  height: 0px; /* define a altura da barra de rolagem como 0 */
+}
+
+#bank main section#options #others-options .other-items .item {
+  width: 100%;
+  height: 4.136vw;
+  background: rgba(255, 255, 255, 0.05);
+
+  gap: 1.364vw;
+  display: flex;
+  align-items: center;
+
+  padding: 15px;
+  margin-bottom: 2px;
+}
+
+#bank main section#options #others-options .other-items .item .item-content h6 {
+  font-weight: 600;
+  font-size: 0.636vw;
+  line-height: 0.773vw;
+  
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#options #others-options .other-items .item .item-content p {
+  font-weight: 400;
+  font-size: 0.545vw;
+  line-height: 0.636vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#options #others-options .other-items .item .item-content p span {
+  width: max-content;
+  height: max-content;
+  box-shadow: none;
+  background: transparent;;
+  font-size: 0.545vw;
+  color: rgb(255, 179, 92);
+
+  line-height: 0.636vw;
+  display: inline-block;
+  font-weight: 400;
+}
+
+#bank main section#options #others-options .other-items .item span {
+  width: 2.091vw;
+  height: 2.091vw;
+  background: rgb(255, 179, 92);
+  box-shadow: 0vw 0vw 0.5vw rgba(255, 179, 92, 0.322);
+  border-radius: 0.455vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 1vw;
+  line-height: 1.227vw;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#options #others-options .other-items .item .item-description h6 {
+  font-weight: 600;
+  font-size: 0.636vw;
+  line-height: 0.773vw;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#options #others-options .other-items .item .item-description p {
+  font-weight: 400;
+  font-size: 0.545vw;
+  line-height: 0.636vw;
+  
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#bank main section#options #others-options .other-items .item .item-description p span {
+  width: max-content;
+  height: max-content;
+  box-shadow: none;
+  background: transparent;;
+  font-size: 0.545vw;
+  color: rgb(255, 179, 92);
+
+  line-height: 0.636vw;
+  display: inline-block;
+}
+
+.selected {
+  color: rgb(255, 179, 92) !important;
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.2) !important;
+}

@@ -430,7 +430,7 @@ RegisterCommand('god',function(source,args,rawCommand)
 				TriggerClientEvent("resetDiagnostic",nplayer)
 				vRP.varyThirst(nplayer,-100)
 				vRP.varyHunger(nplayer,-100)
-				endLog('LogGod',"[ID]: "..user_id.." \n[GOD]: Usou o comando /god no ID: "..args[1]..". "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").."",true)
+				sendLog('LogGod',"[ID]: "..user_id.." \n[GOD]: Usou o comando /god no ID: "..args[1]..". "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").."",true)
             end
         else
             vRPclient.killGod(source)
@@ -441,7 +441,7 @@ RegisterCommand('god',function(source,args,rawCommand)
 
             TriggerClientEvent("resetBleeding",source)
 			TriggerClientEvent("resetDiagnostic",source)
-			endLog('LogGod',"[ID]: "..user_id.." \n[GOD]: Usou o comando /god nele mesmo. "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").."",true)
+			sendLog('LogGod',"[ID]: "..user_id.." \n[GOD]: Usou o comando /god nele mesmo. "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").."",true)
         end
     end
 end)
@@ -701,7 +701,7 @@ RegisterCommand('nc',function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
 	if vRP.hasPermission(user_id,"ac.permissao") then
 		vRPclient.toggleNoclip(source)
-        senLog('LogNc',"```prolog\n[ID]: "..user_id.." \n[USOU]: NC "..vRP.format(parseInt(args[1])).." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S"),true)
+        sendLog('LogNc',"```prolog\n[ID]: "..user_id.." \n[USOU]: NC "..vRP.format(parseInt(args[1])).." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S"),true)
 	end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
