@@ -17,7 +17,7 @@ end
 local vehiclesWeight = {
     ['carros'] = '60',
     ['motos'] = '20',
-    ['carros'] = '75',
+    -- ['carros'] = '75',
     ['bike'] = '2',
     ['utilitario'] = '250',
     ['barcos'] = '50',
