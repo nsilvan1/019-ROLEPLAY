@@ -843,31 +843,19 @@ img {
 }
 
 
-
 .qtd {
 
     width: 8.5vw;
-
     padding: 10px 0;
-
     font-size: 0.7rem;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
-
     border-radius: 2px;
-
     color: #fff;
-
     height: 5vh;
-
-    background-color: rgba(255, 255, 255, 0.12);
-
+    background-color: rgba(193, 31, 31, 0.12);
     border: 1;
 
 }
@@ -877,7 +865,6 @@ img {
 .myInfos {
 
     align-self: flex-start;
-
     padding: 0 0 25px 16px;
 
 }
@@ -887,9 +874,7 @@ img {
 .infosContent {
 
     padding-top: 12px;
-
     font-size: .75rem;
-
     color: #ffffff;
 
 }
@@ -899,9 +884,7 @@ img {
 .myName span {
 
     letter-spacing: 1px;
-
     margin-right: 18px;
-
     font-size: .75rem;
 
 }
@@ -911,7 +894,6 @@ img {
 .infosContent span {
 
     letter-spacing: 1px;
-
     margin-right: 18px;
 
 }
@@ -921,7 +903,6 @@ img {
 .myInfos b {
 
     font-size: 1.5rem;
-
     padding-bottom: 15px;
 
 }
@@ -931,7 +912,6 @@ img {
 .myInfos i {
 
     color: #b3b3b3;
-
     font-weight: 300;
 
 }
@@ -941,7 +921,6 @@ img {
 .myInfos s {
 
     color: #f0f0f0;
-
     text-decoration: none;
 
 }

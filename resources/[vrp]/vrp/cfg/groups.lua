@@ -240,6 +240,7 @@ cfg.groups = {
 		"diretor.permissao",
 		"polpar.permissao",
 		"player.blips",
+		"portahp.permissao",
 		"paramedico.permissao",
 	}, 
 	["paisana-diretor"] = {
@@ -251,44 +252,6 @@ cfg.groups = {
 		"polpar.permissao",
 		"player.blips",
 	}, 
-	["especialista"] = {
-		_config = {
-			title = "Especialista",
-			gtype = "job"
-		},
-		"especialista.permissao",
-		"paramedico.permissao",
-		"polpar.permissao",
-		"player.blips",
-	}, 
-	["paisana-especialista"] = {
-		_config = {
-			title = "Paisana Especialista",
-			gtype = "job"
-		},
-		"paisana-especialista.permissao",
-		"polpar.permissao",
-		"player.blips",
-	}, 
-	["psicologo"] = {
-		_config = {
-			title = "Psicologo",
-			gtype = "job"
-		},
-		"psicologo.permissao",
-		"paramedico.permissao",
-		"polpar.permissao",
-		"player.blips",
-	}, 
-	["paisana-psicologo"] = {
-		_config = {
-			title = "Paisana Psicologo",
-			gtype = "job"
-		},
-		"paisana-psicologo.permissao",
-		"polpar.permissao",
-		"player.blips",
-	}, 
 	["medico"] = {
 		_config = {
 			title = "Medico",
@@ -297,6 +260,7 @@ cfg.groups = {
 		"medico.permissao",
 		"paramedico.permissao",
 		"polpar.permissao",
+		"portahp.permissao",
 		"player.blips",
 	}, 
 	["paisana-medico"] = {
@@ -317,6 +281,7 @@ cfg.groups = {
 		"enfermeiro.permissao",
 		"paramedico.permissao",
 		"polpar.permissao",
+		"portahp.permissao",
 		"player.blips",
 	},
 	["paisana-enfermeiro"] = {
@@ -335,6 +300,7 @@ cfg.groups = {
 		},
 		"paramedico.permissao",
 		"polpar.permissao",
+		"portahp.permissao",
 		"para.permissao",
 		"player.blips",
 	}, 

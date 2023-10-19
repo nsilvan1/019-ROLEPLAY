@@ -1393,11 +1393,11 @@ config.garages = {
 		vehicles = {
 			{ vehicle = 'amg45', modelo = 'Mercedes a45' },
 			-- { vehicle = 'risegolf', modelo = 'Golf gti' },
-			{ vehicle = 'cls63sp', modelo = 'CLS 63' },
-			-- { vehicle = 'VRrs6av', modelo = 'RS6av' },
+			{ vehicle = 'VRrs6av', modelo = 'RS6av' },
 			{ vehicle = 'maseratinfp', modelo = 'Maserati' },
 			-- { vehicle = 'pol718', modelo = 'Cayman' },
 			{ vehicle = 'VRdm1200', modelo = 'DM 1200' },
+			{ vehicle = 'cls63sp', modelo = 'CLS 63' },
 			-- { vehicle = 'WRclassxv2', modelo = 'Mercedes 4x4' },
 			-- { vehicle = 'mbsprinter', modelo = 'Transporte de presos' },
 		

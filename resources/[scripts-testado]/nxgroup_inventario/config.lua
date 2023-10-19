@@ -59,15 +59,15 @@ config.chest = {
 	["Bloods"] = { "Bloods", 66.02,621.89,201.37,3000,"bloods.permissao","https://discord.com/api/webhooks/1053477668248625254/KjVDHOPFKNefARO0YgP_2yQvkgLl6qoJXDysjo7Y55_gvCnzKS2nuJ90oQPW5aIBel7N" },
 
 	["Motoclub"] = { "Motoclub", 977.17,-104.02,74.85,3000,"motoclub.permissao","https://discord.com/api/webhooks/1053477878488121474/KkbC7ADQSHUSUtUnFIwY2ZdqqS59ONo4OFLwM1DnPIgTRpydyxGS4Qztag-_naR3EOly" },
-	["Hells"] = { "Hells", 474.7,-1308.45,29.21,3000,"hells.permissao","https://discord.com/api/webhooks/1053478055911370762/aL0AUAz1tz5N15iIWR3KiREkDZYYF-nI5oBEb_mpBKhozqze1eSJJ4zgkoxs2KZgR35N" },
+	["Hells"] = { "Hells", -1138.14,-2000.76,13.19,3000,"hells.permissao","https://discord.com/api/webhooks/1053478055911370762/aL0AUAz1tz5N15iIWR3KiREkDZYYF-nI5oBEb_mpBKhozqze1eSJJ4zgkoxs2KZgR35N" },
 
-	["Bratva"] = { "Bratva", -1875.56,2062.39,145.58,3000,"bratva.permissao","https://discord.com/api/webhooks/974875649808408586/Hs1wseCf3cHfxhk_tH5t-7Rbm2j9LzjFOBXTrxzEilQh0xGKCn-pkik1s3HIfQ_cdrFC" },
+	["Bratva"] = { "Bratva", -1875.56,2062.39,145.58,3000,"bratva.permissao","https://discord.com/api/webhooks/1164266904622477462/RRib5Q9gKbOfmxzBPTjxytvazITpdJc5BwDtRcG7JIo4lXuK-JRrq2PYKOoR1F2vHs6b" },
 
 	["Crips"] = { "Crips", -1460.86,-45.08,58.41,3000,"crips.permissao","https://discord.com/api/webhooks/1053493116365181050/b2xPyHPYEJD2HG0q6d8_4Giisb3uNHERsHy6yYNgG7WCuguB7bQlJFnec3iKeQYiF986" },
 	["Mafia"] = { "Mafia", -3218.6,800.54,14.08,3000,"mafia.permissao","https://discord.com/api/webhooks/1053461939549905017/F8EyFFwOGbMkWFqXyTu5kjdqe_9RrPLQ8CPvP9Zw6RNzFWBzEMTUt-70EUWvCfa1rPvJ" },
 
 	["Triade"] = { "Triade", 575.42,-3121.91,18.77,3000,"triade.permissao","https://discord.com/api/webhooks/1053496692030308402/kdvVzFGLCOmKaAIOUvE1bPJDV0iPc24uGyDHVp4se7gKNomBkzr0MRgKa186GowbeBpc" },
-
+	-- ["Cartel"] = { "Cartel", 575.42,-3121.91,18.77,3000,"triade.permissao","https://discord.com/api/webhooks/1053496692030308402/kdvVzFGLCOmKaAIOUvE1bPJDV0iPc24uGyDHVp4se7gKNomBkzr0MRgKa186GowbeBpc" },
 
 	
 }
@@ -106,7 +106,7 @@ config.shopList = {
 		{ 811.19,-2157.67,29.61,"ammunationStore" },
 		{ 811.19,-2157.67,29.61,"ammunationStore" },
 	
-		{ 1275.44,-1710.81,54.78,"ilegalStore" },
+		-- { 1275.44,-1710.81,54.78,"ilegalStore" },
 		{ 1272.36,-1711.73,54.78,"ilegalStore2" },
 
 	
@@ -116,7 +116,7 @@ config.shopList = {
 
 		{ 964.54,-1841.23,31.27,"gunsCraft" },  --Bratva
 		{ -1870.5,2061.56,135.44,"gunsCraft" }, --CRIPS(VINICULA)
-		{ 1402.33,1139.85,109.75,"gunsCraft" }, --BRATVA(FAZENDA)
+		{ -1866.3, 2065.6, 135.44,"gunsCraft" }, --BRATVA(FAZENDA)
 		
 		{ -875.68,-1458.65,7.53,"ammoCraft" },  --YAKUZA (YAKUZA)
 		{ 568.09,-3126.8,18.77,"ammoCraft" },   --AZTECAS (DOCAS)
@@ -136,7 +136,7 @@ config.itemShops = {
 				["celular"] = 5000,
 				["repairkit"] = 15000,
 				["radio"] = 2000,
-				["mochila"] = 15000,
+				["mochila"] = 5000,
 				["roupas"] = 5000,
 				-- ["alianca"] = 20000,
 				["energetico"] = 1000,
@@ -247,10 +247,10 @@ config.itemShops = {
 			["perm"] = nil,
 			["cash"] = "limpo",
 			["list"] = {
-				["algema"] = 3000,
-				["capuz"] = 1000,
-				["modificacaodearma"] = 20000,
-
+				["algema"] = 5000,
+				["capuz"] = 3000,
+				["masterpick"] = 20000,
+				-- ["modificacaodearma"] = 20000,
 			}
 		},
 		["gunsCraft"] = {
@@ -268,24 +268,24 @@ config.itemShops = {
 					["molas"] = 2,
 					["gatilho"] = 1,
 				},
-				["wbody|WEAPON_MACHINEPISTOL"] = {
-					["pecadearma"] = 250,
-					["placa-metal"] = 6,
-					["molas"] = 3,
-					["gatilho"] = 1,
-				},
-				["wbody|WEAPON_SPECIALCARBINE_MK2"] = {
-					["pecadearma"] = 400,
-					["placa-metal"] = 10,
-					["molas"] = 6,
-					["gatilho"] = 1,
-				},
-				["wbody|WEAPON_ASSAULTRIFLE"] = {
-					["pecadearma"] = 400,
-					["placa-metal"] = 10,
-					["molas"] = 6,
-					["gatilho"] = 1,
-				},
+				-- ["wbody|WEAPON_MACHINEPISTOL"] = {
+				-- 	["pecadearma"] = 250,
+				-- 	["placa-metal"] = 6,
+				-- 	["molas"] = 3,
+				-- 	["gatilho"] = 1,
+				-- },
+				-- ["wbody|WEAPON_SPECIALCARBINE_MK2"] = {
+				-- 	["pecadearma"] = 400,
+				-- 	["placa-metal"] = 10,
+				-- 	["molas"] = 6,
+				-- 	["gatilho"] = 1,
+				-- },
+				-- ["wbody|WEAPON_ASSAULTRIFLE"] = {
+				-- 	["pecadearma"] = 400,
+				-- 	["placa-metal"] = 10,
+				-- 	["molas"] = 6,
+				-- 	["gatilho"] = 1,
+				-- },
 			}
 		},
 		["gunsCraft2"] = {

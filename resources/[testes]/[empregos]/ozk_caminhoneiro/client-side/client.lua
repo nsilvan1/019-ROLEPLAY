@@ -55,9 +55,12 @@ Citizen.CreateThread(function()
 								else
 									vRPSend.checkPayment(modules,parseInt(GetVehicleBodyHealth(GetPlayersLastVehicle())/10))
 									TriggerServerEvent("trydeleteveh",VehToNet(vehicle))
+									print("1")
 									if DoesEntityExist(vehicle) then
+										print("2")
 										TriggerServerEvent("trydeleteveh",VehToNet(vehicle))
 									end
+									print("3")
 									ClearPedTasks(PlayerPedId())
 									vRP._DeletarObjeto()
 									RemoveBlip(blips)

@@ -1933,7 +1933,7 @@ Citizen.CreateThread(function()
     while true do
     Citizen.Wait(0)
     SetVehicleDensityMultiplierThisFrame(0.2) --Seleciona densidade do trafico
-    SetPedDensityMultiplierThisFrame(0.1) --seleciona a densidade de Npc
+    SetPedDensityMultiplierThisFrame(0.5) --seleciona a densidade de Npc
     SetRandomVehicleDensityMultiplierThisFrame(1.0) --seleciona a densidade de viaturas estacionadas a andar etc
     SetParkedVehicleDensityMultiplierThisFrame(1.0) --seleciona a densidade de viaturas estacionadas
     SetScenarioPedDensityMultiplierThisFrame(0.2, 0.2) --seleciona a densidade de Npc a andar pela cidade
