@@ -36,6 +36,7 @@ function vRP.getUsersByGroup(perm)
 end
 
 RegisterCommand('tablet', function(source,args,rawCommand)
+	print('teste');
 	local source = source
 	local user_id = vRP.getUserId(source)
 	local mygroup = nil

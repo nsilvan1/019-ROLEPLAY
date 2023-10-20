@@ -668,6 +668,7 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- /semems
 -----------------------------------------------------------------------------------------------------------------------------------------
+
 RegisterCommand('semems',function(source,args,rawCommand)
     local source = source
     local user_id = vRP.getUserId(source)
@@ -678,16 +679,16 @@ RegisterCommand('semems',function(source,args,rawCommand)
             TriggerClientEvent("Notify",source,"negado","Há paramédico em trabalho.")
         else
 
-            if vRP.request(source, "Você deseja rezar pra ser renascido ? Esse serviço custará $10000", 60) then
-                    if vRP.tryFullPayment(user_id,10000) then
+            if vRP.request(source, "Você deseja rezar pra ser renascido? Esse serviço custará $500", 60) then
+                    if vRP.tryFullPayment(user_id,500) then
                         TriggerClientEvent("progress",source, 20000,"Revivendo")
                        TriggerClientEvent("Notify",source,"importante","estamos orando por você! Aguarde!!!",8000)
                         Citizen.Wait(20000)
 						vRP.clearInventory(user_id)
                         vRPclient.killGod(source)
-                        vRPclient.setHealth(source,200)
+                        vRPclient.setHealth(source,400)
                         TriggerClientEvent("Notify",source,"sucesso","Você foi reanimado e seu inventario foi limpo .",8000)
-                        sendLog('LogSemems',"[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[SEMEMS]: "..user_id.." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S"),true)
+						sendLog('LogSemems',"[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[SEMEMS]: "..user_id.." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S"),true)
                         else
                             TriggerClientEvent("Notify",source,"negado","Você não tem dinheiro suficiente",8000) 
                             return
