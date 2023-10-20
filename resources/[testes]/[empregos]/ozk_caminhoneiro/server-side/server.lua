@@ -1,8 +1,10 @@
 local Tunnel = module("vrp","lib/Tunnel")
 local Proxy = module("vrp","lib/Proxy")
 vRP = Proxy.getInterface("vRP")
-Mot = {}
-Tunnel.bindInterface("motorista",Mot)
+vRPclient = Tunnel.getInterface("vRP")
+emP = {}
+Tunnel.bindInterface("ozk_caminhoneiro",emP)
+local Tools = module("vrp","lib/Tools")
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- CHECKPAYMENT
 -----------------------------------------------------------------------------------------------------------------------------------------

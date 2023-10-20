@@ -1,3 +1,9 @@
+local Tunnel = module("vrp","lib/Tunnel")
+local Proxy = module("vrp","lib/Proxy")
+local Tools = module("vrp","lib/Tools")
+vRP = Proxy.getInterface("vRP")
+vRPclient = Tunnel.getInterface("vRP")
+emP = Tunnel.getInterface("ozk_caminhoneiro")
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- VARIAVEIS
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -118,6 +124,8 @@ end
 RegisterNUICallback("ButtonClick",function(data,cb)
 	ClearPedTasks(PlayerPedId())
 	vRP._DeletarObjeto()
+	DeleteVehicle(nvehicle)
+
 	if data ~= "fechar" and segundos == 0 then
 		ToggleActionMenu()
 		spawnCarga(cfg.cargas[data]['spawnCarga'][1],cfg.cargas[data]['spawnCarga'][2],cfg.cargas[data]['spawnCarga'][3],cfg.cargas[data]['spawnCarga'][4],cfg.cargas[data]['spawnCarga'][5])
