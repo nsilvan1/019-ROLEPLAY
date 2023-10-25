@@ -329,6 +329,8 @@ config.itemShops = {
 }
 
 config.itemlist = {
+	["notebook"] = { index = "notebook", nome = "Notebook", type = "usar", peso = 0.5 },
+	["scanerMotor"] = { index = "scanerMotor", nome = "Scaner Motor", type = "usar", peso = 0.5 },
 	["kevlar"] = { index = "kevlar", nome = "Kevlar", type = "usar", peso = 1 },
 	["c4"] = { index = "c4", nome = "C4", type = "usar", peso = 1 },
 	["serra"] = { index = "serra", nome = "Serra", type = "usar", peso = 1 },

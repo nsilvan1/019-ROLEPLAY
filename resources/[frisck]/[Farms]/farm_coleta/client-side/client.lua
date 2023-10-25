@@ -26,7 +26,7 @@ local Coordenadas = {
     -- {511.4,-1335.76,29.73}, -- hells
 	-- armas
 	{-1916.85, 2084.02,140.39},-- Bratva
-	{-313.6,-1035.65,30.54}, -- mafia
+	{503.59,-3121.4,9.8}, -- mafia
 
 
 	-- {95.55, -1294.31, 29.27}, -- Vanilla
@@ -282,7 +282,7 @@ Citizen.CreateThread(function()
 								selecionado = inicio
 								CriandoBlip(locs,selecionado)
 								TriggerEvent("Notify","importante","Você iniciou o serviço.")
-							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),-313.6,-1035.65,30.54,true) <= 1.2 then -- mafia
+							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),503.59,-3121.4,9.8,true) <= 1.2 then -- mafia
 								servico = true							
 								inicio = 33
 								fim = 55					
@@ -435,7 +435,9 @@ end
 
 local pedlist = {
 	{ ['x'] = -1916.85, ['y'] = 2084.02, ['z'] = 140.39, ['h'] = 230.25, ['hash'] = 0xA8C22996, ['hash2'] = "csb_chin_goon" },
-   }
+	{ ['x'] = 503.59, ['y'] = -3121.4, ['z'] = 9.8, ['h'] = 184.20, ['hash'] = 0x062547E7, ['hash2'] = "cs_floyd" },
+		
+}
 
 CreateThread(function()
 	for k,v in pairs(pedlist) do

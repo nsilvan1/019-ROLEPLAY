@@ -602,7 +602,7 @@ cfg.groups = {
 	"ilegal.permissao",
 	"drogas.permissao",
 },
-	["ballas"] = {
+	["Ballas"] = {
 		_config = {
 			title = "Ballas",
 			gtype = "job",

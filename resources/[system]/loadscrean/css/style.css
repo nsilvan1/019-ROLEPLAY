@@ -32,7 +32,7 @@ html, body {
 }
 .background:first-child {
   background-image: url(../img/background-1.png);
-  -webkit-transform: translateY(-15vh);
+  -webkit-transform: translateY(-10vh);
           transform: translateY(-15vh);
 }
 .background:first-child .content-wrapper {

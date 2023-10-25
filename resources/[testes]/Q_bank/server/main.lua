@@ -13,15 +13,20 @@ function vRPReceiver.requestFines()
 	local user_id = vRP.getUserId(source)
 	if user_id then
 		local fines = {}
+		local value = vRP.getUData(parseInt(user_id),"vRP:multas")
+		 print(value)
 		local consult = vRP.getFines(user_id)
-		for k,v in pairs(consult) do
-			if parseInt(v.oficial) == 0 then
-				table.insert(fines,{ id = v.id, user_id = parseInt(v.user_id), nuser_id = "Governo", date = v.date, price = parseInt(v.price), text = tostring(v.text) })
-			else
-				local identity = vRP.getUserIdentity(parseInt(v.oficial))
-				table.insert(fines,{ id = v.id, user_id = parseInt(v.user_id), nuser_id = tostring(identity.name.." "..identity.firstname), date = v.data, price = parseInt(v.price), text = tostring(v.text) })
-			end
-		end
+		table.insert(fines,{  user_id = parseInt(user_id), nuser_id = "Governo",  price = parseInt(value), text = 'Multas' })
+		
+        -- local multas = json.decode(value) or 0
+		-- for k,v in pairs(consult) do
+		-- 	if parseInt(v.oficial) == 0 then
+				
+		-- 	else
+		-- 		local identity = vRP.getUserIdentity(parseInt(v.oficial))
+		-- 		table.insert(fines,{ id = v.id, user_id = parseInt(v.user_id), nuser_id = tostring(identity.name.." "..identity.firstname), date = v.data, price = parseInt(v.price), text = tostring(v.text) })
+		-- 	end
+		-- end
 		return fines
 	end
 end
@@ -30,9 +35,12 @@ function vRPReceiver.finesPayment(id,price)
 	local source = source
 	local user_id = vRP.getUserId(source)
 	if user_id then
+		
+		vRP.remUData(user_id,"vRP:multas")
 		if vRP.rembankmoney(user_id,parseInt(price)) then
-			TriggerClientEvent("vrp_bank:Update",source,"requestFines")
-			vRP.delFines(parseInt(id))
+			
+			local value = vRP.getUData(parseInt(user_id),"vRP:multas")
+			print(value)
 		else
 			vRPSend.returnotify(source,true,"<b>Dinheiro insuficiente na sua conta bancária.</b>.")
 		end
@@ -132,8 +140,10 @@ function vRPReceiver.bankDeposit(amount)
 	local identity = vRP.getUserIdentity(user_id)
 	if user_id then
 		if parseInt(amount) > 0 then
-			if vRP.tryGetInventoryItem(user_id,"dolares",parseInt(amount),true) then
+			local walletMoney = vRP.getMoney(user_id)
+			if(vRP.tryPayment(user_id, amount)) then
 				vRP.setBankMoney(user_id,vRP.getBankMoney(user_id)+parseInt(amount))
+				vRP.setMoney(user_id, walletMoney-amount)
 				vRP.log(cfg.webhookbanco,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[DEPOSITOU]: $"..vRP.format(parseInt(amount)).." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
 				TriggerClientEvent("vrp_bank:Update",source,"requestInicio")
 				vRPSend.returnotify(source,true,"<b>Dinheiro Depositado</b>.")
@@ -151,26 +161,24 @@ function vRPReceiver.bankWithdraw(amount)
 
 	if user_id then
 		local getInvoice = vRP.getInvoice(user_id)
-		if getInvoice[1] ~= nil then
-			vRPSend.returnotify(source,false,"Encontramos faturas pendentes.")
-			return
-		end
-		local getFines = vRP.getFines(user_id)
-		if getFines[1] ~= nil then
-			vRPSend.returnotify(source,false,"Encontramos multas pendentes.")
-			return
-		end
+		-- if getInvoice[1] ~= nil then
+		-- 	vRPSend.returnotify(source,false,"Encontramos faturas pendentes.")
+		-- 	return
+		-- end
+		-- local getFines = vRP.getFines(user_id)
+		-- if getFines[1] ~= nil then
+		-- 	vRPSend.returnotify(source,false,"Encontramos multas pendentes.")
+		-- 	return
+		-- end
 		if parseInt(amount) > 0 then
-			if vRP.computeInvWeight(user_id) + vRP.itemWeightList("dolares") * parseInt(amount) <= vRP.getInventoryMaxWeight(user_id) then
-				if vRP.tryWithdraw(user_id,parseInt(amount)) then
-					TriggerClientEvent("vrp_bank:Update",source,"requestInicio")
-					vRP.log(cfg.webhookbanco,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[SACOU]: $"..vRP.format(parseInt(amount)).." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
-					vRPSend.returnotify(source,true,"Valor Retirado com Sucesso!")
-				else
-					vRPSend.returnotify(source,false,"Dinheiro insuficiente na sua conta bancária.")
-				end
+			if vRP.tryWithdraw(user_id,parseInt(amount)) then
+				local walletMoney = vRP.getMoney(user_id)
+				vRP.setMoney(user_id, walletMoney+amount)
+				TriggerClientEvent("vrp_bank:Update",source,"requestInicio")
+				vRP.log(cfg.webhookbanco,"```prolog\n[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[SACOU]: $"..vRP.format(parseInt(amount)).." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S").." \r```")
+				vRPSend.returnotify(source,true,"Valor Retirado com Sucesso!")
 			else
-				vRPSend.returnotify(source,false,"Mochila cheia.")
+				vRPSend.returnotify(source,false,"Dinheiro insuficiente na sua conta bancária.")
 			end
 		end
 	end

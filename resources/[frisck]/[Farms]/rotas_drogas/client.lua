@@ -58,7 +58,7 @@ Citizen.CreateThread(function()
 			local distance = GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),x,y,z,true)
 			if distance <= 5 then
 				sleep = 4
-				DrawMarker(21,x,y,z-0.6,0,0,0,0.0,0,0,0.5,0.5,0.4,255,255,0,50,0,0,0,1)
+				-- DrawMarker(21,x,y,z-0.6,0,0,0,0.0,0,0,0.5,0.5,0.4,255,255,0,50,0,0,0,1)
 				if not entregando then
 					if distance <= 1.0 then
 						drawTxt("PRESSIONE  ~y~E~w~  PARA INICIAR AS ENTREGAS",4,0.5,0.92,0.35,255,255,255,180)
@@ -159,3 +159,20 @@ function CriandoBlip(locs,selecionado)
 	AddTextComponentString("Entrega de Drogas")
 	EndTextCommandSetBlipName(blips)
 end
+
+local pedlist = {
+	{ ['x'] = -2190.2, ['y'] = -399.5, ['z'] = 13.31, ['h'] = 230.25, ['hash'] = 0xC2A87702, ['hash2'] = "a_m_m_stlat_02" },
+		
+}
+
+CreateThread(function()
+	for k,v in pairs(pedlist) do
+		RequestModel(GetHashKey(v.hash2))
+		while not HasModelLoaded(GetHashKey(v.hash2)) do Wait(100) end
+		ped = CreatePed(4,v.hash,v.x,v.y,v.z-1,v.h,false,true)
+		peds = ped
+		FreezeEntityPosition(ped,true)
+		SetEntityInvincible(ped,true)
+		SetBlockingOfNonTemporaryEvents(ped,true)
+	end
+end)

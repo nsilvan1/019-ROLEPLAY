@@ -139,16 +139,16 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- REQUESTSALARY
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNUICallback("requestMySalarys",function(data,cb)
-	local resultado = vRPSend.requestMySalarys()
-	while not resultado do
-		resultado = vRPSend.requestMySalarys()
-		Citizen.Wait(10)
-	end
-	if resultado then
-		cb({ resultado = resultado })
-	end
-end)
+-- RegisterNUICallback("requestMySalarys",function(data,cb)
+-- 	local resultado = vRPSend.requestMySalarys()
+-- 	while not resultado do
+-- 		resultado = vRPSend.requestMySalarys()
+-- 		Citizen.Wait(10)
+-- 	end
+-- 	if resultado then
+-- 		cb({ resultado = resultado })
+-- 	end
+-- end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- SALARYPAYMENT
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -160,31 +160,31 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- REQUESTINVOICES
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNUICallback("requestInvoices",function(data,cb)
-	local resultado = vRPSend.requestInvoices()
-	while not resultado do
-		resultado = vRPSend.requestInvoices()
-		Citizen.Wait(10)
-	end
+-- RegisterNUICallback("requestInvoices",function(data,cb)
+-- 	local resultado = vRPSend.requestInvoices()
+-- 	while not resultado do
+-- 		resultado = vRPSend.requestInvoices()
+-- 		Citizen.Wait(10)
+-- 	end
 
-	if resultado then
-		cb({ resultado = resultado })
-	end
-end)
+-- 	if resultado then
+-- 		cb({ resultado = resultado })
+-- 	end
+-- end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- REQUESTMYINVOICES
 -----------------------------------------------------------------------------------------------------------------------------------------
-RegisterNUICallback("requestMyInvoices",function(data,cb)
-	local resultado = vRPSend.requestMyInvoices()
-	while not resultado do
-		resultado = vRPSend.requestMyInvoices()
-		Citizen.Wait(10)
-	end
+-- RegisterNUICallback("requestMyInvoices",function(data,cb)
+-- 	local resultado = vRPSend.requestMyInvoices()
+-- 	while not resultado do
+-- 		resultado = vRPSend.requestMyInvoices()
+-- 		Citizen.Wait(10)
+-- 	end
 
-	if resultado then
-		cb({ resultado = resultado })
-	end
-end)
+-- 	if resultado then
+-- 		cb({ resultado = resultado })
+-- 	end
+-- end)
 
 function vRPReceiver.returnotify(status,text)
 	if status then

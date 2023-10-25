@@ -71,7 +71,6 @@ const itemContent = (type, item, i) => {
         <div class = "item-description">
           <h6>${item.text}</h6>
           <p>Valor: <span>$${formatNumber(item.price)}</span></p>
-          <p>Data da fatura: <span>${item.date}</span></p>
         </div>
       </div>
     `
@@ -82,7 +81,6 @@ const itemContent = (type, item, i) => {
         <div class = "item-content">
           <h6>${item.text}</h6>
           <p>Valor: <span>$${formatNumber(item.price)}</span></p>
-          <p>Data da fatura: <span>${item.date}</span></p>
           <p>Aplicado: <span>${item.nuser_id}</span></p>
         </div>
       </div>
@@ -95,7 +93,6 @@ const itemContent = (type, item, i) => {
         <div class = "item-content">
           <h6>Salario #${i = i + 1}</h6>
           <p>Valor: <span>$${item.price}</span></p>
-          <p>Data da fatura: <span>${item.date}</span></p>
         </div>
       </div>
     `
