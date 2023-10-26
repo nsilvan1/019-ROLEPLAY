@@ -82,7 +82,7 @@ function initialFunc()
       sendToDiscord(cfg.webhooks.weekEnd,'(daily rewards) New cycle!  END: '..os.date("%d/%m %H:%M",lResource.expirate_time))
       sendToDiscord('https://discord.com/api/webhooks/1053311312349896744/53lSIVqbU-mKLSyTfYf-CT1SB30PdeL9ssnTCV5QRTabmfGO3dbxSpn1DPF2p6XcGgwI',' '..GetConvar('sv_hostname','default fxserver')..' Sistema restartado. Um novo ciclo foi gerado e se encerrara as '..os.date("%d/%m %H:%M",lResource.expirate_time))
       print('(daily rewards) NEW CYCLE! END: '..os.date("%d/%m %H:%M",lResource.expirate_time))
-      vRP._execute('premiacao/resetDaily')
+      -- vRP._execute('premiacao/resetDaily')
       lInfo = {}
       lClient._init(-1)
     else 
@@ -104,7 +104,7 @@ function initialFunc()
         print('(daily rewards) O ciclo semanal se encerrara '..os.date("%d/%m %H:%M",info.week_end))
         print('(daily rewards) A semana do dia: '..os.date("%d/%m %H:%M",info.week_init).." a "..os.date("%d/%m %H:%M",info.week_end).." se encerrou e um relatorio foi enviado para o Webhook escolhido.") 
         sendToDiscord(cfg.webhooks.weekEnd,json.encode(rankinfo,{indent = true}))
-        vRP._execute('premiacao/resetRankup')
+        -- vRP._execute('premiacao/resetRankup')
       end
     else 
       info.week_end = os.time()+7*24*60*60

@@ -20,7 +20,7 @@ body {
   background: linear-gradient(
     162.76deg,
     rgba(39, 39, 39, 0.9) 11.85%,
-    rgb(255, 179, 92) 198.42%
+    rgb(197, 9, 9) 198.42%
   );
 
   display: none;
@@ -29,7 +29,7 @@ body {
 }
 
 #exit {
-  color: rgb(255, 179, 92);
+  color: rgb(252, 8, 8);
   font-size: 1.091vw;
 
   top: 1.455vw;
@@ -57,9 +57,10 @@ body {
   color: #ffffff;
 }
 
-#bank header h1 span {
-  color: rgb(255, 179, 92);
-}
+/* cor banco 019 */
+/* #bank header h1 span {
+  color: rgb(197, 9, 9);
+} */
 
 #bank header p {
   font-weight: 500;
@@ -160,7 +161,7 @@ body {
 }
 
 #bank main section#menu-options .welcome-message p span {
-  color: rgb(255, 179, 92);
+  color: rgb(197, 9, 9);
 }
 
 #bank main section#options #home {
@@ -188,7 +189,7 @@ body {
   font-size: 1.045vw;
   line-height: 1.273vw;
 
-  color: rgb(255, 179, 92);
+  color: rgb(197, 9, 9);
 }
 
 #bank main section#options #home .option p {
@@ -245,8 +246,8 @@ body {
 
   border: none;
   border-radius: 0.273vw;
-  background: rgb(255, 179, 92);
-  box-shadow: 0vw 0vw 0.591vw rgba(255, 179, 92, 0.377);
+  background: rgb(197, 9, 9);
+  box-shadow: 0vw 0vw 0.591vw rgba(197, 9, 9, 0.377);
 
   font-weight: 700;
   font-size: 0.545vw;
@@ -258,7 +259,7 @@ body {
 }
 
 #bank main section#options #home .option .option-interaction button:hover {
-  background: rgb(255, 179, 92);
+  background: rgb(197, 9, 9);
 }
 
 #bank main section#options #others-options {
@@ -293,14 +294,14 @@ body {
 }
 
 #bank main section#options #others-options .other-title button:hover {
-  background:rgb(255, 179, 92)
+  background:rgb(197, 9, 9)
 }
 
 #bank main section#options #others-options .other-title .title-message h4 {
   font-weight: 600;
   font-size: 1.045vw;
   line-height: 1.273vw;
-  color: rgb(255, 179, 92);
+  color: rgb(197, 9, 9);
 }
 
 #bank main section#options #others-options .other-title .title-message p {
@@ -356,7 +357,7 @@ body {
   box-shadow: none;
   background: transparent;;
   font-size: 0.545vw;
-  color: rgb(255, 179, 92);
+  color: rgb(197, 9, 9);
 
   line-height: 0.636vw;
   display: inline-block;
@@ -366,8 +367,8 @@ body {
 #bank main section#options #others-options .other-items .item span {
   width: 2.091vw;
   height: 2.091vw;
-  background: rgb(255, 179, 92);
-  box-shadow: 0vw 0vw 0.5vw rgba(255, 179, 92, 0.322);
+  background: rgb(197, 9, 9);
+  box-shadow: 0vw 0vw 0.5vw rgba(197, 9, 9, 0.322);
   border-radius: 0.455vw;
 
   display: flex;
@@ -403,14 +404,14 @@ body {
   box-shadow: none;
   background: transparent;;
   font-size: 0.545vw;
-  color: rgb(255, 179, 92);
+  color: rgb(197, 9, 9);
 
   line-height: 0.636vw;
   display: inline-block;
 }
 
 .selected {
-  color: rgb(255, 179, 92) !important;
+  color: rgb(197, 9, 9) !important;
 }
 
 .active {

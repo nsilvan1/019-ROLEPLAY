@@ -168,7 +168,16 @@ RegisterNetEvent('notificacao')
 AddEventHandler('notificacao',function(x,y,z,user_id)
 	if not DoesBlipExist(blips[user_id]) then
 		PlaySoundFrontend(-1,"Enter_1st","GTAO_FM_Events_Soundset",true)
-		TriggerEvent("NotifyPush",{ code = 10, title = "Ocorrência em andamento", x = x, y = y, z = z, badge = "Disparos de arma de fogo" })
+		-- TriggerEvent("NotifyPush",{ code = 10, title = "Ocorrência em andamento", x = x, y = y, z = z, badge = "Disparos de arma de fogo" })
+		TriggerEvent("NotifyPush", {
+			text = "Disparos de arma de fogo",
+			code = 10,
+			title = "Ocorrência em andamento",
+			x = x, 
+			y = y,
+			z = z,
+			rgba = { 69, 115, 41 }
+		})
 		blips[user_id] = AddBlipForCoord(x,y,z)
 		SetBlipScale(blips[user_id],0.5)
 		SetBlipSprite(blips[user_id],10)

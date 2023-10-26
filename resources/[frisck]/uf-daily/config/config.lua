@@ -1,17 +1,17 @@
 cfg = {}
 
-cfg.command = "horas"
+cfg.command = ""
 
 cfg.listOnePorcentage = 0.1 --ou false (Colocar na lista apenas itens raros.)
 
 cfg.actions = {
   login = {
-    chat_notify = {enable = true, message = "^7𝐒𝐄𝐉𝐀 𝐁𝐄𝐌 𝐕𝐈𝐍𝐃𝐎 ! 𝐏𝐀𝐑𝐀 𝐕𝐄𝐑 𝐎 𝐒𝐄𝐔 𝐒𝐓𝐀𝐓𝐔𝐒, 𝐃𝐈𝐆𝐈𝐓𝐄 /𝐇𝐎𝐑𝐀𝐒"},
+    chat_notify = {enable = false, message = "^7𝐒𝐄𝐉𝐀 𝐁𝐄𝐌 𝐕𝐈𝐍𝐃𝐎 ! 𝐏𝐀𝐑𝐀 𝐕𝐄𝐑 𝐎 𝐒𝐄𝐔 𝐒𝐓𝐀𝐓𝐔𝐒, 𝐃𝐈𝐆𝐈𝐓𝐄 /𝐇𝐎𝐑𝐀𝐒"},
     event_notify = {enable = false, message = "^7𝐒𝐄𝐉𝐀 𝐁𝐄𝐌 𝐕𝐈𝐍𝐃𝐎 ! 𝐏𝐀𝐑𝐀 𝐕𝐄𝐑 𝐎 𝐒𝐄𝐔 𝐒𝐓𝐀𝐓𝐔𝐒, 𝐃𝐈𝐆𝐈𝐓𝐄 /𝐇𝐎𝐑𝐀𝐒"},
-    sound_beep  = {enable = true}
+    sound_beep  = {enable = false}
   },
   reedemGift = {
-    baloons = {enable = true}
+    baloons = {enable = false}
   },
   chat_template = '<div style="display:flex;align-items:center;justify-content:center;padding:10px;margin:5px 0;background-image: linear-gradient(to right, rgba(39, 203, 255,1) 3%, rgba(46, 128, 255,0) 95%);border-radius: 5px;">{0}</div>'
 }

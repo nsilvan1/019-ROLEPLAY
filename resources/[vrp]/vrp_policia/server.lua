@@ -1205,6 +1205,8 @@ AddEventHandler('atirando',function(x,y,z)
 				local player = vRP.getUserSource(w)
 				if player then
 					TriggerClientEvent('notificacao',player,x,y,z,user_id)
+					-- local data = { x = x, y = y, z = z, title = "911 " , code = "Disparos", veh = "Recebemos uma denuncia de disparos de arma de fogo, verifique o ocorrido." }
+					-- TriggerClientEvent('NotifyPush',player,data)
 				end
 			end
 		end
