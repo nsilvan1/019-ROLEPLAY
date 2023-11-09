@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 * {
-    cursor: none;
+    cursor: show;
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -14,8 +14,8 @@ body {
     width: 100vw;
     height: 100vh;
     font-family: Helvetica, Arial;
-    /* background: #161922; */
-    /* background-image: url("https://cdn.discordapp.com/attachments/557708055308009482/972265733549596722/background_sp.png"); */
+    background: #161922;
+    background-image: url("https://cdn.discordapp.com/attachments/1131595446750564394/1167446187671027752/Logo_1920_x1080.png?ex=654e27fd&is=653bb2fd&hm=19126fab9f6131e69d1e30d919c819e0c1241ab4e2927fab7bcf986c8bfb81db&.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -70,7 +70,7 @@ h2 {
     left: 50%;
     top: 50%;
     pointer-events: none;
-    background-image: url('https://i.imgur.com/aOAOdG4.png');
+    /* background-image: url('https://i.imgur.com/jeLSILa.png'); */
     background-repeat: no-repeat;
     transform: translate(-50%, -50%);
     z-index: 9999999;
@@ -142,7 +142,7 @@ h2 {
 #slider #elapsed {
     width: 0px;
     height: 4px;
-    background: #FFF459;
+    background: #fc0404;
     box-shadow: 0px 0px 40px -8px #00f87a;
     border-radius: 2px;
 }
@@ -195,13 +195,13 @@ h2 {
 }
 
 #play:hover g {
-    stroke: #FFF459;
+    stroke: #fc0404;
     box-shadow: 0px 0px 40px -8px #00f87a;
     cursor: none;
 }
 
 #play:hover g path {
-    fill: #FFF459;
+    fill: #fc0404;
     box-shadow: 0px 0px 40px -8px #00f87a;
     cursor: none;
 }
@@ -239,7 +239,7 @@ h2 {
 }
 
 #pause:hover rect {
-    fill: #FFF459;
+    fill: #fc0404;
     box-shadow: 0px 0px 40px -8px #00f87a;
 }
 
@@ -249,7 +249,7 @@ h2 {
 }
 
 .expend svg:hover g polygon {
-    fill: #FFF459;
+    fill: #fc0404;
     box-shadow: 0px 0px 40px -8px #00f87a;
     cursor: none;
 }
@@ -264,7 +264,7 @@ h2 {
 .slider .volume {
     width: 69px;
     height: 4px;
-    background: #FFF459;
+    /* background: #fc0404; */
     box-shadow: 0px 0px 40px -8px #00f87a;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
@@ -369,17 +369,17 @@ input[type="range"]::-ms-thumb {
 input[type="range"]::-webkit-slider-thumb:hover,
 input[type="range"]::-webkit-slider-thumb:focus,
 input[type="range"]::-webkit-slider-thumb:active {
-    background-color: #FFF459;
+    background-color: #fc0404;
 }
 
 input[type="range"]::-moz-range-thumb:hover,
 input[type="range"]::-moz-range-thumb:focus,
 input[type="range"]::-moz-range-thumb:active {
-    background-color: #FFF459;
+    background-color: #fc0404;
 }
 
 input[type="range"]::-ms-thumb:hover,
 input[type="range"]::-ms-thumb:focus,
 input[type="range"]::-ms-thumb:active {
-    background-color: #FFF459;
+    background-color: #fc0404;
 }

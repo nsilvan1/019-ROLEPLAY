@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+
+.notifies-container {
+    height: 60vh;
+    width: 300px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 20px;
+    top: 200px;
+    align-items: flex-end;
+    padding-top: 130px;
+    overflow: hidden;
+}
+
+.notify {
+    min-width: 100%;
+    min-height: 85px;
+    background: rgba(15, 15, 15, 0.6);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.notifyLine {
+    position: absolute;
+    background-color: #F2C94C;
+    width: 80%;
+    height: 4px;
+    left: 10%;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.Titlo-Notify{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-left: 20%;
+    color: #fff;
+    margin-top: -14%;
+    width: 80%;
+    font-weight: bold;
+}
+
+.text-Notify{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 20%;
+    color: rgba(255, 255, 255, 0.6);
+    width: 80%;
+    min-height: 63%;
+}
+
+
+img {
+    height: 30px;
+    margin-top: 6.5%;
+    margin-left: 5%;
+    -webkit-animation-name: bounceIn;
+    -webkit-animation-name: tada;
+    animation-name: tada;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes appear {
+    from {
+        transform: translateX(-100%);
+    
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.appear {
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-fill-mode: backwards; 
+}
+
+@keyframes disappear {
+    from {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 0%;
+        transform: translateX(-100%);
+    }
+}
+
+.disappear {
+    animation-name: disappear;
+    animation-duration: 1s;
+    animation-fill-mode: backwards; 
+}
+
+
+@keyframes width {
+    from {
+        width: 60%;
+    }
+
+    to {
+        width: 0px;
+    }
+}
+
+
+.width {
+    animation-name: width;
+    animation-duration: 9400ms;
+    animation-fill-mode: backwards; 
+}
+
+
+@-webkit-keyframes tada {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    }
+    @keyframes tada {
+    0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    }
+    } 

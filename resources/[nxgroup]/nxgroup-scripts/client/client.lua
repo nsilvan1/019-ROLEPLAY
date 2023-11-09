@@ -397,8 +397,17 @@ local blips = {
 	-- { ['x'] = -526.01, ['y'] = -1211.00, ['z'] = 18.18, ['sprite'] = 361, ['color'] = 41, ['nome'] = "Posto de Gasolina", ['scale'] = 0.3 },
 	-- { ['x'] = -70.21, ['y'] = -1761.79, ['z'] = 29.53, ['sprite'] = 361, ['color'] = 41, ['nome'] = "Posto de Gasolina", ['scale'] = 0.3 },
 	----
+
+	{ ['x'] =  150.266,  ['y'] = -1040.203,  ['z'] = 29.374, ['sprite'] = 272, ['color'] = 45, ['nome'] = "Banco", ['scale'] = 0.6 },
+	{ ['x'] = -1212.980,  ['y'] = -330.841,  ['z'] = 37.787, ['sprite'] = 272, ['color'] = 45, ['nome'] = "Banco", ['scale'] = 0.6 },
+	{ ['x'] = -2962.582,  ['y'] = 482.627,  ['z'] = 15.703, ['sprite'] = 272, ['color'] = 45, ['nome'] = "Banco", ['scale'] = 0.6 },
+	{ ['x'] = -112.202,  ['y'] = 6469.295,  ['z'] = 31.626, ['sprite'] = 272, ['color'] = 45, ['nome'] = "Banco", ['scale'] = 0.6 },
+	{ ['x'] = 314.187,  ['y'] = -278.621,  ['z'] = 54.170, ['sprite'] = 272, ['color'] = 45, ['nome'] = "Banco", ['scale'] = 0.6 },
+	{ ['x'] = -351.534,  ['y'] = -49.529,  ['z'] = 49.042, ['sprite'] = 272, ['color'] = 45, ['nome'] = "Banco", ['scale'] = 0.6 },
+	{ ['x'] = 241.727,  ['y'] = 220.706,  ['z'] = 106.286, ['sprite'] = 272, ['color'] = 45, ['nome'] = "Banco", ['scale'] = 0.6 },
+
 	{ ['x'] = -633.99, ['y'] = -238.98, ['z'] = 38.53, ['sprite'] = 617, ['color'] = 0, ['nome'] = "Joalheria", ['scale'] = 0.4 },
-	{ ['x'] = 161.01, ['y'] = -1110.98, ['z'] = 29.89, ['sprite'] = 102, ['color'] = 13, ['nome'] = "Advogados / Tribunal", ['scale'] = 0.6 },
+	-- { ['x'] = 161.01, ['y'] = -1110.98, ['z'] = 29.89, ['sprite'] = 102, ['color'] = 13, ['nome'] = "Advogados / Tribunal", ['scale'] = 0.6 },
 
 	-- { ['x'] = 1308.01, ['y'] = 4261.0, ['z'] = 33.92, ['sprite'] = 68, ['color'] = 13, ['nome'] = "Central | Pescadores", ['scale'] = 0.4 },
 	{ ['x'] = 1551.22, ['y'] = 3798.98, ['z'] = 34.41, ['sprite'] = 68, ['color'] = 13, ['nome'] = "Venda | Pescados", ['scale'] = 0.3 },

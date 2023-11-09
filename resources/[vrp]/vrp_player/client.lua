@@ -918,7 +918,6 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterNetEvent("jaqueta")
 AddEventHandler("jaqueta",function(index,color)
-	print("entou no client")
 	local ped = GetPlayerPed(-1)
 	if index == nil then
 		SetPedComponentVariation(ped,11,15,0,2)
