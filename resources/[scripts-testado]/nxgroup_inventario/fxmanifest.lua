@@ -16,7 +16,7 @@ client_script{
 server_script {
   "@vrp/lib/utils.lua",
   "server.lua",
-  "blips.lua",
+--   "blips.lua",
   "config.lua",
   "itens.lua",
 }

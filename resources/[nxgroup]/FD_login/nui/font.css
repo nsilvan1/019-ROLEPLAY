@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'medium';
+    src: url('./fonts/OpenSauceSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'black';
+    src: url('./fonts/OpenSauceSans-Black.ttf');
+}

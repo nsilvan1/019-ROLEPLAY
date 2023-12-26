@@ -857,7 +857,7 @@ function getNearestBennys()
 	local playercoords = GetEntityCoords(PlayerPedId())
 	for i,j in ipairs(locais) do
 		local distance = #(playercoords - locais[i])
-		if distance < 3 then
+		if distance < 4 then
 			return locais[i]
 		end
 	end

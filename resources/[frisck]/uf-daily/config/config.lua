@@ -1,17 +1,17 @@
 cfg = {}
 
-cfg.command = "horas"
+cfg.command = ""
 
 cfg.listOnePorcentage = 0.1 --ou false (Colocar na lista apenas itens raros.)
 
 cfg.actions = {
   login = {
-    chat_notify = {enable = true, message = "^7𝐒𝐄𝐉𝐀 𝐁𝐄𝐌 𝐕𝐈𝐍𝐃𝐎 𝐀𝐎 𝐄𝐕𝐄𝐍𝐓𝐎 𝐉𝐎𝐆𝐔𝐄 𝐌𝐀𝐈𝐒! 𝐏𝐀𝐑𝐀 𝐕𝐄𝐑 𝐎 𝐒𝐄𝐔 𝐒𝐓𝐀𝐓𝐔𝐒, 𝐃𝐈𝐆𝐈𝐓𝐄 /𝐇𝐎𝐑𝐀𝐒"},
-    event_notify = {enable = false, message = "^7𝐒𝐄𝐉𝐀 𝐁𝐄𝐌 𝐕𝐈𝐍𝐃𝐎 𝐀𝐎 𝐄𝐕𝐄𝐍𝐓𝐎 𝐉𝐎𝐆𝐔𝐄 𝐌𝐀𝐈𝐒! 𝐏𝐀𝐑𝐀 𝐕𝐄𝐑 𝐎 𝐒𝐄𝐔 𝐒𝐓𝐀𝐓𝐔𝐒, 𝐃𝐈𝐆𝐈𝐓𝐄 /𝐇𝐎𝐑𝐀𝐒"},
-    sound_beep  = {enable = true}
+    chat_notify = {enable = false, message = "^7𝐒𝐄𝐉𝐀 𝐁𝐄𝐌 𝐕𝐈𝐍𝐃𝐎 ! 𝐏𝐀𝐑𝐀 𝐕𝐄𝐑 𝐎 𝐒𝐄𝐔 𝐒𝐓𝐀𝐓𝐔𝐒, 𝐃𝐈𝐆𝐈𝐓𝐄 /𝐇𝐎𝐑𝐀𝐒"},
+    event_notify = {enable = false, message = "^7𝐒𝐄𝐉𝐀 𝐁𝐄𝐌 𝐕𝐈𝐍𝐃𝐎 ! 𝐏𝐀𝐑𝐀 𝐕𝐄𝐑 𝐎 𝐒𝐄𝐔 𝐒𝐓𝐀𝐓𝐔𝐒, 𝐃𝐈𝐆𝐈𝐓𝐄 /𝐇𝐎𝐑𝐀𝐒"},
+    sound_beep  = {enable = false}
   },
   reedemGift = {
-    baloons = {enable = true}
+    baloons = {enable = false}
   },
   chat_template = '<div style="display:flex;align-items:center;justify-content:center;padding:10px;margin:5px 0;background-image: linear-gradient(to right, rgba(39, 203, 255,1) 3%, rgba(46, 128, 255,0) 95%);border-radius: 5px;">{0}</div>'
 }
@@ -46,11 +46,11 @@ cfg.gifts = {
     [0.1 --[[Raridade do item]]] = { 
       globalMessage = {enable = true, message= "🎉{nome} {sobrenome} pegou um item raro no Jogue Mais! ({amount} {item})🎉"},
       gifts = {
-        {idname = "wbody|WEAPON_SPECIALCARBINE", name='G-36', amount =  {min = 1, max = 1}},
+        -- {idname = "wbody|WEAPON_SPECIALCARBINE", name='G-36', amount =  {min = 1, max = 1}},
         {idname = "wbody|WEAPON_ASSAULTRIFLE", name='AK-47', amount =  {min = 1, max = 1}},
       }
     }, 
-    [0.2] = { 
+    [0.1] = { 
       globalMessage = {enable = false, message= "🎉{nome} {sobrenome} pegou um item raro no Jogue Mais! ({item})🎉"},
       gifts = {
         {idname = "wbody|WEAPON_PISTOL", name='M1911', amount =  {min = 1, max = 1}},
@@ -84,7 +84,7 @@ cfg.gifts = {
       globalMessage = {enable = true, message= "🎉{nome} {sobrenome} pegou um item raro no Jogue Mais! ({amount} {item})🎉"},
       gifts = {
         {idname = "wbody|WEAPON_ASSAULTRIFLE", name='AK-47', amount =  {min = 1, max = 1}},
-        {idname = "wbody|WEAPON_SPECIALCARBINE", name='G-36', amount =  {min = 1, max = 1}},
+        -- {idname = "wbody|WEAPON_SPECIALCARBINE", name='G-36', amount =  {min = 1, max = 1}},
         {idname = "wbody|WEAPON_ASSAULTSMG", name='Mtar-21', amount =  {min = 1, max = 1}},
       }
     }, 
@@ -160,7 +160,7 @@ cfg.gifts = {
       globalMessage = {enable = true, message= "🎉{nome} {sobrenome} pegou um item raro no Jogue Mais! ({amount} {item})🎉"},
       gifts = {
         {idname = "wbody|WEAPON_ASSAULTRIFLE", name='AK-47', amount =  {min = 1, max = 1}},
-        {idname = "wbody|WEAPON_SPECIALCARBINE", name='G-36', amount =  {min = 1, max = 1}},
+        -- {idname = "wbody|WEAPON_SPECIALCARBINE", name='G-36', amount =  {min = 1, max = 1}},
         {idname = "wbody|WEAPON_ASSAULTSMG", name='Mtar-21', amount =  {min = 1, max = 1}},
       }
     }, 
@@ -198,7 +198,7 @@ cfg.gifts = {
       globalMessage = {enable = true, message= "🎉{nome} {sobrenome} pegou um item raro no Jogue Mais! ({amount} {item})🎉"},
       gifts = {
         {idname = "wbody|WEAPON_ASSAULTRIFLE", name='AK-47', amount =  {min = 1, max = 1}},
-        {idname = "wbody|WEAPON_SPECIALCARBINE", name='G-36', amount =  {min = 1, max = 1}},
+        -- {idname = "wbody|WEAPON_SPECIALCARBINE", name='G-36', amount =  {min = 1, max = 1}},
         {idname = "wbody|WEAPON_ASSAULTSMG", name='Mtar-21', amount =  {min = 1, max = 1}},
       }
     }, 

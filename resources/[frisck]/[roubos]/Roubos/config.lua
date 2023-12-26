@@ -226,7 +226,7 @@ Config.setup = {
 		},
 		tempo = 20, --> Segundos
 		tempoEspera = 5, --> Minutos,
-		lspd = 3 --> 03 Minimo de policiais para assalto
+		lspd = 4 --> 03 Minimo de policiais para assalto
 	},
 	['caixa'] = {
 		items = {
@@ -234,7 +234,7 @@ Config.setup = {
 		},
 		tempo = 30, --> Segundos para terminar
 		tempoEspera = 5, --> Minutos para puxar dnv
-		lspd = 1 --> 1 Minimo de policiais para assalto
+		lspd = 2 --> 1 Minimo de policiais para assalto
 	},
 	-- ['Loja De Departamento'] = {
 	-- 	items = {

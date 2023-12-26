@@ -138,9 +138,9 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 local salarios = {
 	-- VIPS
-	{ ['permissao'] = "bronze.permissao", ['nome'] = "Bronze", ['payment'] = 2000 },
-	{ ['permissao'] = "prata.permissao", ['nome'] = "Prata", ['payment'] = 4000 },
-    { ['permissao'] = "ouro.permissao", ['nome'] = "Ouro", ['payment'] = 6000 },
+	{ ['permissao'] = "bronze.permissao", ['nome'] = "Bronze", ['payment'] = 500 },
+	{ ['permissao'] = "prata.permissao", ['nome'] = "Prata", ['payment'] = 1000 },
+    { ['permissao'] = "ouro.permissao", ['nome'] = "Ouro", ['payment'] = 1500 },
     { ['permissao'] = "diamante4.permissao", ['nome'] = "Diamante", ['payment'] = 8000 },
     { ['permissao'] = "esmeralda.permissao", ['nome'] = "Esmeralda", ['payment'] = 12000 },
 
@@ -668,6 +668,7 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- /semems
 -----------------------------------------------------------------------------------------------------------------------------------------
+
 RegisterCommand('semems',function(source,args,rawCommand)
     local source = source
     local user_id = vRP.getUserId(source)
@@ -678,16 +679,16 @@ RegisterCommand('semems',function(source,args,rawCommand)
             TriggerClientEvent("Notify",source,"negado","Há paramédico em trabalho.")
         else
 
-            if vRP.request(source, "Você deseja rezar pra ser renascido ? Esse serviço custará $10000", 60) then
-                    if vRP.tryFullPayment(user_id,10000) then
+            if vRP.request(source, "Você deseja rezar pra ser renascido? Esse serviço custará $500", 60) then
+                    if vRP.tryFullPayment(user_id,500) then
                         TriggerClientEvent("progress",source, 20000,"Revivendo")
                        TriggerClientEvent("Notify",source,"importante","estamos orando por você! Aguarde!!!",8000)
                         Citizen.Wait(20000)
 						vRP.clearInventory(user_id)
                         vRPclient.killGod(source)
-                        vRPclient.setHealth(source,200)
+                        vRPclient.setHealth(source,400)
                         TriggerClientEvent("Notify",source,"sucesso","Você foi reanimado e seu inventario foi limpo .",8000)
-                        sendLog('LogSemems',"[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[SEMEMS]: "..user_id.." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S"),true)
+						sendLog('LogSemems',"[ID]: "..user_id.." "..identity.name.." "..identity.firstname.." \n[SEMEMS]: "..user_id.." "..os.date("\n[Data]: %d/%m/%Y [Hora]: %H:%M:%S"),true)
                         else
                             TriggerClientEvent("Notify",source,"negado","Você não tem dinheiro suficiente",8000) 
                             return
@@ -766,7 +767,7 @@ RegisterCommand('blusa', function(source, args, rawCommand)
         TriggerClientEvent('blusa', source, args[1], args[2])
     else
         TriggerClientEvent("Notify", source, "negado",
-                           "Você precisa de roupas para trocar de roupa.")
+                           "Você precisa de roupas para trocar de blusa.")
     end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -786,6 +787,7 @@ end)
 -- /jaqueta
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterCommand('jaqueta', function(source, args, rawCommand)
+	
     local user_id = vRP.getUserId(source)
     if vRP.getInventoryItemAmount(user_id, "roupas") >= 1 or
         vRP.hasPermission(user_id, "paramedico.permissao") then
@@ -1153,7 +1155,7 @@ AddEventHandler('survavel:playerdeath',function(nSource,weapon)
 			local killer_identity = vRP.getUserIdentity(user_id)
 			local victim_identity = vRP.getUserIdentity(nuser_id)
 
-			sendLog('LogMorte',"[ID]: "..nuser_id.." - '"..victim_identity.name.." "..victim_identity.firstname.."'\n[MATOU O ID]: "..user_id.." - '"..killer_identity.name.." "..killer_identity.firstname.."'\n[ARMA]: '"..weapon.."' [HASH]: "..hash.."\n[LOCAL ASSASSINO]: "..kx..","..ky..","..kz.."\n[LOCAL VITIMA]: "..vx..","..vy..","..vz.."\n"..date.."```",true)
+			-- sendLog('LogMorte',"[ID]: "..nuser_id.." - '"..victim_identity.name.." "..victim_identity.firstname.."'\n[MATOU O ID]: "..user_id.." - '"..killer_identity.name.." "..killer_identity.firstname.."'\n[ARMA]: '"..weapon.."' [HASH]: "..hash.."\n[LOCAL ASSASSINO]: "..kx..","..ky..","..kz.."\n[LOCAL VITIMA]: "..vx..","..vy..","..vz.."\n"..date.."```",true)
 			local admin = vRP.getUsersByPermission("ac.permissao")
 			for l,w in pairs(admin) do
 				if  NotifyMortes[w] then

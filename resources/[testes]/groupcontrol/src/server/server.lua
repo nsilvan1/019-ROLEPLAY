@@ -23,7 +23,7 @@ local Perm = {}
 local user_groups = {}
 local opened = {}
 
-RegisterCommand('painel', function(source,args,rawCommand)
+RegisterCommand('org', function(source,args,rawCommand)
 	local user_id = vRP.getUserId(source)
 	for k,v in pairs(cfg.emps) do
 		if vRP.hasPermission(user_id,v.perm) then

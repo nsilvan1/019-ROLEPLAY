@@ -1,0 +1,46 @@
+{
+  "token": "f55a4348cfc7aa317cf56674916434a99ddedddebd0ca6f3ed9d49c53176e33f",
+  "command": "fval",
+  "mysql": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "thunder",
+    "user": "root",
+    "password": ""
+  },
+  "snowflake": {
+    "database_prefix": "vrp",
+    "vehicles": "vrp_user_vehicles",
+    "priority": "vrp_priority",
+    "homes": "vrp_homes_permissions",
+    "esx": {
+      "admin_group": "admin",
+      "default_group": "unemployed",
+      "vehicle_plate": "AAA 000"
+    }
+  },
+  "requireOnlineToDelivery": false,
+  "plugins": [],
+  "chat": {
+    "enabled": true,
+    "global": true,
+    "color": "#ffa852",
+    "format": ":name comprou :product."
+  },
+  "nui": {
+    "enabled": true,
+    "title": "Parabéns, :name",
+    "subtitle": "Você acabou de adquirir :product"
+  },
+  "messages": {
+    "/vip": {
+      "color": "#5bc0de",
+      "none_color": "#e53935",
+      "none": "Não foi encontrado nenhum benefício para expirar",
+      "group": "Seu grupo :name expira no dia :date",
+      "vehicle": "Seu veículo :name expira no dia :date",
+      "home": "Sua casa :name expira no dia :date"
+    }
+  },
+  "webhook": "https://discord.com/api/webhooks/1161330266409803866/J_dXqXtKkd9bzwNT3YXnYp-vjrAsOVBSTjDvMLSMIoqIFVjDkT_jEYebGcdkfyGEw0rW"
+}

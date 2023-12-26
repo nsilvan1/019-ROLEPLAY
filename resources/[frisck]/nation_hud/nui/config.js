@@ -1,4 +1,4 @@
-const logoImg = "https://i.imgur.com/0tJErmd.png";
+const logoImg = "https://i.imgur.com/jKkFVRG.png";
 
 $(".logo img").attr("src", logoImg);
 

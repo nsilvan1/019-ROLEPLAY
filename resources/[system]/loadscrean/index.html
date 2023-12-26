@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>XLegion</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <audio id="loading" src="music/music.mp3" autoplay="true" hidden="true" loop="true"></audio>
+<div class="container">
+  <section class="background">
+    <div class="content-wrapper">
+      <p class="content-title"></p>
+      <p class="content-subtitle">PRESSIONE ESPAÇO PARA PAUSA A MUSICA.</p>
+    </div>
+  </section>
+  <!-- <section class="background">
+    <div class="content-wrapper">
+      <p class="content-title">Quote #1</p>
+      <p class="content-subtitle">Description</p>
+    </div>
+  </section>
+  <section class="background">
+    <div class="content-wrapper">
+      <p class="content-title">Quote #2</p>
+      <p class="content-subtitle">Description</p>
+    </div>
+  </section> -->
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
+<script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+<script  src="js/script.js"></script>
+<script>
+    var play = false;
+            var vid = document.getElementById("loading");
+            vid.volume = 0.1;
+            window.addEventListener('keyup', function(e)
+            {
+                if (e.which == 69){
+                    vid.volume = Math.min(vid.volume + 0.1,1);
+                } else if(e.which == 65){
+                    vid.volume = Math.max(vid.volume - 0.1,0);
+                };
+            });
+    
+            var audio = document.querySelector('audio');
+    
+            if (audio) {
+    
+            window.addEventListener('keydown', function (event) {
+    
+            var key = event.which || event.keyCode;
+    
+            if (key === 32) { // spacebar
+    
+            event.preventDefault();
+    
+            audio.paused ? audio.play() : audio.pause();
+          
+        }
+    
+      });
+    }
+    </script>
+</body>
+</html>

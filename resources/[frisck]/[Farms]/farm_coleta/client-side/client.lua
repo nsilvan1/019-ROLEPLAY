@@ -25,8 +25,8 @@ local Coordenadas = {
 	-- {975.73,-140.24,74.88}, -- The Lost
     -- {511.4,-1335.76,29.73}, -- hells
 	-- armas
-	{701.75,-303.46,59.25},-- Bratva
-	{-313.6,-1035.65,30.54}, -- mafia
+	{-1916.85, 2084.02,140.39},-- Bratva
+	{503.59,-3121.4,9.8}, -- mafia
 
 
 	-- {95.55, -1294.31, 29.27}, -- Vanilla
@@ -234,7 +234,7 @@ Citizen.CreateThread(function()
 				local distance = GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),x,y,z,true)
 				if distance <= 30.0 then
 					RusherOtimizar = 5
-					DrawMarker(21,x,y,z,0,0,0,0,0,0,0.5,0.5,0.5,255,255,255,30,0,0,0,1)
+					-- DrawMarker(21,x,y,z,0,0,0,0,0,0,0.5,0.5,0.5,255,255,255,30,0,0,0,1)
 					if distance <= 1.2 then
 						RusherOtimizar = 1
 						drawTxt("PRESSIONE  ~b~E~w~  PARA INICIAR COLETA",4,0.5,0.93,0.35,255,255,255,200)
@@ -275,14 +275,14 @@ Citizen.CreateThread(function()
 							   selecionado = inicio
 							   CriandoBlip(locs,selecionado)
 							   TriggerEvent("Notify","importante","Você iniciou o serviço.")
-							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),701.75,-303.46,59.25,true) <= 1.2 then -- bratva
+							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),-1916.85,2084.02,140.39,true) <= 1.2 then -- bratva
 								servico = true
 								inicio = 78
 								fim = 88
 								selecionado = inicio
 								CriandoBlip(locs,selecionado)
 								TriggerEvent("Notify","importante","Você iniciou o serviço.")
-							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),-313.6,-1035.65,30.54,true) <= 1.2 then -- mafia
+							elseif GetDistanceBetweenCoords(GetEntityCoords(PlayerPedId()),503.59,-3121.4,9.8,true) <= 1.2 then -- mafia
 								servico = true							
 								inicio = 33
 								fim = 55					
@@ -433,4 +433,20 @@ function CriandoBlip(locs,selecionado)
 	EndTextCommandSetBlipName(blips)
 end
 
+local pedlist = {
+	{ ['x'] = -1916.85, ['y'] = 2084.02, ['z'] = 140.39, ['h'] = 230.25, ['hash'] = 0xA8C22996, ['hash2'] = "csb_chin_goon" },
+	{ ['x'] = 503.59, ['y'] = -3121.4, ['z'] = 9.8, ['h'] = 184.20, ['hash'] = 0x062547E7, ['hash2'] = "cs_floyd" },
+		
+}
 
+CreateThread(function()
+	for k,v in pairs(pedlist) do
+		RequestModel(GetHashKey(v.hash2))
+		while not HasModelLoaded(GetHashKey(v.hash2)) do Wait(100) end
+		ped = CreatePed(4,v.hash,v.x,v.y,v.z-1,v.h,false,true)
+		peds = ped
+		FreezeEntityPosition(ped,true)
+		SetEntityInvincible(ped,true)
+		SetBlockingOfNonTemporaryEvents(ped,true)
+	end
+end)

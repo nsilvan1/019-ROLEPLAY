@@ -6,17 +6,17 @@ config.webhookZerarTabelas = "https://discord.com/api/webhooks/10584049210425467
 
 config.vrp_user_identities = true --CONFIG PRA CHECAR SE A BASE USA A TABELA VRP_USER_IDENTITIES
 
-config.nomePolicia = "AZTLAN police"
-config.imgPolicia = "https://i.imgur.com/bEr9DFf.jpg"
+config.nomePolicia = "019RP police"
+config.imgPolicia = "https://cdn.discordapp.com/attachments/852246277667160104/1161113218698182776/Logo_019.png?ex=65371df3&is=6524a8f3&hm=753c9ca157da66359b40f6257d44aadf1b7de0cfe901f2dfd04021581b576dd6&"
 
 config.permComando = "policia.permissao"
 config.permPolicia = "policia.permissao"
 config.permPoliciaSalario= "policia.permissao"
-config.tempoPagamento = 60 -- TEMPO EM MINUTOS
+config.tempoPagamento = 35 -- TEMPO EM MINUTOS
 
-config.armamentoNaDP = false -- TRUE SO VAI PEGAR ARMAS NA DP / FALSE PEGA DE QUALQUER LUGAR
-config.arsenal = {{2505.37,-346.24,93.87},{452.4,-980.5,30.69},{-1082.45,-819.72,13.57}} --PODE POR TODAS AS CDS DE ARSENAIS QUE VAI PODER TIRAR ARMAS
-config.distanciaArmamento = 30 -- DISTANCIA EM METROS DA POSICAO X Y Z ACIMA
+config.armamentoNaDP = true -- TRUE SO VAI PEGAR ARMAS NA DP / FALSE PEGA DE QUALQUER LUGAR
+config.arsenal = {{-1103.5,-824.41,14.29},{2505.37,-346.24,93.87},{452.4,-980.5,30.69},{-1082.45,-819.72,13.57}} --PODE POR TODAS AS CDS DE ARSENAIS QUE VAI PODER TIRAR ARMAS
+config.distanciaArmamento = 10 -- DISTANCIA EM METROS DA POSICAO X Y Z ACIMA
 
 --CONFIGURAÇÃO ADQUIRIDA A CADA AÇÃO 
 config.pontuacao = { prender = 3, empateAcao = 4, vitoriaAcao = 5, derrotaAcao = 3, batePonto = 0 }
@@ -201,55 +201,57 @@ config.unidades = {
 }
 
 config.viaturas = {
-    {value = 1, patente= "ALUNOS E PRAÇAS", vtr = "VRA3"},
-    {value = 2, patente= "GRADUADOS", vtr = "VRA3 / VRA4"},
-    {value = 3, patente= "OFICIAIS", vtr = "VRA3 / VRA4 / VRRS6"},
-    {value = 4, patente= "ALTO COMANDO", vtr = "VRA3 / VRA4 / VRRS6 / VRRS6AV"},
-    {value = 5, patente= "G.T.M", vtr = "VRDM1200"},
-    {value = 6, patente= "TÁTICA", vtr = "POLICIARANGER"},
-    {value = 7, patente= "G.R.A.E.R", vtr = "POLMAV"},
-    {value = 8, patente= "SPEED", vtr = "POLICIASPEED"},
-    {value = 9, patente= "D.I.C", vtr = "CAD"},
+    {value = 1, patente= "ALUNOS E PRAÇAS", vtr = "amg45"},
+    {value = 2, patente= "GRADUADOS", vtr = "amg45 / VRrs6av"},
+    {value = 3, patente= "OFICIAIS", vtr = "amg45 / VRrs6av"},
+    {value = 4, patente= "ALTO COMANDO", vtr = "cls63sp"},
+    {value = 5, patente= "G.T.M", vtr = ""},
+    {value = 6, patente= "TÁTICA", vtr = ""},
+    {value = 7, patente= "G.R.A.E.R", vtr = ""},
+    {value = 8, patente= "SPEED", vtr = "maseratinfp"},
+    {value = 9, patente= "D.I.C", vtr = ""},
 }
 
 config.fardamentosMasculino = {
-    {value = 1, patente= "Aluno", roupa = "jaqueta 118; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 2, patente= "Soldado", roupa = "jaqueta 118 1; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 3, patente= "3° Sargento", roupa = "jaqueta 118 3; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 4, patente= "2° Sargento", roupa = "jaqueta 118 4; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 5, patente= "1° Sargento", roupa = "jaqueta 118 5; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 6, patente= "SUB TENENTE", roupa = "jaqueta 118 6; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 7, patente= "2º TENENTE", roupa = "jaqueta 118 7; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 8, patente= "1º TENENTE", roupa = "jaqueta 118 8; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 9, patente= "CAPITÃO", roupa = "jaqueta 118 9; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 10, patente= "MAJOR", roupa = "jaqueta 151 ; blusa 23; calca 87 2; acessorios 14; sapatos 25; maos 20"},
-    {value = 11, patente= "ALTO COMANDO", roupa = "jaqueta 151 ; blusa 23; calca 87 2; acessorios 14; sapatos 25; maos 20"},
-    {value = 12, patente= "ALTO COMANDO", roupa = "jaqueta 13; calca 87 2; colete 9; maos 26; sapatos 25; mascara 121; blusa 6; acessorios 14"},
-    {value = 13, patente= "ALTO COMANDO", roupa = "jaqueta 93; calca 87 2; colete 9; maos 19; sapatos 25; mascara 121; blusa 6; acessorios 14"},
-    {value = 14, patente= "TÁTICA", roupa = "jaqueta 139; maos 20; colete 7; calca 87; sapatos 25; mascara 169 13; blusa 6; acessorios 14"},
-    {value = 15, patente= "G.T.M", roupa = "jaqueta 139 1; maos 20; colete 7 1; calca 87 3; sapatos 25; mascara 121; blusa 6; acessorios 14"},
-    {value = 16, patente= "SPEED", roupa = "jaqueta 151 1; blusa 23; calca 87 2; acessorios 14; sapatos 25; maos 20; mascara 121"},
-    {value = 17, patente= "G.R.A.E.R", roupa = "jaqueta 139 3; maos 20; colete 7 2; calca 87 1; sapatos 25; mascara 121; blusa 6; acessorios 14"},
+    {value = 1, patente= "Aluno", roupa = ""},
+    {value = 2, patente= "Soldado", roupa = ""},
+    {value = 3, patente= "Cabo", roupa = ""},
+    {value = 4, patente= "3° Sargento", roupa = ""},
+    {value = 5, patente= "2° Sargento", roupa = ""},
+    {value = 6, patente= "1° Sargento", roupa = ""},
+    {value = 7, patente= "SUB TENENTE", roupa = ""},
+    {value = 8, patente= "2º TENENTE", roupa = ""},
+    {value = 9, patente= "1º TENENTE", roupa = ""},
+    {value = 10, patente= "CAPITÃO", roupa = ""},
+    {value = 11, patente= "MAJOR", roupa = ""},
+    {value = 12, patente= "ALTO COMANDO", roupa = ""},
+    {value = 13, patente= "ALTO COMANDO", roupa = ""},
+    {value = 14, patente= "ALTO COMANDO", roupa = ""},
+    {value = 15, patente= "TÁTICA", roupa = ""},
+    {value = 16, patente= "G.T.M", roupa = ""},
+    {value = 17, patente= "SPEED", roupa = ""},
+    {value = 18, patente= "G.R.A.E.R", roupa = ""},
 }
 
 config.fardamentosFeminino = {
-    {value = 1, patente= "Aluno", roupa = "jaqueta 118; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 2, patente= "Soldado", roupa = "jaqueta 118 1; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 3, patente= "3° Sargento", roupa = "jaqueta 118 3; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 4, patente= "2° Sargento", roupa = "jaqueta 118 4; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 5, patente= "1° Sargento", roupa = "jaqueta 118 5; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 6, patente= "SUB TENENTE", roupa = "jaqueta 118 6; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 7, patente= "2º TENENTE", roupa = "jaqueta 118 7; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 8, patente= "1º TENENTE", roupa = "jaqueta 118 8; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 9, patente= "CAPITÃO", roupa = "jaqueta 118 9; maos 19; colete 6; calca 87 2; sapatos 25; mascara 121; blusa 5; acessorios 14"},
-    {value = 10, patente= "MAJOR", roupa = "jaqueta 151 ; blusa 23; calca 87 2; acessorios 14; sapatos 25; maos 20"},
-    {value = 11, patente= "ALTO COMANDO", roupa = "jaqueta 151 ; blusa 23; calca 87 2; acessorios 14; sapatos 25; maos 20"},
-    {value = 12, patente= "ALTO COMANDO", roupa = "jaqueta 13; calca 87 2; colete 9; maos 26; sapatos 25; mascara 121; blusa 6; acessorios 14"},
-    {value = 13, patente= "ALTO COMANDO", roupa = "jaqueta 93; calca 87 2; colete 9; maos 19; sapatos 25; mascara 121; blusa 6; acessorios 14"},
-    {value = 14, patente= "TÁTICA", roupa = "jaqueta 139; maos 20; colete 7; calca 87; sapatos 25; mascara 169 13; blusa 6; acessorios 14"},
-    {value = 15, patente= "G.T.M", roupa = "jaqueta 139 1; maos 20; colete 7 1; calca 87 3; sapatos 25; mascara 121; blusa 6; acessorios 14"},
-    {value = 16, patente= "SPEED", roupa = "jaqueta 151 1; blusa 23; calca 87 2; acessorios 14; sapatos 25; maos 20; mascara 121"},
-    {value = 17, patente= "G.R.A.E.R", roupa = "jaqueta 139 3; maos 20; colete 7 2; calca 87 1; sapatos 25; mascara 121; blusa 6; acessorios 14"},
+    {value = 1, patente= "Aluno", roupa = ""},
+    {value = 2, patente= "Soldado", roupa = ""},
+    {value = 3, patente= "Cabo", roupa = ""},
+    {value = 4, patente= "3° Sargento", roupa = ""},
+    {value = 5, patente= "2° Sargento", roupa = ""},
+    {value = 6, patente= "1° Sargento", roupa = ""},
+    {value = 7, patente= "SUB TENENTE", roupa = ""},
+    {value = 8, patente= "2º TENENTE", roupa = ""},
+    {value = 9, patente= "1º TENENTE", roupa = ""},
+    {value = 10, patente= "CAPITÃO", roupa = ""},
+    {value = 11, patente= "MAJOR", roupa = ""},
+    {value = 12, patente= "ALTO COMANDO", roupa = ""},
+    {value = 13, patente= "ALTO COMANDO", roupa = ""},
+    {value = 14, patente= "ALTO COMANDO", roupa = ""},
+    {value = 15, patente= "TÁTICA", roupa = ""},
+    {value = 16, patente= "G.T.M", roupa = ""},
+    {value = 17, patente= "SPEED", roupa = ""},
+    {value = 18, patente= "G.R.A.E.R", roupa = ""},
 }
 
 return config

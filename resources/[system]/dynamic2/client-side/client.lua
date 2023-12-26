@@ -161,8 +161,8 @@ end)
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- KEYMAPPING
 -----------------------------------------------------------------------------------------------------------------------------------------
--- RegisterKeyMapping("globalFunctions","Abrir menu principal.","keyboard","F9")
--- RegisterKeyMapping("emergencyFunctions","Abrir menu de emergência.","keyboard","F10")
+RegisterKeyMapping("globalFunctions","Abrir menu principal.","keyboard","F9")
+RegisterKeyMapping("emergencyFunctions","Abrir menu de emergência.","keyboard","F10")
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- PED
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -203,7 +203,7 @@ AddEventHandler("dynamic:animalSpawn",function(model)
 	end
 end)
 -----------------------------------------------------------------------------------------------------------------------------------------
--- DYNAMIC:ANIMALFUNCTIONS
+-- dynamic:ANIMALFUNCTIONS
 -----------------------------------------------------------------------------------------------------------------------------------------
 RegisterNetEvent("dynamic:animalFunctions")
 AddEventHandler("dynamic:animalFunctions",function(functions)

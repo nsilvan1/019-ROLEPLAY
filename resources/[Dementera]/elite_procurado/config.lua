@@ -27,7 +27,7 @@ config.amount = 1 -- Quantidade necessária desse item
 ----------------------------------------------------------------------------------------------------------------------------
 config.blipCoords = {
 	{ ['coords'] = vector3(1275.83, -1710.52, 54.78) }, 
-	{ ['coords'] = vector3(1272.34, -1711.6, 54.78) },
+	-- { ['coords'] = vector3(1272.34, -1711.6, 54.78) },
 }
 
 ----------------------------------------------------------------------------------------------------------------------------
@@ -44,9 +44,9 @@ config.textonotify2 = 'Uma Pessoa procurada, tentou invadir nossos sistemas' -- 
 ----------------------------------------------------------------------------------------------------------------------------
 -------- [ Permissões para executar devidas ações ] ------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
-config.addprocurado = 'prender.permissao' -- Permissão para adicionar o player como procurado
-config.remprocurado = 'prender.permissao' -- Permissão para tirar o player de procurado
-config.checkprocurado = 'prender.permissao' -- Permissão para verificar se o player está ou não procurar
+config.addprocurado = 'policia.permissao' -- Permissão para adicionar o player como procurado
+config.remprocurado = 'policia.permissao' -- Permissão para tirar o player de procurado
+config.checkprocurado = 'policia.permissao' -- Permissão para verificar se o player está ou não procurar
 config.policiapermissao = 'policia.permissao' -- Permissão que vai receber os chamados quando um procurado for avistado
 
 ----------------------------------------------------------------------------------------------------------------------------

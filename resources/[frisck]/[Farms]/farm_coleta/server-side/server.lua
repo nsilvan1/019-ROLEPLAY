@@ -95,135 +95,48 @@ function emP.checkPayment()
 		
 
 		elseif vRP.hasPermission(user_id,"bratva.permissao") then
-			local itens = math.random(100)
+			local itens = math.random(0,100)
 			local quantidade = math.random(5,6)
 			local pagamento = math.random(2000,5000)
-			if itens <= 100 then
-				if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("pecadearma")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-					quantidade = math.random(5,6)
-					vRP.giveInventoryItem( user_id,"pecadearma",quantidade)
-					TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Peça de Arma.</b>")
+			print(itens)
+			if itens <= 10  then
+				quantidade = math.random(1,2)
+				if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("placa-metal")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
+					vRP.giveInventoryItem( user_id,"placa-metal",quantidade)
+					TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Placa de metal.</b>")
 				else
 					TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
 				end
+			
+			elseif itens >= 11 and itens <= 30  then
+				quantidade = math.random(2,4)
+				if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("molas")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
+					vRP.giveInventoryItem( user_id,"molas",quantidade)
+					TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Molas.</b>")
+				else
+					TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
+				end
+			
+			elseif itens >= 31 and itens <= 50  then
+					quantidade = math.random(1,2)
+					if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("gatilho")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
+						vRP.giveInventoryItem( user_id,"gatilho",quantidade)
+						TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Gatilho.</b>")
+					else
+						TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
+					end
+			
+			else 
+					quantidade = math.random(5,6)
+					if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("pecadearma")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
+						vRP.giveInventoryItem( user_id,"pecadearma",quantidade)
+						TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Peça de Arma.</b>")
+					else
+						TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
+					end
 			end
 
-		-- elseif vRP.hasPermission(user_id,"native.permissao") then
-		-- 	local itens = math.random(100)
-		-- 	local quantidade = math.random(5,6)
-		-- 	local pagamento = math.random(2000,5000)
-		-- 	if itens <= 100 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("polvora")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(5,6)
-		-- 			vRP.giveInventoryItem( user_id,"polvora",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Polvora.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end
-
-		-- elseif vRP.hasPermission(user_id,"contrabando.permissao") then
-		-- 	local itens = math.random(100)
-		-- 	local quantidade = math.random(1,6)
-		-- 	local pagamento = math.random(2000,5000)
-		-- 	if itens <= 100 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("algemas")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(0,3)
-		-- 			vRP.giveInventoryItem( user_id,"algemas",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Algemas.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end
-
-		-- 	if itens > 26 and itens <= 100 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("capuz")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(0,3)
-		-- 			vRP.giveInventoryItem( user_id,"capuz",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Capuz.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end
-
-
-		-- elseif vRP.hasPermission(user_id,"lavagem.permissao") then
-		-- 	local itens = math.random(100)
-		-- 	local quantidade = math.random(1,6)
-		-- 	if itens <= 29 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("detergenteneutro")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(0,6)
-		-- 			vRP.giveInventoryItem( user_id,"detergenteneutro",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Detergente Neutro.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end
-
-		-- if itens > 26 and itens <= 100 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("agua")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(5,6)
-		-- 			vRP.giveInventoryItem( user_id,"agua",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Agua.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end
-
-		-- 	if itens > 26 and itens <= 100 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("bicarbonatodesodio")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(5,6)
-		-- 			vRP.giveInventoryItem( user_id,"bicarbonatodesodio",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Bicarbonato De Sodio.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end	
-
-		-- 	if itens > 26 and itens <= 100 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("vinagre")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(5,6)
-		-- 			vRP.giveInventoryItem( user_id,"vinagre",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Vinagre.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end		
-			
-			
-		-- elseif vRP.hasPermission(user_id,"lifeinvader.permissao") then
-		-- 	local itens = math.random(100)
-		-- 	local quantidade = math.random(5,6)
-		-- 	if itens <= 29 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("detergenteneutro")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(5,6)
-		-- 			vRP.giveInventoryItem( user_id,"detergenteneutro",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Detergente Neutro.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end
-
-		-- 	if itens > 26 and itens <= 100 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("agua")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(5,6)
-		-- 			vRP.giveInventoryItem( user_id,"agua",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Agua.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end
-
-		-- 	if itens > 26 and itens <= 100 then
-		-- 		if vRP.getInventoryWeight(user_id)+vRP.getItemWeight("bicarbonatodesodio")*quantidade <= vRP.getInventoryMaxWeight(user_id) then
-		-- 			quantidade = math.random(5,6)
-		-- 			vRP.giveInventoryItem( user_id,"bicarbonatodesodio",quantidade)
-		-- 			TriggerClientEvent("Notify",source,"sucesso","Você coletou <b>"..quantidade.."x Bicarbonato De Sodio.</b>")
-		-- 		else
-		-- 			TriggerClientEvent("Notify",source,"negado","<b>Mochila</b> cheia.",8000)
-		-- 		end
-		-- 	end	
-			
+		
 		end
 		return true			
 	end

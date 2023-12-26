@@ -1,6 +1,3 @@
-shared_script "@AlphaAC/natives.lua"
-
-
 fx_version "bodacious"
 game "gta5"
 

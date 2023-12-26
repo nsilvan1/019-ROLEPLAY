@@ -21,7 +21,7 @@ config.drawMarker = function(x,y,z)
 	DrawMarker(27,x,y,z-0.97,0,0,0,0,0,0,1.0,1.0,0.5,201, 0, 0,155,0,0,0,1)
 end
 
-config.images = "https://flushrp.com/img/inv/"
+config.images = "http://189.1.172.224/img/"
 config.permSpawn = "ceo.permissao" --PERMISSAO PRA ACESSO AO COMANDO /arma e /item
 config.nationGarages = true
 config.nyoGarages = false
@@ -49,8 +49,8 @@ config.chest = {
 
 	
 	["Vanilla"] = { "Vanilla", 94.1,-1290.96,29.27,3000,"vanilla.permissao","https://discord.com/api/webhooks/1053471537753247834/mnxqVw8jPgytaVtKco2vFTAZFqp0Derh2quPrakVkrod5sOhZF2HEoOClobZESrVqNM3" },
-	["Bahamas"] = { "Bahamas", -1389.25,-610.86,30.32,3000,"bahamas.permissao","https://discord.com/api/webhooks/974874799778193478/cmzXZkHomdkwVjNsQlq3hKV7XTMX-9XlygyMT6Obj0CLKiCjTK9_Z_ifC_ezc5mM0pj1" },
-	-- ["Tequilala"] = { "Tequilala", -573.81,293.51,79.18,3000,"tequilala.permissao","https://discord.com/api/webhooks/1053473736784875570/MMnfy-bULfbM2J-T10YjT8F2YbLHiLQue2KcheITE2sDFbynLJfeHfV4W3LesVNcvkgN" },
+	-- ["Bahamas"] = { "Bahamas", -1389.25,-610.86,30.32,3000,"bahamas.permissao","https://discord.com/api/webhooks/974874799778193478/cmzXZkHomdkwVjNsQlq3hKV7XTMX-9XlygyMT6Obj0CLKiCjTK9_Z_ifC_ezc5mM0pj1" },
+	["Tequilala"] = { "Tequilala", -573.81,293.51,79.18,3000,"tequilala.permissao","https://discord.com/api/webhooks/1053473736784875570/MMnfy-bULfbM2J-T10YjT8F2YbLHiLQue2KcheITE2sDFbynLJfeHfV4W3LesVNcvkgN" },
 	
 	["Groove"] = { "Groove", 1527.1,-640.93,138.41,3000,"groove.permissao","https://discord.com/api/webhooks/1053476188678520833/q4p1v97uRtY6Gs6i476XGlfw9pkROY_QNWGbGr2VTfT8ZDLgpyjU7I-ec56ZOg2iV4l-" },
 	["Groove2"] = { "Groove", 1397.74,-741.48,72.17,500,"groove.permissao","https://discord.com/api/webhooks/1053476188678520833/q4p1v97uRtY6Gs6i476XGlfw9pkROY_QNWGbGr2VTfT8ZDLgpyjU7I-ec56ZOg2iV4l-" },
@@ -59,15 +59,15 @@ config.chest = {
 	["Bloods"] = { "Bloods", 66.02,621.89,201.37,3000,"bloods.permissao","https://discord.com/api/webhooks/1053477668248625254/KjVDHOPFKNefARO0YgP_2yQvkgLl6qoJXDysjo7Y55_gvCnzKS2nuJ90oQPW5aIBel7N" },
 
 	["Motoclub"] = { "Motoclub", 977.17,-104.02,74.85,3000,"motoclub.permissao","https://discord.com/api/webhooks/1053477878488121474/KkbC7ADQSHUSUtUnFIwY2ZdqqS59ONo4OFLwM1DnPIgTRpydyxGS4Qztag-_naR3EOly" },
-	["Hells"] = { "Hells", 474.7,-1308.45,29.21,3000,"hells.permissao","https://discord.com/api/webhooks/1053478055911370762/aL0AUAz1tz5N15iIWR3KiREkDZYYF-nI5oBEb_mpBKhozqze1eSJJ4zgkoxs2KZgR35N" },
+	["Hells"] = { "Hells", -1138.14,-2000.76,13.19,3000,"hells.permissao","https://discord.com/api/webhooks/1053478055911370762/aL0AUAz1tz5N15iIWR3KiREkDZYYF-nI5oBEb_mpBKhozqze1eSJJ4zgkoxs2KZgR35N" },
 
-	["Bratva"] = { "Bratva", -1875.56,2062.39,145.58,3000,"bratva.permissao","https://discord.com/api/webhooks/974875649808408586/Hs1wseCf3cHfxhk_tH5t-7Rbm2j9LzjFOBXTrxzEilQh0xGKCn-pkik1s3HIfQ_cdrFC" },
+	["Bratva"] = { "Bratva", -1875.56,2062.39,145.58,3000,"bratva.permissao","https://discord.com/api/webhooks/1164266904622477462/RRib5Q9gKbOfmxzBPTjxytvazITpdJc5BwDtRcG7JIo4lXuK-JRrq2PYKOoR1F2vHs6b" },
 
 	["Crips"] = { "Crips", -1460.86,-45.08,58.41,3000,"crips.permissao","https://discord.com/api/webhooks/1053493116365181050/b2xPyHPYEJD2HG0q6d8_4Giisb3uNHERsHy6yYNgG7WCuguB7bQlJFnec3iKeQYiF986" },
-	["Mafia"] = { "Mafia", -1476.72,-38.18,54.61,3000,"mafia.permissao","https://discord.com/api/webhooks/1053461939549905017/F8EyFFwOGbMkWFqXyTu5kjdqe_9RrPLQ8CPvP9Zw6RNzFWBzEMTUt-70EUWvCfa1rPvJ" },
+	["Mafia"] = { "Mafia", -3218.6,800.54,14.08,3000,"mafia.permissao","https://discord.com/api/webhooks/1053461939549905017/F8EyFFwOGbMkWFqXyTu5kjdqe_9RrPLQ8CPvP9Zw6RNzFWBzEMTUt-70EUWvCfa1rPvJ" },
 
 	["Triade"] = { "Triade", 575.42,-3121.91,18.77,3000,"triade.permissao","https://discord.com/api/webhooks/1053496692030308402/kdvVzFGLCOmKaAIOUvE1bPJDV0iPc24uGyDHVp4se7gKNomBkzr0MRgKa186GowbeBpc" },
-
+	-- ["Cartel"] = { "Cartel", 575.42,-3121.91,18.77,3000,"triade.permissao","https://discord.com/api/webhooks/1053496692030308402/kdvVzFGLCOmKaAIOUvE1bPJDV0iPc24uGyDHVp4se7gKNomBkzr0MRgKa186GowbeBpc" },
 
 	
 }
@@ -106,7 +106,7 @@ config.shopList = {
 		{ 811.19,-2157.67,29.61,"ammunationStore" },
 		{ 811.19,-2157.67,29.61,"ammunationStore" },
 	
-		{ 1275.44,-1710.81,54.78,"ilegalStore" },
+		-- { 1275.44,-1710.81,54.78,"ilegalStore" },
 		{ 1272.36,-1711.73,54.78,"ilegalStore2" },
 
 	
@@ -116,7 +116,7 @@ config.shopList = {
 
 		{ 964.54,-1841.23,31.27,"gunsCraft" },  --Bratva
 		{ -1870.5,2061.56,135.44,"gunsCraft" }, --CRIPS(VINICULA)
-		{ 1402.33,1139.85,109.75,"gunsCraft" }, --BRATVA(FAZENDA)
+		{ -1866.3, 2065.6, 135.44,"gunsCraft" }, --BRATVA(FAZENDA)
 		
 		{ -875.68,-1458.65,7.53,"ammoCraft" },  --YAKUZA (YAKUZA)
 		{ 568.09,-3126.8,18.77,"ammoCraft" },   --AZTECAS (DOCAS)
@@ -133,14 +133,14 @@ config.itemShops = {
 			["perm"] = nil,
 			["cash"] = "limpo",
 			["list"] = {
-				["celular"] = 10000,
+				["celular"] = 5000,
 				["repairkit"] = 15000,
-				["radio"] = 5000,
-				["mochila"] = 15000,
+				["radio"] = 2000,
+				["mochila"] = 5000,
 				["roupas"] = 5000,
 				-- ["alianca"] = 20000,
-				["energetico"] = 7000,
-				["isca"] = 200,
+				["energetico"] = 1000,
+				["isca"] = 100,
 			}
 		},
 		["departamentStorePesca"] = {
@@ -148,15 +148,15 @@ config.itemShops = {
 			["method"]= "Sell",
 			["cash"] = "limpo",
 			["list"] = {
-				["lambari"] = 400,
-				["dourado"] = 450,
-				["corvina"] = 470,
-				["salmao"] = 500,
-				["pacu"] = 550,
-				["pintado"] = 570,
-				["pirarucu"] = 600,
-				["tilapia"] = 650,
-				["tucunare"] = 700,
+				["lambari"] = 100,
+				["dourado"] = 150,
+				["corvina"] = 170,
+				["salmao"] = 200,
+				["pacu"] = 150,
+				["pintado"] = 170,
+				["pirarucu"] = 200,
+				["tilapia"] = 150,
+				["tucunare"] = 100,
 				["isca"] = 100,
 			}
 		},
@@ -165,7 +165,7 @@ config.itemShops = {
 			["method"]= "Sell",
 			["cash"] = "limpo",
 			["list"] = {
-				["graos"] = 350,
+				["graos"] = 100,
 			}
 		},
 		["bebidasStore"] = {
@@ -198,13 +198,13 @@ config.itemShops = {
 			["cash"] = "limpo",
 			["method"]= "Sell",
 			["list"] = {
-				["ouro"] = 300,
-				["ferro"] = 300,
-				["bronze"] = 300,
-				["topazio"] = 300,
-				["rubi"] = 300,
-				["safira"] = 300,
-				["diamante"] = 3000,
+				["ouro"] = 100,
+				["ferro"] = 100,
+				["bronze"] = 100,
+				["topazio"] = 100,
+				["rubi"] = 100,
+				["safira"] = 100,
+				["diamante"] = 400,
 			}
 		},
 		["ammunationStore"] = {
@@ -238,9 +238,9 @@ config.itemShops = {
 			["cash"] = "sujo",
 			["list"] = {
 				["polvora"] = 250,
-				["molas"] = 5000,
-				["gatilho"] = 5000,
-				["placa-metal"] = 10000,
+				["molas"] = 1000,
+				["gatilho"] = 2000,
+				["placa-metal"] = 9000,
 			}
 		},
 		["ilegalStore2"] = {
@@ -249,8 +249,8 @@ config.itemShops = {
 			["list"] = {
 				["algema"] = 5000,
 				["capuz"] = 3000,
-				["modificacaodearma"] = 20000,
-
+				["masterpick"] = 20000,
+				-- ["modificacaodearma"] = 20000,
 			}
 		},
 		["gunsCraft"] = {
@@ -268,24 +268,24 @@ config.itemShops = {
 					["molas"] = 2,
 					["gatilho"] = 1,
 				},
-				["wbody|WEAPON_MACHINEPISTOL"] = {
-					["pecadearma"] = 250,
-					["placa-metal"] = 6,
-					["molas"] = 3,
-					["gatilho"] = 1,
-				},
-				["wbody|WEAPON_SPECIALCARBINE_MK2"] = {
-					["pecadearma"] = 400,
-					["placa-metal"] = 10,
-					["molas"] = 6,
-					["gatilho"] = 1,
-				},
-				["wbody|WEAPON_ASSAULTRIFLE"] = {
-					["pecadearma"] = 400,
-					["placa-metal"] = 10,
-					["molas"] = 6,
-					["gatilho"] = 1,
-				},
+				-- ["wbody|WEAPON_MACHINEPISTOL"] = {
+				-- 	["pecadearma"] = 250,
+				-- 	["placa-metal"] = 6,
+				-- 	["molas"] = 3,
+				-- 	["gatilho"] = 1,
+				-- },
+				-- ["wbody|WEAPON_SPECIALCARBINE_MK2"] = {
+				-- 	["pecadearma"] = 400,
+				-- 	["placa-metal"] = 10,
+				-- 	["molas"] = 6,
+				-- 	["gatilho"] = 1,
+				-- },
+				-- ["wbody|WEAPON_ASSAULTRIFLE"] = {
+				-- 	["pecadearma"] = 400,
+				-- 	["placa-metal"] = 10,
+				-- 	["molas"] = 6,
+				-- 	["gatilho"] = 1,
+				-- },
 			}
 		},
 		["gunsCraft2"] = {
@@ -329,6 +329,8 @@ config.itemShops = {
 }
 
 config.itemlist = {
+	["notebook"] = { index = "notebook", nome = "Notebook", type = "usar", peso = 0.5 },
+	["scanerMotor"] = { index = "scanerMotor", nome = "Scaner Motor", type = "usar", peso = 0.5 },
 	["kevlar"] = { index = "kevlar", nome = "Kevlar", type = "usar", peso = 1 },
 	["c4"] = { index = "c4", nome = "C4", type = "usar", peso = 1 },
 	["serra"] = { index = "serra", nome = "Serra", type = "usar", peso = 1 },

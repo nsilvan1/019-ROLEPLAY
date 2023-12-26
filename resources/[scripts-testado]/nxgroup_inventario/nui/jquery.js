@@ -515,7 +515,7 @@ const updateIdentity = () => {
     });
 }
 
-var linkImagem = ""
+var linkImagem = "http://189.1.172.224/img/"
 $("#pesoChest").hide()
 const updateMochila = () => {
     document.getElementById("amount").value = "";

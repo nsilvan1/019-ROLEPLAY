@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
+    />
+    <title>Bank</title>
+  </head>
+  <body>
+    <i class="fa-sharp fa-solid fa-xmark" id="exit"></i>
+    <div id="bank">
+
+      <header>
+        <h1>BANCO <span>019</span></h1>
+        <p>Banco 019 é o seu banco e o banco do futuro.</p>
+      </header>
+
+      <main>
+        <section id="menu-options">
+          <ul>
+            <li onclick="loadPages(this, 'home')">
+              <div class="option-name">
+                <h3>Inicio</h3>
+                <p>Pagina inicial da sua conta bancária</p>
+              </div>
+              <i class="fa-sharp fa-solid fa-house"></i>
+            </li>
+            <!-- <li onclick="loadPages(this, 'invoices')">
+              <div class="option-name">
+                <h3>Faturas</h3>
+                <p>Pague suas faturas pendentes.</p>
+              </div>
+              <i class="fa-sharp fa-solid fa-receipt"></i>
+            </li>
+            <li onclick="loadPages(this, 'myInvoices')">
+              <div class="option-name">
+                <h3>Minhas Faturas</h3>
+                <p>Lista de faturas que não pagaram.</p>
+              </div>
+              <i class="fa-solid fa-circle-minus"></i>
+            </li> -->
+            <!-- <li onclick="loadPages(this, 'fines')">
+              <div class="option-name">
+                <h3>Multas</h3>
+                <p>Pague suas multas pendentes.</p>
+              </div>
+              <i class="fa-sharp fa-solid fa-hammer-crash"></i>
+            </li> -->
+            <!-- <li onclick="loadPages(this, 'salarys')">
+              <div class="option-name">
+                <h3>Salario</h3>
+                <p>Recebe seus salarios acumulados.</p>
+              </div>
+              <i class="fa-sharp fa-solid fa-money-bill"></i>
+            </li> -->
+          </ul>
+          <div class="welcome-message">
+            <h6>Bem-vindo novamente!</h6>
+            <p>Seu saldo disponivel <span>$ 0.000.000</span> dolares</p>
+          </div>
+        </section>
+        <section id="options">
+          <div id="home">
+
+            <div class="option">
+              <h4>DEPOSITAR</h4>
+              <p>Faça um deposito na sua conta bancaria.</p>
+              <div class="option-interaction">
+                <input
+                  type="number"
+                  placeholder="VALOR"
+                  id="deposito"
+                  class="deposito amount"
+                  maxlength="9"
+                  onkeypress="return onlyNumbers(event)"
+                  spellcheck="false"
+                  value=""
+                />
+                <button class = 'depositar'>DEPOSITAR</button>
+              </div>
+            </div>
+
+
+            <div class="option">
+              <h4>SACAR</h4>
+              <p>Faça um deposito na sua conta bancaria.</p>
+              <div class="option-interaction">
+                <input
+                  type="number"
+                  id="saque"
+                  class="saque amount"
+                  maxlength="9"
+                  onkeypress="return onlyNumbers(event)"
+                  spellcheck="false"
+                  value=""
+                  placeholder="VALOR"
+									/>
+                <button class = 'sacar'>SACAR</button>
+              </div>	
+            </div>
+
+            <div class="option">
+              <h4>TRANSFERENCIA</h4>
+              <p>Faça um deposito na sua conta bancaria.</p>
+              <div class="option-interaction">
+                <input
+                  type="number"
+                  placeholder="ID"
+                  id="id"
+                  class="transf1 amount"
+                  maxlength="4"
+                  onkeypress="return onlyNumbers(event)"
+                  spellcheck="false"
+                  value=""
+                />
+                <input
+                  type="number"
+                  placeholder="VALOR"
+                  id="trans"
+                  class="trans_valor1 amount"
+                  maxlength="9"
+                  onkeypress="return onlyNumbers(event)"
+                  spellcheck="false"
+                  value=""
+                />
+                <button class = 'trans1'>TRANSFERIR</button>
+              </div>
+            </div>
+          </div>
+          <div id="others-options" style="display: none">
+            <div class="other-title">
+              <div class="title-message">
+                <h4>Faturas Pendentes</h4>
+                <p>40 faturas pendentes na sua conta bancaria.</p>
+              </div>
+              <button onclick="action(this)">PAGAR</button>
+            </div>
+            <div class="other-items">
+							<!-- <div class="item" data-id-key="1" data-price-key="2">
+								<div class = "item-content">
+									<h6>Salario #2</h6>
+									<p>Valor: <span>2</span></p>
+									<p>Data da fatura: <span>2</span></p>
+								</div>
+							</div> -->
+						</div>
+          </div>
+        </section>
+      </main>
+
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>

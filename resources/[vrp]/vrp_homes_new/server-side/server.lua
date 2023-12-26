@@ -335,7 +335,7 @@ AddEventHandler("homes:invokeSystem",function(action)
 	if user_id then 
 		local homeName = nearestHomes(source) --[[or tostring(args[1])]]
 		if homes[tostring(homeName)] then 
-			TriggerClientEvent("dynamic:closeSystem2", source)
+			TriggerClientEvent("dynamic2:closeSystem2", source)
 
 			if action == "visitar" then 
 				homesInterior[homeName] = homes[homeName][4]
@@ -1136,7 +1136,7 @@ AddEventHandler("homes:clotheSystem",function(action)
 		local basic = vRP.getSData("wardrobe:"..user_id)
 		local consult = json.decode(basic) or {}
 		if action == "save" then
-			TriggerClientEvent("dynamic:closeSystem2", source)
+			TriggerClientEvent("dynamic2:closeSystem2", source)
 			local custom = vRPC.getCustomPlayer(source)
 			local nameFit = vRP.prompt(source, "Insira o nome do outfit.", "")
 			if nameFit ~= "" then 
@@ -1150,7 +1150,7 @@ AddEventHandler("homes:clotheSystem",function(action)
 				end
 			end
 		elseif action == "delete" then 
-			TriggerClientEvent("dynamic:closeSystem2", source)
+			TriggerClientEvent("dynamic2:closeSystem2", source)
 			local nameFit = vRP.prompt(source, "Insira o nome do outfit.", "")
 			if nameFit ~= "" then 
 				if consult[nameFit] ~= nil and string.len(nameFit) > 0 then
@@ -1191,7 +1191,7 @@ AddEventHandler("homes:clotheSystemEdden",function(action)
 		local basic = vRP.getSData("wardrobe:"..user_id)
 		local consult = json.decode(basic) or {}
 		if action == "save" then
-			TriggerClientEvent("dynamic:closeSystem2", source)
+			TriggerClientEvent("dynamic2:closeSystem2", source)
 			local custom = vRPC.getCustomPlayer(source)
 			local nameFit = vRP.prompt(source, "Insira o nome do outfit.", "")
 			if nameFit ~= "" then 
@@ -1205,7 +1205,7 @@ AddEventHandler("homes:clotheSystemEdden",function(action)
 				end
 			end
 		elseif action == "delete" then 
-			TriggerClientEvent("dynamic:closeSystem2", source)
+			TriggerClientEvent("dynamic2:closeSystem2", source)
 			local nameFit = vRP.prompt(source, "Insira o nome do outfit.", "")
 			if nameFit ~= "" then 
 				if consult[nameFit] ~= nil and string.len(nameFit) > 0 then

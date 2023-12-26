@@ -1,6 +1,3 @@
-shared_script "@ThnAC/natives.lua"
- 
-
 fx_version 'adamant'
 game 'gta5'
 

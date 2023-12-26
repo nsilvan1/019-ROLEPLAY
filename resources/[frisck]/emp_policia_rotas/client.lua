@@ -25,7 +25,10 @@ Citizen.CreateThread(function()
 	
 				if distance <= 10.0 then
 					kswait = 4
-					DrawMarker(31,Config[i].CoordenadaX, Config[i].CoordenadaY, Config[i].CoordenadaZ-0.6,0,0,0,0.0,0,0,0.8,0.8,0.8, Config[i].colorRed, Config[i].colorGreen, Config[i].colorBlue,50,0,0,0,10)
+					DrawMarker(21,Config[i].CoordenadaX, Config[i].CoordenadaY, 
+								Config[i].CoordenadaZ-0.6,0,0,0,0.0,0,0,0.8,0.8,0.8, 
+								Config[i].colorRed, Config[i].colorGreen, 
+								Config[i].colorBlue,50,0,0,0,10)
 					if distance <= 1.1 then
 						drawTxt("~".. Config[i].colorLetter .."~PRESSIONE  ~w~E~".. Config[i].colorLetter .."~  PARA PATRULHAR NA ZONA ".. Config[i].nome .."",4,0.5,0.93,0.50, Config[i].colorRed, Config[i].colorGreen, Config[i].colorBlue, 180)
 						if IsControlJustPressed(0,38) and emP.checkPermission() then
@@ -69,10 +72,23 @@ Citizen.CreateThread(function()
 
 			if distance <= 60.0 then
 				kswait = 4
-				DrawMarker(31, Config[id].rota[selecionado].x, Config[id].rota[selecionado].y, Config[id].rota[selecionado].z+0.30,0,0,0,0,180.0,130.0,2.0,2.0,1.0, Config[id].colorRed, Config[id].colorGreen, Config[id].colorBlue,50,1,0,0,1)
+				DrawMarker(21, Config[id].rota[selecionado].x, Config[id].rota[selecionado].y, Config[id].rota[selecionado].z+0.30,0,0,0,0,180.0,130.0,2.0,2.0,1.0, Config[id].colorRed, Config[id].colorGreen, Config[id].colorBlue,50,1,0,0,1)
 				if distance <= 2.5 then
 					if emP.checkPermission() then
-						if IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("a45policia")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("chevypolicia")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("amarokpolicia")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("mercedesgle")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("jeeppolicia")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("mercxclass")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("r820p")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("m8comando")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("policiacb500")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("13capricew")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("policiaschaftersid")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("cat")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("usssvan")) or IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("mercedespolicia")) then
+						if IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("amg45")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("cls63sp")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("maseratinfp")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("VRdm1200")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("jeeppolicia")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("mercxclass")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("r820p")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("m8comando")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("policiacb500")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("13capricew")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("policiaschaftersid")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("cat")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("usssvan")) or 
+						IsVehicleModel(GetVehiclePedIsUsing(PlayerPedId()),GetHashKey("mercedespolicia")) then
 							RemoveBlip(blips)
 
 							-- Verifica se o blip é o último da rota

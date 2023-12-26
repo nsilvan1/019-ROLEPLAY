@@ -439,6 +439,17 @@ itens.usaveis = {
             TriggerClientEvent("Notify",source,"sucesso","Mochila utilizada com sucesso.",8000)
         end
     end,
+    -- ['notebook'] = function(source,user_id)
+    --     if vRP.tryGetInventoryItem(user_id,"notebook",1) then
+    --         TriggerClientEvent("tksNote:open", source)
+    --     end
+    -- end,
+
+    ['scanerMotor'] = function(source,user_id)
+        if vRP.tryGetInventoryItem(user_id,"scanerMotor",1) then
+            TriggerClientEvent("tksNote:open", source)
+        end
+    end,
 
 
     ['colete'] = function(source,user_id)

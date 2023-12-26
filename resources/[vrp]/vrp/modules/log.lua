@@ -52,6 +52,7 @@ local channels = {
     LogAnunciosEms = 'https://discord.com/api/webhooks/1058387018251513976/rCKQWvhSoa9TLpjwYewOcxIIGpuAph4xXtawBiVtuidD--e3bqq5XdWoSMFAbeyvvFGT',
     LogSpawnVeiculo = 'https://discord.com/api/webhooks/1058398211116646540/14S4Kf01PRlh9WXmhsO1-sNuCYlh-oS67I6pC4ofWKwNyGtp-4KIl5r2Kk4ESBi2Je7O',
     LogCL = 'https://discord.com/api/webhooks/1058398369921376408/M3MLH9jNow0EsjjplTrx95WhWj4bR9yPKBjgJQZpD504wnsjlNPAL3ijDU9nscn6jZ0T',
+    LogSemems = "https://discord.com/api/webhooks/1164408342010134528/B0LpaMRhDNzx3g85mPBn0oKj7Zt6YFNCey4VGUXmF07PSwN6Y62nsuhbLZpd2pJ_2bPd",
     
 
     --- arsenal policia

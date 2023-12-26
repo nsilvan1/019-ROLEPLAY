@@ -79,7 +79,7 @@ AddEventHandler("vRP:playerSpawn",function(user_id,source,first_spawn)
     local source = source
     Wait(10000)
     TriggerClientEvent('chatMessage',source,"",
-    {255, 0, 102},"@Prefeitura ^0Seja bem-vindo(a) a AZTLAN, tenha um ótimo RP!!")
+    {255, 0, 102},"@Prefeitura ^0Seja bem-vindo(a) a 019RP, tenha um ótimo RP!!")
 end)
 
 

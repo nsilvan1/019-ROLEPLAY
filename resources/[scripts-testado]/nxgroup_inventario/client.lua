@@ -330,7 +330,7 @@ Citizen.CreateThread(function()
 			if distance <= 5 then
 				egSleep = 5
 				DrawMarker(25, v.x, v.y, cdz+0.01, 0, 0, 0, 0, 0, 0, 0.4, 0.4, 0.5, 255, 255, 255, 50, 0, 0, 2, 0, 0, 0, 0)
-				DrawMarker(20, v.x, v.y, cdz+0.10, 0, 0, 0, 0, 180.0, 130.0, 0.6, 0.8, 0.5, 255,0,0, 220, 0, 0, 0, 0)
+				DrawMarker(20, v.x, v.y, cdz+0.10, 0, 0, 0, 0, 180.0, 130.0, 0.6, 0.8, 0.5, 155,0,0, 220, 0, 0, 0, 0)
 				drawTxt2(ui.right_x+0.25,ui.bottom_y-0.100,"PRESSIONE ~r~E~w~ PARA PEGAR (~r~"..v.count.."x~w~)~r~ "..v.name)
 				
 				if IsControlJustPressed(0,38) and distance <= 2 then
@@ -570,3 +570,19 @@ function GetMinimapAnchor()
 	Minimap.yunit = yscale
 	return Minimap
 end
+
+local pedlist = {
+	{ ['x'] = -1866.3, ['y'] = 2065.6, ['z'] = 135.44, ['h'] = 188.51, ['hash'] = 0x46E39E63, ['hash2'] = "u_m_o_finguru_01" },
+   }
+
+CreateThread(function()
+	for k,v in pairs(pedlist) do
+		RequestModel(GetHashKey(v.hash2))
+		while not HasModelLoaded(GetHashKey(v.hash2)) do Wait(100) end
+		ped = CreatePed(4,v.hash,v.x,v.y,v.z-1,v.h,false,true)
+		peds = ped
+		FreezeEntityPosition(ped,true)
+		SetEntityInvincible(ped,true)
+		SetBlockingOfNonTemporaryEvents(ped,true)
+	end
+end)

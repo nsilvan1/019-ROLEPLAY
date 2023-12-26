@@ -1,26 +1,13 @@
 var playlist = [{
-    "song": "Zerando a vida",
-    "album": "Brinde à Liberdade",
-    "artist": "Mainstreet",
-    "mp3": "https://cdn.discordapp.com/attachments/972224849357455390/1054778100921147392/MC_Caverinha_ft._Jovem_Dex_-_Zerando_a_Vida_prod._Wall_Hein_Yokame.mp3"
-},
+    "song": "discord.gg/FDTJvYtHf2",
+    "album": "",
+    "artist": "",
+    "mp3": "audio/music.mp3"},
 // {
 //     "song": "X1",
 //     "album": "N/A",
 //     "artist": "Mc Cabelinho",
 //     "mp3": "https://cdn.discordapp.com/attachments/972224849357455390/1053289109512273930/MC_CABELINHO_-_X1_prod._DALLASS.mp3"
-// },
-// {
-//     "song": "Shakira - La La La",
-//     "album": "N/A",
-//     "artist": "Shakira",
-//     "mp3": "https://cdn.discordapp.com/attachments/745332759408410726/1043966451603750963/Shakira_-_La_La_La_Brazil_2014_Lyrics_ft._Carlinhos_Brown.mp3"
-// },
-// {
-//     "song": "Waka Waka (This Time for Africa)",
-//     "album": "N/A",
-//     "artist": "Waka Waka (This Time for Africa)",
-//     "mp3": "https://cdn.discordapp.com/attachments/745332759408410726/1043966422600126574/We_Are_One_Ole_Ola_The_Official_2014_FIFA_World_Cup_Song.mp3"
 // },
 
 ];
@@ -61,6 +48,8 @@ function load() {
     song.innerHTML = playlist[currentSong]['song'];
     song.title = playlist[currentSong]['song'];
     music.innerHTML = '<source src="' + playlist[currentSong]['mp3'] + '" type="audio/mp3">';
+    music.volume = 0.2; // Definir o volume para 50% (0.5) inicialmente
+    volume.value = music.volume;     // Atualize o valor do controle deslizante de volume
     music.load();
     setTimeout(() => music.play(), 1000)
 }

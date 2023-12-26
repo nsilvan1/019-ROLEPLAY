@@ -14,8 +14,8 @@
 
 
 -- Copiando estrutura do banco de dados para vrp
-CREATE DATABASE IF NOT EXISTS `vrp` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `vrp`;
+CREATE DATABASE IF NOT EXISTS `thunder` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `thunder`;
 
 -- Copiando estrutura para tabela vrp.groups_control
 CREATE TABLE IF NOT EXISTS `groups_control` (

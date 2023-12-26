@@ -3,7 +3,7 @@ Config = {}
 Config.Debug = false -- mandar mensagem para CMD? true = SIM
 
 Config.Webhook = 'https://discord.com/api/webhooks/1049867169049083924/QhViJGSa6YueL0j4rOPwPqPpv4IyyVjgi0VnlkJccIcFjlFjO4GWRvoDGRFbmKM5QE05' -- copie e cole sua webhook
-Config.ServerName = 'AZTLAN ' -- Titulo da Msg
+Config.ServerName = '019RP ' -- Titulo da Msg
 
 Config.MessageId = '1071607504531882075' -- inicie o resource sem ID, após iniciar, copie o id da mensagem e cole aqui.
 
